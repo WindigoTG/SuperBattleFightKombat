@@ -1,0 +1,486 @@
+fileFormatVersion: 2
+guid: 10194518c49d7d0469e30a552be1e620
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 25
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: mmzx1_vent_0
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 1107
+        width: 31
+        height: 38
+      alignment: 9
+      pivot: {x: 0.5157008, y: 0.5272377}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af467e1ef216deb46890b3a0702006ea
+      internalID: 342532468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzx1_vent_1
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 1108
+        width: 31
+        height: 38
+      alignment: 9
+      pivot: {x: 0.4517202, y: 0.49903628}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9ae7da8ffffd4d43a8258526e602005
+      internalID: -690417880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzx1_vent_2
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 1108
+        width: 31
+        height: 38
+      alignment: 9
+      pivot: {x: 0.45204213, y: 0.50073886}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c02a79c71bb4d744b81a3595b0350ff
+      internalID: -1754078098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzx1_vent_3
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 1108
+        width: 31
+        height: 39
+      alignment: 9
+      pivot: {x: 0.45097005, y: 0.4871795}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a207f05bb77777745a7043cbc704cdbc
+      internalID: 242944860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzx1_vent_4
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 794
+        width: 28
+        height: 35
+      alignment: 9
+      pivot: {x: 0.49999946, y: 0.5438389}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5aecb89daf4cb8741bfe5239fa7456a0
+      internalID: -362964935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzx1_vent_5
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 794
+        width: 25
+        height: 34
+      alignment: 9
+      pivot: {x: 0.35885864, y: 0.55811626}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3888e206fe6244c4a8216e4e57926db6
+      internalID: 1123673423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzx1_vent_6
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 794
+        width: 24
+        height: 33
+      alignment: 9
+      pivot: {x: 0.33320174, y: 0.5749253}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5eb18d1742a2ba4ebc11ff51d7ae82a
+      internalID: 248956364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzx1_vent_7
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 794
+        width: 40
+        height: 38
+      alignment: 9
+      pivot: {x: 0.6255394, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73b8bf3514de9e24095f70ae9d317655
+      internalID: 2411315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzx1_vent_8
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 794
+        width: 38
+        height: 38
+      alignment: 9
+      pivot: {x: 0.60368586, y: 0.5011179}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28e87dee128e241428a754d65d1a67fc
+      internalID: 1967939084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzx1_vent_9
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 734
+        width: 38
+        height: 38
+      alignment: 9
+      pivot: {x: 0.60349756, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3af2ff26a69847041b1e15d74db5725a
+      internalID: 1802196044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzx1_vent_10
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 734
+        width: 38
+        height: 38
+      alignment: 9
+      pivot: {x: 0.60482424, y: 0.5013283}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7be4501eb736c83479af0ffbc9979b68
+      internalID: 2096580135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzx1_vent_11
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 734
+        width: 38
+        height: 38
+      alignment: 9
+      pivot: {x: 0.6011493, y: 0.498654}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79a1459d07c287b47bdeaa7fea56dbde
+      internalID: -39022298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzx1_vent_12
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 735
+        width: 38
+        height: 40
+      alignment: 9
+      pivot: {x: 0.60217685, y: 0.47338256}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3970c71a4728b514b94fa8e42eb607e5
+      internalID: -318897810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzx1_vent_13
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 736
+        width: 41
+        height: 44
+      alignment: 9
+      pivot: {x: 0.55729413, y: 0.4311579}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aba7fc7287a94994fb4f813c7172a85a
+      internalID: 1204544142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzx1_vent_14
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 736
+        width: 47
+        height: 48
+      alignment: 9
+      pivot: {x: 0.55122405, y: 0.39421335}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d8f6334b104ebf408615922af493688
+      internalID: -1264656711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzx1_vent_15
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 736
+        width: 37
+        height: 39
+      alignment: 9
+      pivot: {x: 0.6208958, y: 0.5111006}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1c96070e07293442bfad4e8d8603a64
+      internalID: -1973963253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      mmzx1_vent_0: 342532468
+      mmzx1_vent_11: -39022298
+      mmzx1_vent_13: 1204544142
+      mmzx1_vent_14: -1264656711
+      mmzx1_vent_9: 1802196044
+      mmzx1_vent_10: 2096580135
+      mmzx1_vent_7: 2411315
+      mmzx1_vent_15: -1973963253
+      mmzx1_vent_5: 1123673423
+      mmzx1_vent_4: -362964935
+      mmzx1_vent_8: 1967939084
+      mmzx1_vent_3: 242944860
+      mmzx1_vent_12: -318897810
+      mmzx1_vent_1: -690417880
+      mmzx1_vent_2: -1754078098
+      mmzx1_vent_6: 248956364
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
