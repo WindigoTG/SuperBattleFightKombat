@@ -29,11 +29,10 @@ public class ContactsPoller : IUpdateableRegular
             var normal = _contacts[i].normal;
             var rigidBody = _contacts[i].rigidbody;
 
-            if (normal.y > _collisionThresh)
+            if (normal.y > _collisionThresh && _contacts[i].point.y < _collider2D.transform.position.y)
             {
                 IsGrounded = true;
                 GroundVelocity = rigidBody != null ? rigidBody.velocity : Vector2.zero;
-                Debug.Log(GroundVelocity);
             }
             if (normal.x > _collisionThresh && rigidBody == null)
                 HasLeftContacts = true;

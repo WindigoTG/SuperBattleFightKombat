@@ -25,10 +25,10 @@ public class PlayerController : MonoBehaviour
         _player.UpdateRegular();
 
 
-        _player.Move(Input.GetAxisRaw("Horizontal"));
+        //_player.Move(Input.GetAxisRaw("Horizontal"));
 
-        if (Input.GetKeyDown(KeyCode.Space))
-            _player.Jump();
+        //if (Input.GetKeyDown(KeyCode.Space))
+        //    _player.Jump();
     }
 
     #endregion

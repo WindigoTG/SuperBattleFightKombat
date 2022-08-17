@@ -7,8 +7,20 @@ public class PlayerView : MonoBehaviour, IDamageable
 
     private SpriteAnimatorController _animatorController;
 
+    [SerializeField] private Rigidbody2D _rigidBody;
     [SerializeField] private SpriteRenderer _spriteRenderer;
     [SerializeField] private float _animationSpeed = 7.5f;
+    [Space]
+    [SerializeField] private BoxCollider2D _regularCollider;
+    [SerializeField] private BoxCollider2D _dashCollider;
+    [SerializeField] private CompositeCollider2D _mainCollider;
+    [Space]
+    [Header("Attack Ogigins")]
+    [SerializeField] private Transform _groundStandAttack;
+    [SerializeField] private Transform _groundRunAttack;
+    [SerializeField] private Transform _groundDashAttack;
+    [SerializeField] private Transform _wallAttack;
+    [SerializeField] private Transform _airAttack;
 
     #endregion
 
@@ -16,6 +28,8 @@ public class PlayerView : MonoBehaviour, IDamageable
     #region Properties
 
     public Transform Transform => transform;
+    public Rigidbody2D RigidBody => _rigidBody;
+    public Collider2D Collider => _mainCollider;
     public bool IsAnimationDone => _animatorController.IsAnimationFinished(_spriteRenderer);
 
     Action<int> IDamageable.OnDamageTaken => throw new NotImplementedException();

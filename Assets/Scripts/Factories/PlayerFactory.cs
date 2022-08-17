@@ -33,10 +33,10 @@ public class PlayerFactory : MonoBehaviour
 
     public PlayerModel CreatePlayer()
     {
-        return new PlayerModel(CreatePlayerBase(), CreateTransformedForm());
+        return new PlayerModel(CreatePlayerView(), CreatePlayerStates());
     }
 
-    private PlayerView CreateTransformedForm()
+    private PlayerView CreatePlayerView()
     {
         SpriteAnimatorController animatorController = new SpriteAnimatorController(
                                                         Resources.Load<SpriteAnimationsConfig>("ModelXAnimationsConfig"));
@@ -45,9 +45,17 @@ public class PlayerFactory : MonoBehaviour
         return view;
     }
 
-    private GameObject CreatePlayerBase()
+    private Dictionary<CharacterState, PlayerState> CreatePlayerStates()
     {
-        return Object.Instantiate(Resources.Load<GameObject>("PlayerBase"));
+        return new Dictionary<CharacterState, PlayerState> 
+        { 
+            { CharacterState.Idle, new IdleState() },
+            { CharacterState.Run, new RunState() },
+            { CharacterState.Jump, new JumpState() },
+            { CharacterState.Fall, new FallState() },
+            { CharacterState.WallCling, new WallClingState() },
+            { CharacterState.Hurt, new HurtState() }
+        };
     }
 
     #endregion
