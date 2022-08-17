@@ -10,6 +10,8 @@ public class WallClingState : PlayerState
     private PlayerView _view;
     private ContactsPoller _contactPoller;
 
+    bool _isAttacking;
+
     #endregion
 
 
@@ -24,8 +26,8 @@ public class WallClingState : PlayerState
 
     public override void Activate()
     {
-
         _view.StartWallClingAnimation();
+        _isAttacking = false;
     }
 
     public override void UpdateRegular()
@@ -74,6 +76,15 @@ public class WallClingState : PlayerState
 
         if (newVelocity == 0)
             _model.SetState(CharacterState.Fall);
+    }
+
+    public override void Attack()
+    {
+        if (!_model.Weapon.Shoot(_view.WallAttackOrigin.position, -_view.transform.localScale.x))
+            return;
+
+        _isAttacking = true;
+        _view.StartShootWallClingAnimation();
     }
 
     #endregion

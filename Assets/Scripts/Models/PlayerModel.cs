@@ -10,7 +10,7 @@ public class PlayerModel : IUpdateableRegular
     private readonly ContactsPoller _contactsPoller;
 
     private PlayerHealth _health;
-    //private PlayerWeapon _weapon;
+    private PlayerWeapon _weapon;
 
     private float _defaultSpeed = 200f;
     private float _currentSpeed;
@@ -67,15 +67,18 @@ public class PlayerModel : IUpdateableRegular
 
     public float WallJumpForceMultiplier => _wallJumpForceMultiplier;
 
+    public PlayerWeapon Weapon => _weapon;
+
     #endregion
 
 
     #region Class Life Cycle
 
-    public PlayerModel(PlayerView view, Dictionary<CharacterState, PlayerState> playerStates)
+    public PlayerModel(PlayerView view, Dictionary<CharacterState, PlayerState> playerStates, PlayerWeapon weapon)
     {
         _view = view;
         _playerStates = playerStates;
+        _weapon = weapon;
 
         _health = new PlayerHealth();
         _health.Damage += TakeHit;
@@ -84,8 +87,6 @@ public class PlayerModel : IUpdateableRegular
         _view.OnDamageTaken += _health.TakeDamage;
 
         _contactsPoller = new ContactsPoller(view.Collider);
-
-        //_weapon = new PlayerWeapon(player.GetComponentInChildren<Grid>().transform);
 
         _currentSpeed = _defaultSpeed;
 
@@ -110,16 +111,8 @@ public class PlayerModel : IUpdateableRegular
 
         _activetState.UpdateRegular();
 
-        if (_isShooting)
-        {
-            if (_currentShootingCD > 0)
-                _currentShootingCD -= Time.deltaTime;
-            else
-            {
-                _isShooting = false;
-                    _view.StartIdleAnimation();
-            }
-        }
+        if (Input.GetMouseButtonDown(0))
+            Shoot();
     }
 
     #endregion
@@ -171,23 +164,41 @@ public class PlayerModel : IUpdateableRegular
     private void TakeHit()
     {
         SetState(CharacterState.Hurt);
+        _view.StartBlinking(1f);
     }
 
     private void Die()
     {
-        if (_isReady)
-        {
-            _isReady = false;
-            _isDead = true;
-            ResetState();
-            StartAtPosition(_lastCheckPoint);
-        }
+        //if (_isReady)
+        //{
+        //    _isReady = false;
+        //    _isDead = true;
+        //    ResetState();
+        //    StartAtPosition(_lastCheckPoint);
+        //}
+
+        _isReady = false;
+        _isDead = true;
+
+        if (_contactsPoller.IsGrounded)
+            SetState(CharacterState.Death);
+        else
+            Respawn();
+    }
+
+    public void Respawn()
+    {
+        ResetState();
+        StartAtPosition(_lastCheckPoint);
     }
 
     public void Shoot()
     {
-        if (_isReady && !_isShooting)
-        {
+        _activetState.Attack();
+        //_weapon.Shoot(_view.GroundStandAttakOrigin.position, _view.transform.localScale.x);
+
+        //if (_isReady && !_isShooting)
+        //{
             //if (!_isGrounded)
             //    _view.StartShootJumpAnimation();
             //else if (_isMoving)
@@ -197,9 +208,9 @@ public class PlayerModel : IUpdateableRegular
 
             //_weapon.Shoot(_player.transform.localScale.x);
 
-            _isShooting = true;
-            _currentShootingCD = _shootingCD;
-        }
+        //    _isShooting = true;
+        //    _currentShootingCD = _shootingCD;
+        //}
     }
 
     #endregion

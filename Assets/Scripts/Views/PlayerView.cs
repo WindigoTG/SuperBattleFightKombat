@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
 public class PlayerView : MonoBehaviour, IDamageable
@@ -22,19 +23,25 @@ public class PlayerView : MonoBehaviour, IDamageable
     [SerializeField] private Transform _wallAttack;
     [SerializeField] private Transform _airAttack;
 
+    public Action<int> OnDamageTaken;
+
+    Coroutine _blinking;
+
     #endregion
 
 
     #region Properties
 
-    public Transform Transform => transform;
     public Rigidbody2D RigidBody => _rigidBody;
     public Collider2D Collider => _mainCollider;
     public bool IsAnimationDone => _animatorController.IsAnimationFinished(_spriteRenderer);
-
-    Action<int> IDamageable.OnDamageTaken => throw new NotImplementedException();
-
-    public Action<int> OnDamageTaken;
+    public int CurrentFrame => _animatorController.GetCurrentFrame(_spriteRenderer);
+    public Transform GroundStandAttackOrigin => _groundStandAttack;
+    public Transform GroundRunAttackOrigin => _groundRunAttack;
+    public Transform GroundDashAttackOrigin => _groundDashAttack;
+    public Transform WallAttackOrigin => _wallAttack;
+    public Transform AirAttackOrigin => _airAttack;
+    
 
     #endregion
 
@@ -100,7 +107,7 @@ public class PlayerView : MonoBehaviour, IDamageable
 
     public void StartShootStandAnimation()
     {
-            _animatorController?.StartAnimation(_spriteRenderer, AnimationTrack.AttackStand, false, _animationSpeed);
+            _animatorController?.StartAnimation(_spriteRenderer, AnimationTrack.AttackStand, false, _animationSpeed, true);
     }
 
     public void StartShootRunAnimation()
@@ -110,7 +117,17 @@ public class PlayerView : MonoBehaviour, IDamageable
 
     public void StartShootJumpAnimation()
     {
-            _animatorController?.StartAnimation(_spriteRenderer, AnimationTrack.AttackJump, false, _animationSpeed);
+            _animatorController?.StartAnimation(_spriteRenderer, AnimationTrack.AttackJump, false, _animationSpeed, true);
+    }
+
+    public void StartShootWallClingAnimation()
+    {
+        _animatorController?.StartAnimation(_spriteRenderer, AnimationTrack.AttakWallCling, false, _animationSpeed, true);
+    }
+
+    public void StartDeathAnimation()
+    {
+        _animatorController?.StartAnimation(_spriteRenderer, AnimationTrack.Death, false, _animationSpeed);
     }
 
     public void Activate()
@@ -122,6 +139,30 @@ public class PlayerView : MonoBehaviour, IDamageable
     {
         _animatorController.StopAnimation(_spriteRenderer);
         _spriteRenderer.enabled = false;
+    }
+
+    public void StartBlinking(float duration)
+    {
+        if (_blinking != null)
+            StopCoroutine(_blinking);
+
+        _blinking = StartCoroutine(Blinking(duration));
+    }
+
+    private IEnumerator Blinking(float duration)
+    {
+        var color = _spriteRenderer.color;
+
+        while (duration > 0)
+        {
+            color.a = color.a == 1f ? 0.5f : 1f;
+            _spriteRenderer.color = color;
+            duration -= 0.1f;
+            yield return new WaitForSeconds(0.1f);
+        }
+
+        color.a = 1;
+        _spriteRenderer.color = color;
     }
 
     #endregion

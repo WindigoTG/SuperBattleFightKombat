@@ -8,6 +8,11 @@ public class RunState : PlayerState
     private PlayerView _view;
     private ContactsPoller _contactPoller;
 
+    private int _lastFrame;
+    private int _frameCount;
+    private bool _isAttacking;
+    private static int _attackFrameCount = 5;
+
     #endregion
 
 
@@ -22,6 +27,7 @@ public class RunState : PlayerState
     public override void Activate()
     {
         _view.StartRunAnimation();
+        _isAttacking = false;
     }
 
     public override void UpdateRegular()
@@ -42,6 +48,21 @@ public class RunState : PlayerState
 
         var horisontal = Input.GetAxisRaw("Horizontal");
         Move(horisontal);
+
+        if (_isAttacking)
+        {
+            if (_view.CurrentFrame != _lastFrame)
+            {
+                _lastFrame = _view.CurrentFrame;
+                _frameCount++;
+            }
+
+            if (_frameCount > _attackFrameCount)
+            {
+                _view.StartRunAnimation();
+                _isAttacking = false;
+            }
+        }
     }
 
     private void Move(float inputHor)
@@ -64,6 +85,17 @@ public class RunState : PlayerState
         }
 
         _view.RigidBody.velocity = _view.RigidBody.velocity.Change(x: newVelocity + (_contactPoller.IsGrounded ? _contactPoller.GroundVelocity.x : 0));
+    }
+
+    public override void Attack()
+    {
+        if (!_model.Weapon.Shoot(_view.GroundRunAttackOrigin.position, _view.transform.localScale.x))
+            return;
+
+        _view.StartShootRunAnimation();
+        _frameCount = 0;
+        _lastFrame = _view.CurrentFrame;
+        _isAttacking = true;
     }
 
     #endregion

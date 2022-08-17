@@ -1,6 +1,8 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class HurtState : PlayerState
+public class DeathState : PlayerState
 {
     #region Fields
 
@@ -22,18 +24,14 @@ public class HurtState : PlayerState
 
     public override void Activate()
     {
-        _view.StartHurtAnimation();
+        _view.RigidBody.velocity = _view.RigidBody.velocity.Change(x: 0.0f);
+        _view.StartDeathAnimation();
     }
 
     public override void UpdateRegular()
     {
-        if (!_view.IsAnimationDone)
-            return;
-
-        if (_contactPoller.IsGrounded)
-            _model.SetState(CharacterState.Idle);
-        else
-            _model.SetState(CharacterState.Fall);
+        if (_view.IsAnimationDone)
+            _model.Respawn();
     }
 
     public override void Attack() { }

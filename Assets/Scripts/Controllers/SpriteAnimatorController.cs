@@ -59,14 +59,14 @@ public class SpriteAnimatorController : IDisposable, IUpdateableRegular
 
     #region Methods
 
-    public void StartAnimation(SpriteRenderer spriteRenderer, AnimationTrack track, bool loop, float speed)
+    public void StartAnimation(SpriteRenderer spriteRenderer, AnimationTrack track, bool loop, float speed, bool forceRestart = false)
     {
         if (_activeAnimations.TryGetValue(spriteRenderer, out var animation))
         {
             animation.Loop = loop;
             animation.Speed = speed;
             animation.IsActive = true;
-            if (animation.Track != track)
+            if (animation.Track != track || forceRestart)
             {
 
                 if (!(track == AnimationTrack.AttackRun && animation.Track == AnimationTrack.Run) &&
@@ -112,6 +112,16 @@ public class SpriteAnimatorController : IDisposable, IUpdateableRegular
     {
         var sequence = _config.Sequences.Find(sequence => sequence.Track == track);
         return sequence != null;
+    }
+
+    public int GetCurrentFrame(SpriteRenderer spriteRenderer)
+    {
+        if (_activeAnimations.TryGetValue(spriteRenderer, out var animation))
+        {
+            return (int)animation.Counter;
+        }
+        else
+            return -1;
     }
 
     #endregion

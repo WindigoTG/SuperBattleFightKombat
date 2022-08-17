@@ -1,7 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
 public enum AnimationTrack
 {
     Idle = 0,
@@ -14,5 +10,7 @@ public enum AnimationTrack
     AttackRun = 7,
     AttackJump = 8,
     IdlePreHenshin = 9,
-    Henshin = 10
+    Henshin = 10,
+    Death = 11,
+    AttakWallCling = 12
 }

@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEditor;
 #endif
 
-public class MaimMenuController : MonoBehaviour
+public class MainMenuController : MonoBehaviour
 {
     #region Fields
 

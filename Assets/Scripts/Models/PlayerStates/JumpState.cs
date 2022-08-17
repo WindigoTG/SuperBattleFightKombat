@@ -8,6 +8,8 @@ public class JumpState : PlayerState
     private PlayerView _view;
     private ContactsPoller _contactPoller;
 
+    private float _buffer;
+
     #endregion
 
 
@@ -22,6 +24,8 @@ public class JumpState : PlayerState
 
     public override void Activate()
     {
+        _buffer = 0.1f;
+
         _view.RigidBody.velocity = _view.RigidBody.velocity.Change(y: 0f);
 
         Vector2 horisontalForce = Vector2.zero;
@@ -55,6 +59,9 @@ public class JumpState : PlayerState
         var horisontal = Input.GetAxisRaw("Horizontal");
         Move(horisontal);
         VerticalCheck(horisontal);
+
+        if (_buffer > 0)
+            _buffer -= Time.deltaTime;
     }
 
     public void Move(float inputHor)
@@ -84,7 +91,7 @@ public class JumpState : PlayerState
             return;
         }
 
-        if (_contactPoller.IsGrounded)
+        if (_contactPoller.IsGrounded && _buffer <= 0)
         {
             if (Mathf.Abs(inputHor) > References.InputThreshold)
                 _model.SetState(CharacterState.Run);
@@ -101,6 +108,14 @@ public class JumpState : PlayerState
             _model.SetState(CharacterState.WallCling);
             return;
         }
+    }
+
+    public override void Attack()
+    {
+        if (!_model.Weapon.Shoot(_view.AirAttackOrigin.position, _view.transform.localScale.x))
+            return;
+
+        _view.StartShootJumpAnimation();
     }
 
     #endregion

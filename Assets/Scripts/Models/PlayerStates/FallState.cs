@@ -22,7 +22,6 @@ public class FallState : PlayerState
 
     public override void Activate()
     {
-
         _view.StartFallAnimation();
     }
 
@@ -77,6 +76,14 @@ public class FallState : PlayerState
             _model.SetState(CharacterState.WallCling);
             return;
         }
+    }
+
+    public override void Attack()
+    {
+        if (!_model.Weapon.Shoot(_view.AirAttackOrigin.position, _view.transform.localScale.x))
+            return;
+
+        _view.StartShootJumpAnimation();
     }
 
     #endregion

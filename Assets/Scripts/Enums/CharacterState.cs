@@ -5,5 +5,6 @@ public enum CharacterState
     Jump = 2,
     Fall = 3,
     Hurt = 4,
-    WallCling = 5
+    WallCling = 5,
+    Death = 6
 }

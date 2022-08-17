@@ -33,7 +33,7 @@ public class PlayerFactory : MonoBehaviour
 
     public PlayerModel CreatePlayer()
     {
-        return new PlayerModel(CreatePlayerView(), CreatePlayerStates());
+        return new PlayerModel(CreatePlayerView(), CreatePlayerStates(), CreatePlayerWeapon());
     }
 
     private PlayerView CreatePlayerView()
@@ -54,8 +54,14 @@ public class PlayerFactory : MonoBehaviour
             { CharacterState.Jump, new JumpState() },
             { CharacterState.Fall, new FallState() },
             { CharacterState.WallCling, new WallClingState() },
-            { CharacterState.Hurt, new HurtState() }
+            { CharacterState.Hurt, new HurtState() },
+            { CharacterState.Death, new DeathState() }
         };
+    }
+
+    private PlayerWeapon CreatePlayerWeapon()
+    {
+        return new PlayerWeapon();
     }
 
     #endregion

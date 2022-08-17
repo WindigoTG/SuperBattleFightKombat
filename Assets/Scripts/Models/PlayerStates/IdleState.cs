@@ -8,6 +8,8 @@ public class IdleState : PlayerState
     private PlayerView _view;
     private ContactsPoller _contactPoller;
 
+    private bool _isAttacking;
+
     #endregion
 
 
@@ -18,6 +20,7 @@ public class IdleState : PlayerState
         _model = model;
         _view = view;
         _contactPoller = contactPoller;
+        _isAttacking = false;
     }
 
     public override void Activate()
@@ -49,8 +52,23 @@ public class IdleState : PlayerState
             return;
         }
 
-        if (_contactPoller.GroundVelocity.x != 0 && _contactPoller.IsGrounded)
-            _view.RigidBody.velocity = _view.RigidBody.velocity.Change(x: _contactPoller.GroundVelocity.x);
+        _view.RigidBody.velocity = _view.RigidBody.velocity.Change(x: (_contactPoller.GroundVelocity.x != 0 && _contactPoller.IsGrounded) ?
+                                                                        _contactPoller.GroundVelocity.x : 0);
+
+        if (_isAttacking && _view.IsAnimationDone)
+        {
+            _isAttacking = false;
+            _view.StartIdleAnimation();
+        }
+    }
+
+    public override void Attack()
+    {
+        if (!_model.Weapon.Shoot(_view.GroundStandAttackOrigin.position, _view.transform.localScale.x))
+            return;
+
+        _isAttacking = true;
+        _view.StartShootStandAnimation();
     }
 
     #endregion
