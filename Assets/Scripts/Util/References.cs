@@ -12,4 +12,26 @@ public class References
     private static Vector3 _rightScale = new Vector3(1, 1, 1);
     public static Vector3 LeftScale => _leftScale;
     public static Vector3 RightScale => _rightScale;
+
+
+    #region Firestore
+
+    private static string _usersCollection = "USERS";
+    public static string USERS_COLLECTION => _usersCollection;
+
+    #endregion
+
+
+    #region Sounds
+
+    private static string _buttonSound = "Button";
+    public static string BUTTON_SOUND => _buttonSound;
+
+    private static string _hurtSound = "Hurt";
+    public static string HURT_SOUND => _hurtSound;
+
+    private static string _deathSound = "Death";
+    public static string DEATH_SOUND => _deathSound;
+
+    #endregion
 }

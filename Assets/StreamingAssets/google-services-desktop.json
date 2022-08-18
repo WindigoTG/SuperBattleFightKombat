@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "681737245432",
+    "project_id": "superbattlefightkombat",
+    "storage_bucket": "superbattlefightkombat.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:681737245432:android:dd12ca6fffb4bdf7f5610d",
+        "android_client_info": {
+          "package_name": "com.NightSun.SuperBattleFightCombatBrawlMeleeAndKNUCKLES"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "681737245432-99aqiomc0hno8edhc65ha8j15jf8fteo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDW5Ca1Lg3aRfvhZvqWN2SwtUf9cuyjUFQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "681737245432-99aqiomc0hno8edhc65ha8j15jf8fteo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

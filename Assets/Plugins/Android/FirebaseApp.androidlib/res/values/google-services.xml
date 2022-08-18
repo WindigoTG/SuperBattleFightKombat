@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:keep="@string/gcm_defaultSenderId,@string/google_storage_bucket,@string/project_id,@string/google_api_key,@string/google_crash_reporting_api_key,@string/google_app_id,@string/default_web_client_id">
+  <string name="gcm_defaultSenderId" translatable="false">681737245432</string>
+  <string name="google_storage_bucket" translatable="false">superbattlefightkombat.appspot.com</string>
+  <string name="project_id" translatable="false">superbattlefightkombat</string>
+  <string name="google_api_key" translatable="false">AIzaSyDW5Ca1Lg3aRfvhZvqWN2SwtUf9cuyjUFQ</string>
+  <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDW5Ca1Lg3aRfvhZvqWN2SwtUf9cuyjUFQ</string>
+  <string name="google_app_id" translatable="false">1:681737245432:android:dd12ca6fffb4bdf7f5610d</string>
+  <string name="default_web_client_id" translatable="false">681737245432-99aqiomc0hno8edhc65ha8j15jf8fteo.apps.googleusercontent.com</string>
+</resources>
