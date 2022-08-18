@@ -165,6 +165,7 @@ public class PlayerModel : IUpdateableRegular
     {
         SetState(CharacterState.Hurt);
         _view.StartBlinking(1f);
+        SoundManager.Instance?.PlaySound("Hurt");
     }
 
     private void Die()
@@ -179,6 +180,8 @@ public class PlayerModel : IUpdateableRegular
 
         _isReady = false;
         _isDead = true;
+
+        SoundManager.Instance?.PlaySound("Death");
 
         if (_contactsPoller.IsGrounded)
             SetState(CharacterState.Death);
