@@ -3,6 +3,7 @@ using UnityEngine;
 using Firebase;
 using Firebase.Extensions;
 using TMPro;
+using UnityEngine.SceneManagement;
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
@@ -43,20 +44,27 @@ public class MainMenuController : MonoBehaviour
 
         AddListeners();
 
-        FirebaseApp.CheckAndFixDependenciesAsync().ContinueWithOnMainThread(task =>
+        if (FirebaseManager.Instance != null && FirebaseManager.Instance.Auth != null &&
+            FirebaseManager.Instance.Auth.IsLoggedIn)
         {
-            var dependencyStatus = task.Result;
-            Debug.Log($"Dependency status: {dependencyStatus}");
-            if (dependencyStatus == DependencyStatus.Available)
+            OnLogInSuccess();
+        }
+        else
+        {
+            FirebaseApp.CheckAndFixDependenciesAsync().ContinueWithOnMainThread(task =>
             {
-                Debug.Log("KBA");
-                OnFirebaseResolved();
-            }
-            else
-            {
-                Debug.Log("Could not resolve all Firebase dependencies: " + dependencyStatus);
-            }
-        });
+                var dependencyStatus = task.Result;
+                Debug.Log($"Dependency status: {dependencyStatus}");
+                if (dependencyStatus == DependencyStatus.Available)
+                {
+                    OnFirebaseResolved();
+                }
+                else
+                {
+                    Debug.Log("Could not resolve all Firebase dependencies: " + dependencyStatus);
+                }
+            });
+        }
     }
 
     private void OnDestroy()
@@ -107,6 +115,8 @@ public class MainMenuController : MonoBehaviour
         _startGameWindow.ChangeNameButton.onClick.AddListener(PlayButtonSound);
         _startGameWindow.SwitchAccountButton.onClick.AddListener(OnSwithAccountButtonClick);
         _startGameWindow.SwitchAccountButton.onClick.AddListener(PlayButtonSound);
+        _startGameWindow.StartGameButton.onClick.AddListener(ProceedToMatchMaking);
+        _startGameWindow.StartGameButton.onClick.AddListener(PlayButtonSound);
     }
 
     private void RemoveListeners()
@@ -135,6 +145,7 @@ public class MainMenuController : MonoBehaviour
 
         _startGameWindow.ChangeNameButton.onClick.RemoveAllListeners();
         _startGameWindow.SwitchAccountButton.onClick.RemoveAllListeners();
+        _startGameWindow.StartGameButton.onClick.RemoveAllListeners();
     }
 
         private void PlayButtonSound() => SoundManager.Instance.PlaySound(References.BUTTON_SOUND);
@@ -144,6 +155,11 @@ public class MainMenuController : MonoBehaviour
         _infoText.text = "Connecting...";
         FirebaseManager.Instance.Init();
         FirebaseManager.Instance.Auth.SilentLogIn(OnLogInSuccess, _ => EnableMenu());
+    }
+
+    private void ProceedToMatchMaking()
+    {
+        SceneManager.LoadScene(1);
     }
 
     private void EnableMenu()

@@ -5,7 +5,7 @@ using Firebase.Firestore;
 using System;
 using System.Threading.Tasks;
 
-public class UserProfileHandler : MonoBehaviour
+public class UserProfileHandler
 {
     #region Fields
 
