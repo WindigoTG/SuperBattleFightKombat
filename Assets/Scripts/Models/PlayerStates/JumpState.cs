@@ -51,12 +51,12 @@ public class JumpState : PlayerState
         }
 
         _view.RigidBody.AddForce((Vector2.up * _model.JumpForce) + horisontalForce);
-        _view.StartJumpAnimation();
+        _view.StartAnimation(AnimationTrack.Jump);
     }
 
-    public override void UpdateRegular()
+    public override void Update(CurrentInputs inputs)
     {
-        var horisontal = Input.GetAxisRaw("Horizontal");
+        var horisontal = inputs.Horisontal;
         Move(horisontal);
         VerticalCheck(horisontal);
 
@@ -115,7 +115,7 @@ public class JumpState : PlayerState
         if (!_model.Weapon.Shoot(_view.AirAttackOrigin.position, _view.transform.localScale.x))
             return;
 
-        _view.StartShootJumpAnimation();
+        _view.StartAnimation(AnimationTrack.AttackJump);
     }
 
     #endregion

@@ -26,10 +26,10 @@ public class IdleState : PlayerState
     public override void Activate()
     {
         _view.RigidBody.velocity = _view.RigidBody.velocity.Change(x: 0.0f);
-        _view.StartIdleAnimation();
+        _view.StartAnimation(AnimationTrack.Idle);
     }
 
-    public override void UpdateRegular()
+    public override void Update(CurrentInputs inputs)
     {
         if (!_contactPoller.IsGrounded)
         {
@@ -39,14 +39,13 @@ public class IdleState : PlayerState
         else
             _model.ReserGroundCoyoteTime();
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (inputs.IsJumpPressed)
         {
             _model.SetState(CharacterState.Jump);
             return;
         }
 
-        var horisontal = Input.GetAxisRaw("Horizontal");
-        if (Mathf.Abs(horisontal) > References.InputThreshold)
+        if (Mathf.Abs(inputs.Horisontal) > References.InputThreshold)
         {
             _model.SetState(CharacterState.Run);
             return;
@@ -58,7 +57,7 @@ public class IdleState : PlayerState
         if (_isAttacking && _view.IsAnimationDone)
         {
             _isAttacking = false;
-            _view.StartIdleAnimation();
+            _view.StartAnimation(AnimationTrack.Idle);
         }
     }
 
@@ -68,7 +67,7 @@ public class IdleState : PlayerState
             return;
 
         _isAttacking = true;
-        _view.StartShootStandAnimation();
+        _view.StartAnimation(AnimationTrack.AttackStand);
     }
 
     #endregion

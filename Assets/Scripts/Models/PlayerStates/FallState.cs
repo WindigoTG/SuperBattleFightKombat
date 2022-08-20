@@ -22,12 +22,12 @@ public class FallState : PlayerState
 
     public override void Activate()
     {
-        _view.StartFallAnimation();
+        _view.StartAnimation(AnimationTrack.Fall);
     }
 
-    public override void UpdateRegular()
+    public override void Update(CurrentInputs inputs)
     {
-        if (Input.GetKeyDown(KeyCode.Space) && (_model.IsGroundCoyoteTime || _model.IsWallCoyoteTime))
+        if (inputs.IsJumpPressed && (_model.IsGroundCoyoteTime || _model.IsWallCoyoteTime))
         {
             _model.SetState(CharacterState.Jump);
             return;
@@ -83,7 +83,7 @@ public class FallState : PlayerState
         if (!_model.Weapon.Shoot(_view.AirAttackOrigin.position, _view.transform.localScale.x))
             return;
 
-        _view.StartShootJumpAnimation();
+        _view.StartAnimation(AnimationTrack.AttackJump);
     }
 
     #endregion

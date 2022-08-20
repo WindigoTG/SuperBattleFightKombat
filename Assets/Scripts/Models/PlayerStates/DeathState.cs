@@ -25,10 +25,10 @@ public class DeathState : PlayerState
     public override void Activate()
     {
         _view.RigidBody.velocity = _view.RigidBody.velocity.Change(x: 0.0f);
-        _view.StartDeathAnimation();
+        _view.StartAnimation(AnimationTrack.Death);
     }
 
-    public override void UpdateRegular()
+    public override void Update(CurrentInputs inputs)
     {
         if (_view.IsAnimationDone)
             _model.Respawn();

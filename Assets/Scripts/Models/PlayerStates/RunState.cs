@@ -26,11 +26,11 @@ public class RunState : PlayerState
     }
     public override void Activate()
     {
-        _view.StartRunAnimation();
+        _view.StartAnimation(AnimationTrack.Run);
         _isAttacking = false;
     }
 
-    public override void UpdateRegular()
+    public override void Update(CurrentInputs inputs)
     {
         if (!_contactPoller.IsGrounded)
         {
@@ -40,14 +40,13 @@ public class RunState : PlayerState
         else
             _model.ReserGroundCoyoteTime();
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (inputs.IsJumpPressed)
         {
             _model.SetState(CharacterState.Jump);
             return;
         }
 
-        var horisontal = Input.GetAxisRaw("Horizontal");
-        Move(horisontal);
+        Move(inputs.Horisontal);
 
         if (_isAttacking)
         {
@@ -59,7 +58,7 @@ public class RunState : PlayerState
 
             if (_frameCount > _attackFrameCount)
             {
-                _view.StartRunAnimation();
+                _view.StartAnimation(AnimationTrack.Run);
                 _isAttacking = false;
             }
         }
@@ -92,7 +91,7 @@ public class RunState : PlayerState
         if (!_model.Weapon.Shoot(_view.GroundRunAttackOrigin.position, _view.transform.localScale.x))
             return;
 
-        _view.StartShootRunAnimation();
+        _view.StartAnimation(AnimationTrack.AttackRun);
         _frameCount = 0;
         _lastFrame = _view.CurrentFrame;
         _isAttacking = true;

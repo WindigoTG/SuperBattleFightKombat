@@ -1,34 +1,9 @@
-using System.Collections;
+using Photon.Pun;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerFactory : MonoBehaviour
+public class PlayerFactory
 {
-    #region Properties
-
-    public static PlayerFactory Instance { get; private set; }
-
-    #endregion
-
-
-    #region Unity Methods
-
-    private void Awake()
-    {
-        if (Instance == null)
-            Instance = this;
-        else if (Instance != this)
-            Destroy(gameObject);
-    }
-
-    private void OnDestroy()
-    {
-        if (Instance == this)
-            Instance = null;
-    }
-
-    #endregion
-
     #region Methods
 
     public PlayerModel CreatePlayer()
@@ -38,10 +13,8 @@ public class PlayerFactory : MonoBehaviour
 
     private PlayerView CreatePlayerView()
     {
-        SpriteAnimatorController animatorController = new SpriteAnimatorController(
-                                                        Resources.Load<SpriteAnimationsConfig>("ModelXAnimationsConfig"));
-        PlayerView view = Object.Instantiate(Resources.Load<PlayerView>("ModelX"));
-        view.SetAnimatorController(animatorController);
+        //PlayerView view = Object.Instantiate(Resources.Load<PlayerView>("ModelX"));
+        PlayerView view = PhotonNetwork.Instantiate("ModelX", new Vector3(0f, 0f, 0f), Quaternion.identity, 0).GetComponent<PlayerView>();
         return view;
     }
 

@@ -1,28 +1,57 @@
+using Photon.Pun;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : MonoBehaviourPunCallbacks, IPunObservable
 {
     #region Fields
 
     PlayerModel _player;
     PlayerFactory _playerfactory;
 
+    bool _isJumpPressed;
+    bool _isAttackPressed;
+    float _horisontalInput;
+
     #endregion
 
 
     #region Unity Methods
 
+    private void Awake()
+    {
+        _playerfactory = new PlayerFactory();
+    }
+
     private void Start()
     {
-        _playerfactory = PlayerFactory.Instance;
+        if (!photonView.IsMine)
+            return;
+
         _player = _playerfactory.CreatePlayer();
 
-        _player.StartAtPosition(new Vector3(0, 0, 0));
+        _player.StartAtPosition(new Vector3(Random.Range(-2f,2f), 0, 0));
     }
 
     public void Update()
     {
-        _player.UpdateRegular();
+        if (photonView.IsMine)
+        {
+            _horisontalInput = Input.GetAxisRaw("Horizontal");
+            _isJumpPressed = Input.GetKeyDown(KeyCode.Space);
+            _isAttackPressed = Input.GetMouseButton(0);
+
+
+            _player.Update(new CurrentInputs
+            {
+                Horisontal = _horisontalInput,
+                IsJumpPressed = _isJumpPressed,
+                IsAttackPressed = _isAttackPressed
+            });
+        }
+
+        _horisontalInput = default;
+        _isJumpPressed = default;
+        _isAttackPressed = default;
 
 
         //_player.Move(Input.GetAxisRaw("Horizontal"));
@@ -32,5 +61,34 @@ public class PlayerController : MonoBehaviour
     }
 
     #endregion
+
+
+    #region IPunObservable
+
+    public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+    {
+        //if (stream.IsWriting)
+        //{
+        //    stream.SendNext(_horisontalInput);
+        //    stream.SendNext(_isJumpPressed);
+        //    stream.SendNext(_isAttackPressed);
+        //}
+        //else
+        //{
+        //    _horisontalInput = (float)stream.ReceiveNext();
+        //    _isJumpPressed = (bool)stream.ReceiveNext();
+        //    _isAttackPressed = (bool)stream.ReceiveNext();
+        //}
+    }
+
+    #endregion
+}
+
+
+public struct CurrentInputs
+{
+    public float Horisontal;
+    public bool IsJumpPressed;
+    public bool IsAttackPressed;
 }
 

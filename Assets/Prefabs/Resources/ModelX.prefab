@@ -142,6 +142,8 @@ GameObject:
   - component: {fileID: 2982933886206111054}
   - component: {fileID: 2249977080557464457}
   - component: {fileID: 999067854471299615}
+  - component: {fileID: 4668547551263134510}
+  - component: {fileID: 5057139521074981544}
   m_Layer: 0
   m_Name: ModelX
   m_TagString: Untagged
@@ -272,6 +274,7 @@ MonoBehaviour:
   _groundDashAttack: {fileID: 4905195637531070076}
   _wallAttack: {fileID: 7013167214958774792}
   _airAttack: {fileID: 2435745794843871610}
+  _spriteAnimationsConfig: {fileID: 11400000, guid: 2da987a4733bb164d8b980f71ae6ee16, type: 2}
 --- !u!61 &999067854471299615
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -298,6 +301,45 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.6}
   m_EdgeRadius: 0.2
+--- !u!114 &4668547551263134510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6670488935158873775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents:
+  - {fileID: 5057139521074981544}
+  sceneViewId: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
+--- !u!114 &5057139521074981544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6670488935158873775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizePosition: 1
+  m_SynchronizeRotation: 0
+  m_SynchronizeScale: 1
+  m_UseLocal: 1
 --- !u!1 &7190797720418445451
 GameObject:
   m_ObjectHideFlags: 0

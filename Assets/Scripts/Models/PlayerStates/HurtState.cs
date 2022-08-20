@@ -22,10 +22,10 @@ public class HurtState : PlayerState
 
     public override void Activate()
     {
-        _view.StartHurtAnimation();
+        _view.StartAnimation(AnimationTrack.TakeHit);
     }
 
-    public override void UpdateRegular()
+    public override void Update(CurrentInputs inputs)
     {
         if (!_view.IsAnimationDone)
             return;

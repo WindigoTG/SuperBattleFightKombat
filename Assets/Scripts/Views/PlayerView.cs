@@ -1,8 +1,9 @@
+using Photon.Pun;
 using System;
 using System.Collections;
 using UnityEngine;
 
-public class PlayerView : MonoBehaviour, IDamageable
+public class PlayerView : MonoBehaviourPunCallbacks, IDamageable
 {
     #region Fields 
 
@@ -22,6 +23,8 @@ public class PlayerView : MonoBehaviour, IDamageable
     [SerializeField] private Transform _groundDashAttack;
     [SerializeField] private Transform _wallAttack;
     [SerializeField] private Transform _airAttack;
+    [Space]
+    [SerializeField] private SpriteAnimationsConfig _spriteAnimationsConfig;
 
     public Action<int> OnDamageTaken;
 
@@ -52,6 +55,14 @@ public class PlayerView : MonoBehaviour, IDamageable
     {
         if (_spriteRenderer == null)
             GetComponent<SpriteRenderer>();
+
+        _animatorController = new SpriteAnimatorController(_spriteAnimationsConfig);
+    }
+
+    private void Start()
+    {
+        if (!photonView.IsMine)
+            _rigidBody.bodyType = RigidbodyType2D.Kinematic;
     }
 
     private void Update()
@@ -70,65 +81,96 @@ public class PlayerView : MonoBehaviour, IDamageable
         _animatorController = animationController;
     }
 
-    public void StartIdleAnimation()
+    public void StartAnimation(AnimationTrack animation)
     {
+        ProcessAnimationRequest(animation);
+        photonView.RPC(nameof(StartAnimationRPC), RpcTarget.All, animation);
+    }
+
+    [PunRPC]
+    private void StartAnimationRPC(AnimationTrack animation)
+    {
+        ProcessAnimationRequest(animation);
+    }
+
+    private void ProcessAnimationRequest(AnimationTrack animation)
+    {
+        switch (animation)
+        {
+            case AnimationTrack.Idle:
+                StartIdleAnimation();
+                break;
+            case AnimationTrack.Run:
+                StartRunAnimation();
+                break;
+            case AnimationTrack.Jump:
+                StartJumpAnimation();
+                break;
+            case AnimationTrack.Fall:
+                StartFallAnimation();
+                break;
+            case AnimationTrack.Henshin:
+                StartHenshinAnimation();
+                break;
+            case AnimationTrack.WallCling:
+                StartWallClingAnimation();
+                break;
+            case AnimationTrack.TakeHit:
+                StartHurtAnimation();
+                break;
+            case AnimationTrack.AttackStand:
+                StartShootStandAnimation();
+                break;
+            case AnimationTrack.AttackRun:
+                StartShootRunAnimation();
+                break;
+            case AnimationTrack.AttackJump:
+                StartShootJumpAnimation();
+                break;
+            case AnimationTrack.AttakWallCling:
+                StartShootWallClingAnimation();
+                break;
+            case AnimationTrack.Death:
+                StartDeathAnimation();
+                break;
+        }
+    }
+
+    private void StartIdleAnimation() =>
         _animatorController?.StartAnimation(_spriteRenderer, AnimationTrack.Idle, true, _animationSpeed);
-    }
 
-    public void StartRunAnimation()
-    {
+    private void StartRunAnimation() =>
         _animatorController?.StartAnimation(_spriteRenderer, AnimationTrack.Run, true, _animationSpeed);
-    }
 
-    public void StartJumpAnimation()
-    {
+    private void StartJumpAnimation() =>
         _animatorController?.StartAnimation(_spriteRenderer, AnimationTrack.Jump, false, _animationSpeed);
-    }
 
-    public void StartFallAnimation()
-    {
+    private void StartFallAnimation() =>
         _animatorController?.StartAnimation(_spriteRenderer, AnimationTrack.Fall, false, _animationSpeed);
-    }
 
-    public void StartHenshinAnimation()
-    {
+    private void StartHenshinAnimation() =>
         _animatorController?.StartAnimation(_spriteRenderer, AnimationTrack.Henshin, false, _animationSpeed);
-    }
 
-    public void StartWallClingAnimation()
-    {
+    private void StartWallClingAnimation() =>
             _animatorController?.StartAnimation(_spriteRenderer, AnimationTrack.WallCling, false, _animationSpeed);
-    }
 
-    public void StartHurtAnimation()
-    {
+    private void StartHurtAnimation() =>
         _animatorController?.StartAnimation(_spriteRenderer, AnimationTrack.TakeHit, false, _animationSpeed);
-    }
 
-    public void StartShootStandAnimation()
-    {
+    private void StartShootStandAnimation() =>
             _animatorController?.StartAnimation(_spriteRenderer, AnimationTrack.AttackStand, false, _animationSpeed, true);
-    }
 
-    public void StartShootRunAnimation()
-    {
+    private void StartShootRunAnimation() =>
             _animatorController?.StartAnimation(_spriteRenderer, AnimationTrack.AttackRun, true, _animationSpeed);
-    }
 
-    public void StartShootJumpAnimation()
-    {
+    private void StartShootJumpAnimation() =>
             _animatorController?.StartAnimation(_spriteRenderer, AnimationTrack.AttackJump, false, _animationSpeed, true);
-    }
 
-    public void StartShootWallClingAnimation()
-    {
+    private void StartShootWallClingAnimation() =>
         _animatorController?.StartAnimation(_spriteRenderer, AnimationTrack.AttakWallCling, false, _animationSpeed, true);
-    }
 
-    public void StartDeathAnimation()
-    {
+    private void StartDeathAnimation() =>
         _animatorController?.StartAnimation(_spriteRenderer, AnimationTrack.Death, false, _animationSpeed);
-    }
 
     public void Activate()
     {
@@ -142,6 +184,16 @@ public class PlayerView : MonoBehaviour, IDamageable
     }
 
     public void StartBlinking(float duration)
+    {
+        if (_blinking != null)
+            StopCoroutine(_blinking);
+
+        _blinking = StartCoroutine(Blinking(duration));
+
+        photonView.RPC(nameof(StartBlinkingRPC), RpcTarget.All, duration);
+    }
+
+    private void StartBlinkingRPC(float duration)
     {
         if (_blinking != null)
             StopCoroutine(_blinking);

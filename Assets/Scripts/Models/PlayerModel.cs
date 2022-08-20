@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerModel : IUpdateableRegular
+public class PlayerModel
 {
     #region Fields
 
@@ -15,8 +15,6 @@ public class PlayerModel : IUpdateableRegular
     private float _defaultSpeed = 200f;
     private float _currentSpeed;
 
-    private const float INPUT_THRESHOLD = 0.1f;
-    private const float _FALL_THRESHOLD = -1f;
     private float _jumpForce = 350.0f;
     private float _wallJumpForceMultiplier = 1;
     private const float COYOTE_TIME = 0.2f;
@@ -24,20 +22,10 @@ public class PlayerModel : IUpdateableRegular
     private float _currentGroundCoyoteTime;
     private float _currentWallCoyoteTime;
 
-    private Vector3 _leftScale = new Vector3(-1, 1, 1);
-    private Vector3 _rightScale = new Vector3(1, 1, 1);
-
     bool _isReady;
 
     bool _isDead;
-    
-    bool _isShooting;
 
-    float _shootingCD = 0.3f;
-    float _currentShootingCD;
-
-    ContactPoint2D[] _contacts = new ContactPoint2D[16];
-    Vector3 _destination;
     Vector3 _lastCheckPoint;
 
     public event System.Action End;
@@ -99,7 +87,7 @@ public class PlayerModel : IUpdateableRegular
 
     #region IUpdateableRegular
 
-    public void UpdateRegular()
+    public void Update(CurrentInputs inputs)
     {
         _contactsPoller.UpdateRegular();
 
@@ -109,9 +97,9 @@ public class PlayerModel : IUpdateableRegular
         if (_currentWallCoyoteTime > 0)
             _currentWallCoyoteTime -= Time.deltaTime;
 
-        _activetState.UpdateRegular();
+        _activetState.Update(inputs);
 
-        if (Input.GetMouseButtonDown(0))
+        if (inputs.IsAttackPressed)
             Shoot();
     }
 

@@ -26,21 +26,21 @@ public class WallClingState : PlayerState
 
     public override void Activate()
     {
-        _view.StartWallClingAnimation();
+        _view.StartAnimation(AnimationTrack.WallCling);
         _isAttacking = false;
     }
 
-    public override void UpdateRegular()
+    public override void Update(CurrentInputs inputs)
     {
         _model.ResetWallCoyoteTime();
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (inputs.IsJumpPressed)
         {
             _model.SetState(CharacterState.Jump);
             return;
         }
 
-        var horisontal = Input.GetAxisRaw("Horizontal");
+        var horisontal = inputs.Horisontal;
 
         if (_contactPoller.IsGrounded)
         {
@@ -84,7 +84,7 @@ public class WallClingState : PlayerState
             return;
 
         _isAttacking = true;
-        _view.StartShootWallClingAnimation();
+        _view.StartAnimation(AnimationTrack.AttakWallCling);
     }
 
     #endregion
