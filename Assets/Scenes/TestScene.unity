@@ -2877,6 +2877,7 @@ MonoBehaviour:
   _sounds:
   - {fileID: 8300000, guid: 3a3b8a3831cf557489eee2a0471d413f, type: 3}
   - {fileID: 8300000, guid: 04d05e36603dbd3409e642411d7a3881, type: 3}
+  - {fileID: 8300000, guid: ab326649c9fd42540af7f629f0594c53, type: 3}
   _soundPool: {fileID: 1686700851}
 --- !u!4 &1686700853
 Transform:

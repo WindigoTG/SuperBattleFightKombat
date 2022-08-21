@@ -1,7 +1,9 @@
+using Photon.Pun;
+using System;
 using System.Collections;
 using UnityEngine;
 
-public class LemonView : MonoBehaviour
+public class LemonView : MonoBehaviourPunCallbacks, IAttack
 {
     #region Fields
 
@@ -9,14 +11,18 @@ public class LemonView : MonoBehaviour
     [SerializeField] private float _animationSpeed = 1f;
     [SerializeField] private SpriteAnimationsConfig _spriteConfig;
     [SerializeField] private Rigidbody2D _rigidBody;
+    [SerializeField] private Collider2D _collider;
 
-    [SerializeField ]float _lifetime = 2f;
+    [SerializeField] float _lifetime = 2f;
+    [SerializeField] private int _damage = 1;
 
     private Coroutine _disableCoroutine;
 
-    private bool _isActive;
-
     private SpriteAnimatorController _animatorController;
+
+    private Action<LemonView> _onCollisionCallback;
+
+    private string _playerID;
 
     #endregion
 
@@ -26,7 +32,8 @@ public class LemonView : MonoBehaviour
     public Rigidbody2D RigidBody => _rigidBody;
     public Transform Transform => transform;
     public float Lifetime => _lifetime;
-    public bool IsActive => _isActive;
+    public string PlayerID => _playerID;
+    public int Damage => _damage;
 
     #endregion
 
@@ -35,6 +42,12 @@ public class LemonView : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        var damageable = collision.GetComponent<IDamageable>();
+        var attack = collision.GetComponent<IAttack>();
+        if ((damageable != null && damageable.PlayerID.Equals(_playerID)) ||
+            attack != null)
+            return;
+
         if (_disableCoroutine != null)
             StopCoroutine(_disableCoroutine);
 
@@ -56,22 +69,50 @@ public class LemonView : MonoBehaviour
 
     #region Methods
 
-    public void Activate()
+    public void Activate(Vector3 position, Vector2 velocity, string playerID, Action<LemonView> onCollisionCallback)
     {
-        gameObject.SetActive(true);
-        _rigidBody.velocity = Vector2.zero;
+        _onCollisionCallback = onCollisionCallback;
 
-        _isActive = true;
         _disableCoroutine = StartCoroutine(DisableLemon());
 
         _animatorController.StartAnimation(_spriteRenderer, AnimationTrack.Idle, true, _animationSpeed);
+
+        transform.position = position;
+        transform.localScale = velocity.x > 0 ? References.RightScale : References.LeftScale;
+        _rigidBody.velocity = velocity;
+
+        _playerID = playerID;
+
+        photonView.RPC(nameof(ActivateRPC), RpcTarget.Others, position, velocity, playerID);
+
+        SoundManager.Instance?.PlaySound(References.PEW_SOUND);
     }
+
+    [PunRPC]
+    private void ActivateRPC(Vector3 position, Vector2 velocity, string playerID)
+    {
+        _disableCoroutine = StartCoroutine(DisableLemon());
+
+        transform.position = position;
+        transform.localScale = velocity.x > 0 ? References.RightScale : References.LeftScale;
+        _rigidBody.velocity = velocity;
+
+        _playerID = playerID;
+
+        _animatorController.StartAnimation(_spriteRenderer, AnimationTrack.Idle, true, _animationSpeed);
+
+        SoundManager.Instance?.PlaySound(References.PEW_SOUND);
+    }
+
     public void Deactivate()
     {
-        gameObject.SetActive(false);
-        _isActive = false;
-
-        _animatorController.StopAnimation(_spriteRenderer);
+        if (!photonView.IsMine)
+            Destroy(gameObject);
+        else
+        {
+            _onCollisionCallback?.Invoke(this);
+            Destroy(gameObject);
+        }
     }
 
     private IEnumerator DisableLemon()

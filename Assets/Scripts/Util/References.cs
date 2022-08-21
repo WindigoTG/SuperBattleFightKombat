@@ -33,5 +33,8 @@ public class References
     private static string _deathSound = "Death";
     public static string DEATH_SOUND => _deathSound;
 
+    private static string _pewSound = "Pew";
+    public static string PEW_SOUND => _pewSound;
+
     #endregion
 }

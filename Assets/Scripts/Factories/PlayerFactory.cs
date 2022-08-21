@@ -15,6 +15,7 @@ public class PlayerFactory
     {
         //PlayerView view = Object.Instantiate(Resources.Load<PlayerView>("ModelX"));
         PlayerView view = PhotonNetwork.Instantiate("ModelX", new Vector3(0f, 0f, 0f), Quaternion.identity, 0).GetComponent<PlayerView>();
+        view.SetPlayerID(PhotonNetwork.LocalPlayer.UserId);
         return view;
     }
 

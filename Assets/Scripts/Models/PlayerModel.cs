@@ -171,10 +171,7 @@ public class PlayerModel
 
         SoundManager.Instance?.PlaySound("Death");
 
-        if (_contactsPoller.IsGrounded)
-            SetState(CharacterState.Death);
-        else
-            Respawn();
+        SetState(CharacterState.Death);
     }
 
     public void Respawn()

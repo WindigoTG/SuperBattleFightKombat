@@ -26,6 +26,8 @@ public class PlayerView : MonoBehaviourPunCallbacks, IDamageable
     [Space]
     [SerializeField] private SpriteAnimationsConfig _spriteAnimationsConfig;
 
+    private string _playerID;
+
     public Action<int> OnDamageTaken;
 
     Coroutine _blinking;
@@ -44,7 +46,7 @@ public class PlayerView : MonoBehaviourPunCallbacks, IDamageable
     public Transform GroundDashAttackOrigin => _groundDashAttack;
     public Transform WallAttackOrigin => _wallAttack;
     public Transform AirAttackOrigin => _airAttack;
-    
+    public string PlayerID => _playerID;
 
     #endregion
 
@@ -70,11 +72,46 @@ public class PlayerView : MonoBehaviourPunCallbacks, IDamageable
         _animatorController?.UpdateRegular();
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (!photonView.IsMine)
+            return;
+
+        CheckForAttack(collision.gameObject);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (!photonView.IsMine)
+            return;
+
+        CheckForAttack(collision.gameObject);
+    }
+    
     #endregion
 
 
 
     #region Methods
+
+    private void CheckForAttack(GameObject go)
+    {
+        var attack = go.GetComponent<IAttack>();
+        if (attack != null && attack.PlayerID != _playerID)
+            TakeDamage(attack.Damage);
+    }
+
+    public void SetPlayerID(string playerID)
+    {
+        _playerID = playerID;
+        photonView.RPC(nameof(SetPlayerIdRPC), RpcTarget.Others, playerID);
+    }
+
+    [PunRPC]
+    private void SetPlayerIdRPC(string playerID)
+    {
+        _playerID = playerID;
+    }
 
     public void SetAnimatorController(SpriteAnimatorController animationController)
     {
@@ -84,7 +121,7 @@ public class PlayerView : MonoBehaviourPunCallbacks, IDamageable
     public void StartAnimation(AnimationTrack animation)
     {
         ProcessAnimationRequest(animation);
-        photonView.RPC(nameof(StartAnimationRPC), RpcTarget.All, animation);
+        photonView.RPC(nameof(StartAnimationRPC), RpcTarget.Others, animation);
     }
 
     [PunRPC]
@@ -190,9 +227,10 @@ public class PlayerView : MonoBehaviourPunCallbacks, IDamageable
 
         _blinking = StartCoroutine(Blinking(duration));
 
-        photonView.RPC(nameof(StartBlinkingRPC), RpcTarget.All, duration);
+        photonView.RPC(nameof(StartBlinkingRPC), RpcTarget.Others, duration);
     }
 
+    [PunRPC]
     private void StartBlinkingRPC(float duration)
     {
         if (_blinking != null)

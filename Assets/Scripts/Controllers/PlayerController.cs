@@ -38,7 +38,7 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunObservable
         {
             _horisontalInput = Input.GetAxisRaw("Horizontal");
             _isJumpPressed = Input.GetKeyDown(KeyCode.Space);
-            _isAttackPressed = Input.GetMouseButton(0);
+            _isAttackPressed = Input.GetMouseButtonDown(0);
 
 
             _player.Update(new CurrentInputs

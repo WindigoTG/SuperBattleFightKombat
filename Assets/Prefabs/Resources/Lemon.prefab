@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3357953842816536163}
   - component: {fileID: 3357953842816536160}
   - component: {fileID: 3357953842816536161}
+  - component: {fileID: -7985241002935005291}
   m_Layer: 0
   m_Name: Lemon
   m_TagString: Untagged
@@ -140,4 +141,29 @@ MonoBehaviour:
   _animationSpeed: 1
   _spriteConfig: {fileID: 11400000, guid: 1f09da86e76e95a408c627b9bc830e48, type: 2}
   _rigidBody: {fileID: 3357953842816536160}
+  _collider: {fileID: 0}
   _lifetime: 2
+  _damage: 1
+--- !u!114 &-7985241002935005291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3357953842816536174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents:
+  - {fileID: 0}
+  sceneViewId: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
