@@ -25,12 +25,16 @@ public class PlayerView : MonoBehaviourPunCallbacks, IDamageable
     [SerializeField] private Transform _airAttack;
     [Space]
     [SerializeField] private SpriteAnimationsConfig _spriteAnimationsConfig;
+    [Space]
+    [SerializeField] private PlayerInfoUI _playerUiPrefab;
 
     private string _playerID;
 
-    public Action<int> OnDamageTaken;
+    public Action<int, string> OnDamageTaken;
 
     Coroutine _blinking;
+
+    private PlayerInfoUI _playerUi;
 
     #endregion
 
@@ -59,12 +63,17 @@ public class PlayerView : MonoBehaviourPunCallbacks, IDamageable
             GetComponent<SpriteRenderer>();
 
         _animatorController = new SpriteAnimatorController(_spriteAnimationsConfig);
+
+        _playerUi = Instantiate(_playerUiPrefab);
+        _playerUi.SetTarget(transform);
     }
 
     private void Start()
     {
         if (!photonView.IsMine)
             _rigidBody.bodyType = RigidbodyType2D.Kinematic;
+        else
+            SetPlayerName(PhotonNetwork.LocalPlayer.NickName);
     }
 
     private void Update()
@@ -87,7 +96,7 @@ public class PlayerView : MonoBehaviourPunCallbacks, IDamageable
 
         CheckForAttack(collision.gameObject);
     }
-    
+
     #endregion
 
 
@@ -98,7 +107,7 @@ public class PlayerView : MonoBehaviourPunCallbacks, IDamageable
     {
         var attack = go.GetComponent<IAttack>();
         if (attack != null && attack.PlayerID != _playerID)
-            TakeDamage(attack.Damage);
+            TakeDamage(attack.Damage, attack.PlayerID);
     }
 
     public void SetPlayerID(string playerID)
@@ -170,11 +179,17 @@ public class PlayerView : MonoBehaviourPunCallbacks, IDamageable
             case AnimationTrack.Death:
                 StartDeathAnimation();
                 break;
+            case AnimationTrack.IdlePreHenshin:
+                StartIdlePreHenshinAnimation();
+                break;
         }
     }
 
     private void StartIdleAnimation() =>
         _animatorController?.StartAnimation(_spriteRenderer, AnimationTrack.Idle, true, _animationSpeed);
+
+    private void StartIdlePreHenshinAnimation() =>
+        _animatorController?.StartAnimation(_spriteRenderer, AnimationTrack.IdlePreHenshin, true, _animationSpeed);
 
     private void StartRunAnimation() =>
         _animatorController?.StartAnimation(_spriteRenderer, AnimationTrack.Run, true, _animationSpeed);
@@ -209,15 +224,26 @@ public class PlayerView : MonoBehaviourPunCallbacks, IDamageable
     private void StartDeathAnimation() =>
         _animatorController?.StartAnimation(_spriteRenderer, AnimationTrack.Death, false, _animationSpeed);
 
-    public void Activate()
-    {
-        _spriteRenderer.enabled = true;
-    }
+    public void Activate() => photonView.RPC(nameof(SetActiveRPC), RpcTarget.All, true);
 
-    public void Deactivate()
+    public void Deactivate() => photonView.RPC(nameof(SetActiveRPC), RpcTarget.All, false);
+
+    [PunRPC]
+    private void SetActiveRPC(bool isActive)
     {
-        _animatorController.StopAnimation(_spriteRenderer);
-        _spriteRenderer.enabled = false;
+        _spriteRenderer.enabled = isActive;
+        _regularCollider.enabled = isActive;
+        _dashCollider.enabled = false;
+
+        if (!isActive)
+        {
+            _animatorController.StopAnimation(_spriteRenderer);
+            _rigidBody.bodyType = RigidbodyType2D.Kinematic;
+            _rigidBody.velocity = Vector2.zero;
+        }
+        else
+            if (photonView.IsMine)
+            _rigidBody.bodyType = RigidbodyType2D.Dynamic;
     }
 
     public void StartBlinking(float duration)
@@ -255,14 +281,34 @@ public class PlayerView : MonoBehaviourPunCallbacks, IDamageable
         _spriteRenderer.color = color;
     }
 
+    public void SetPlayerName(string name) => photonView.RPC(nameof(SetPlayerNameRPC), RpcTarget.All, name);
+
+    [PunRPC]
+    private void SetPlayerNameRPC(string name) => _playerUi.SetPlayerName(name);
+
+    public void SetPlayerHealth(int health) => photonView.RPC(nameof(SetPlayerHealthRPC), RpcTarget.All, health);
+
+    [PunRPC]
+    private void SetPlayerHealthRPC(int health) => _playerUi.SetPlayerHealth(health);
+
+    public void SetUiEnabled(bool isEnabled) => photonView.RPC(nameof(SetUiEnabledRPC), RpcTarget.All, isEnabled);
+
+    [PunRPC]
+    private void SetUiEnabledRPC(bool isEnabled) => _playerUi.SetUiEnabled(isEnabled);
+
+    public void PlaySound(string sound) => photonView.RPC(nameof(PlaySoundRPC), RpcTarget.All, sound);
+
+    [PunRPC]
+    private void PlaySoundRPC(string sound) => SoundManager.Instance?.PlaySound(sound);
+
     #endregion
 
 
     #region IDamageable
 
-    public void TakeDamage(int damage)
+    public void TakeDamage(int damage, string attackerID)
     {
-        OnDamageTaken?.Invoke(damage);
+        OnDamageTaken?.Invoke(damage, attackerID);
     }
 
     #endregion

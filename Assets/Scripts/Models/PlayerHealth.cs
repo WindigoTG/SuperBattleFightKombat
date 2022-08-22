@@ -10,15 +10,20 @@ public class PlayerHealth
     float _lastHitTime;
 
     public event Action Damage;
-    public event Action Death;
+    public event Action<string> Death;
+
+    PlayerView _playerView;
 
     public PlayerHealth()
     {
         Reset();
     }
 
-    public void TakeDamage(int damage)
+    public void TakeDamage(int damage, string attackerID)
     {
+        if (_currentHealth <= 0)
+            return;
+
         if (Time.time - _lastHitTime > _invincibilityPeriod)
         {
             _lastHitTime = Time.time;
@@ -29,8 +34,10 @@ public class PlayerHealth
                 Damage?.Invoke();
             else
             {
-                Death?.Invoke();
+                Death?.Invoke(attackerID);
             }
+
+            _playerView?.SetPlayerHealth(_currentHealth);
         }
 
     }
@@ -39,6 +46,13 @@ public class PlayerHealth
     {
         _currentHealth = _maxHealth;
         _lastHitTime = Time.time;
+        _playerView?.SetPlayerHealth(_currentHealth);
+    }
+
+    public void SetPlayerView(PlayerView view)
+    {
+        _playerView = view;
+        _playerView.SetPlayerHealth(_currentHealth);
     }
 }
 

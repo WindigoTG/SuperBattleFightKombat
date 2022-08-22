@@ -45,6 +45,18 @@ MonoBehaviour:
   - DeactivateRPC
   - StartBlinkingRPC
   - SetPlayerIdRPC
+  - SetPlayerReady
+  - SetPlayerReadyRPC
+  - StartHenshinRPC
+  - StartGameRPC
+  - SetPlayerHealthRPC
+  - SetPlayerNameRPC
+  - SetUiEnabledRPC
+  - OnPlayerDeath
+  - PlaySoundRPC
+  - SetActiveRPC
+  - OnPlayerDeathRPC
+  - StopGame
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1

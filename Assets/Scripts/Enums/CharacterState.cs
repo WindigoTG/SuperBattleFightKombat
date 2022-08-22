@@ -6,5 +6,7 @@ public enum CharacterState
     Fall = 3,
     Hurt = 4,
     WallCling = 5,
-    Death = 6
+    Death = 6,
+    IdlePreHenshin = 7,
+    Henshin = 8
 }

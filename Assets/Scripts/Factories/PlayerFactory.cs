@@ -13,7 +13,6 @@ public class PlayerFactory
 
     private PlayerView CreatePlayerView()
     {
-        //PlayerView view = Object.Instantiate(Resources.Load<PlayerView>("ModelX"));
         PlayerView view = PhotonNetwork.Instantiate("ModelX", new Vector3(0f, 0f, 0f), Quaternion.identity, 0).GetComponent<PlayerView>();
         view.SetPlayerID(PhotonNetwork.LocalPlayer.UserId);
         return view;
@@ -29,7 +28,9 @@ public class PlayerFactory
             { CharacterState.Fall, new FallState() },
             { CharacterState.WallCling, new WallClingState() },
             { CharacterState.Hurt, new HurtState() },
-            { CharacterState.Death, new DeathState() }
+            { CharacterState.Death, new DeathState() },
+            { CharacterState.IdlePreHenshin, new IdlePreHenshinState() },
+            { CharacterState.Henshin, new HenshinState() }
         };
     }
 

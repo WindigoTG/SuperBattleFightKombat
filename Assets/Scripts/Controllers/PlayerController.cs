@@ -1,5 +1,8 @@
 using Photon.Pun;
+using System;
 using UnityEngine;
+
+using Random = UnityEngine.Random;
 
 public class PlayerController : MonoBehaviourPunCallbacks, IPunObservable
 {
@@ -8,9 +11,14 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunObservable
     PlayerModel _player;
     PlayerFactory _playerfactory;
 
-    bool _isJumpPressed;
-    bool _isAttackPressed;
-    float _horisontalInput;
+    private bool _isJumpPressed;
+    private bool _isAttackPressed;
+    private float _horisontalInput;
+
+    private bool _isReady;
+
+    public Action OnReady;
+    public Action<string> OnDeath;
 
     #endregion
 
@@ -29,17 +37,20 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunObservable
 
         _player = _playerfactory.CreatePlayer();
 
-        _player.StartAtPosition(new Vector3(Random.Range(-2f,2f), 0, 0));
+        _player.NonHenshinStartAtPosition(new Vector3(Random.Range(-2f,2f), 0, 0));
+        _player.OnDeath += OnPlayerDeath;
     }
 
     public void Update()
     {
         if (photonView.IsMine)
         {
-            _horisontalInput = Input.GetAxisRaw("Horizontal");
-            _isJumpPressed = Input.GetKeyDown(KeyCode.Space);
-            _isAttackPressed = Input.GetMouseButtonDown(0);
-
+            if (_isReady)
+            {
+                _horisontalInput = Input.GetAxisRaw("Horizontal");
+                _isJumpPressed = Input.GetKeyDown(KeyCode.Space);
+                _isAttackPressed = Input.GetMouseButtonDown(0);
+            }
 
             _player.Update(new CurrentInputs
             {
@@ -52,13 +63,36 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunObservable
         _horisontalInput = default;
         _isJumpPressed = default;
         _isAttackPressed = default;
-
-
-        //_player.Move(Input.GetAxisRaw("Horizontal"));
-
-        //if (Input.GetKeyDown(KeyCode.Space))
-        //    _player.Jump();
     }
+
+    #endregion
+
+
+    #region Methods
+
+    private void OnHenshinFinished()
+    {
+        OnReady?.Invoke();
+        _player.OnReady -= OnHenshinFinished;
+    }
+
+    private void OnPlayerDeath(string attackerID)
+    {
+        OnDeath?.Invoke(attackerID);
+    }
+
+    public void StartHenshin()
+    {
+        _player.OnReady += OnHenshinFinished;
+        _player.SetState(CharacterState.Henshin);
+    }
+
+    public void StartGame()
+    {
+        _isReady = true;
+    }
+
+    public void RespawnPlayer() => _player.Respawn();
 
     #endregion
 
@@ -67,18 +101,7 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunObservable
 
     public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
     {
-        //if (stream.IsWriting)
-        //{
-        //    stream.SendNext(_horisontalInput);
-        //    stream.SendNext(_isJumpPressed);
-        //    stream.SendNext(_isAttackPressed);
-        //}
-        //else
-        //{
-        //    _horisontalInput = (float)stream.ReceiveNext();
-        //    _isJumpPressed = (bool)stream.ReceiveNext();
-        //    _isAttackPressed = (bool)stream.ReceiveNext();
-        //}
+
     }
 
     #endregion

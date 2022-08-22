@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -35,6 +36,9 @@ public class PlayerModel
     private PlayerState _activetState;
     private CharacterState _currentState;
     private CharacterState _previousState;
+
+    public Action OnReady;
+    public Action<string> OnDeath;
 
     #endregion
 
@@ -117,6 +121,12 @@ public class PlayerModel
         _currentState = state;
         _activetState = _playerStates[state];
         _activetState.Activate();
+
+        if (state == CharacterState.Idle && !_isReady)
+        {
+            _isReady = true;
+            OnReady?.Invoke();
+        }
     }
 
     public void ReserGroundCoyoteTime() => _currentGroundCoyoteTime = COYOTE_TIME;
@@ -133,7 +143,6 @@ public class PlayerModel
 
         _view.Activate();
 
-        _isReady = true;
         SetState(CharacterState.Idle);
 
         if (_isDead)
@@ -141,6 +150,20 @@ public class PlayerModel
             _health.Reset();
             _isDead = false;
         }
+    }
+
+    public void NonHenshinStartAtPosition(Vector3 position)
+    {
+        _lastCheckPoint = position;
+
+        RaycastHit2D hit = Physics2D.Raycast(position, Vector3.down, Mathf.Infinity, LayerMask.GetMask("Ground"));
+
+        _view.transform.position = new Vector3(position.x, hit.collider.bounds.max.y, 0);
+
+        _view.Activate();
+
+        SetState(CharacterState.IdlePreHenshin);
+        _health.SetPlayerView(_view);
     }
 
     private void ResetState()
@@ -153,31 +176,27 @@ public class PlayerModel
     {
         SetState(CharacterState.Hurt);
         _view.StartBlinking(1f);
-        SoundManager.Instance?.PlaySound("Hurt");
+        _view.PlaySound(References.HURT_SOUND);
     }
 
-    private void Die()
+    private void Die(string attackerID)
     {
-        //if (_isReady)
-        //{
-        //    _isReady = false;
-        //    _isDead = true;
-        //    ResetState();
-        //    StartAtPosition(_lastCheckPoint);
-        //}
-
-        _isReady = false;
         _isDead = true;
 
-        SoundManager.Instance?.PlaySound("Death");
+        _view.PlaySound(References.DEATH_SOUND);
 
         SetState(CharacterState.Death);
+        _view.SetUiEnabled(false);
+
+        OnDeath?.Invoke(attackerID);
     }
 
     public void Respawn()
     {
         ResetState();
         StartAtPosition(_lastCheckPoint);
+        _view.Activate();
+        _view.SetUiEnabled(true);
     }
 
     public void Shoot()

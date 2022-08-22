@@ -1,8 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class DeathState : PlayerState
+public class HenshinState : PlayerState
 {
     #region Fields
 
@@ -25,13 +23,16 @@ public class DeathState : PlayerState
     public override void Activate()
     {
         _view.RigidBody.velocity = _view.RigidBody.velocity.Change(x: 0.0f);
-        _view.StartAnimation(AnimationTrack.Death);
+        _view.StartAnimation(AnimationTrack.Henshin);
     }
 
     public override void Update(CurrentInputs inputs)
     {
         if (_view.IsAnimationDone)
-            _view.Deactivate();
+            _model.SetState(CharacterState.Idle);
+
+        _view.RigidBody.velocity = _view.RigidBody.velocity.Change(x: (_contactPoller.GroundVelocity.x != 0 && _contactPoller.IsGrounded) ?
+                                                                        _contactPoller.GroundVelocity.x : 0);
     }
 
     public override void Attack() { }
