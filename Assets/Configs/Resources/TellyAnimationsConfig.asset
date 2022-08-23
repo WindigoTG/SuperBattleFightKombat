@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db483d8634870fa4d89ebe9d17d01f08, type: 3}
+  m_Name: TellyAnimationsConfig
+  m_EditorClassIdentifier: 
+  Sequences:
+  - Track: 0
+    Sprites:
+    - {fileID: -1398259897, guid: cd959fe38a7182e47964e438fc3390c5, type: 3}
+    - {fileID: -1452351842, guid: cd959fe38a7182e47964e438fc3390c5, type: 3}
+    - {fileID: -249414682, guid: cd959fe38a7182e47964e438fc3390c5, type: 3}
+    - {fileID: -866196439, guid: cd959fe38a7182e47964e438fc3390c5, type: 3}
+    - {fileID: -424853014, guid: cd959fe38a7182e47964e438fc3390c5, type: 3}
+    - {fileID: -716448983, guid: cd959fe38a7182e47964e438fc3390c5, type: 3}
+    - {fileID: -489910272, guid: cd959fe38a7182e47964e438fc3390c5, type: 3}
+    - {fileID: 1822639291, guid: cd959fe38a7182e47964e438fc3390c5, type: 3}
+    - {fileID: 334145403, guid: cd959fe38a7182e47964e438fc3390c5, type: 3}
+    - {fileID: -1635666841, guid: cd959fe38a7182e47964e438fc3390c5, type: 3}
+    - {fileID: 1220322374, guid: cd959fe38a7182e47964e438fc3390c5, type: 3}
+    - {fileID: 238656640, guid: cd959fe38a7182e47964e438fc3390c5, type: 3}

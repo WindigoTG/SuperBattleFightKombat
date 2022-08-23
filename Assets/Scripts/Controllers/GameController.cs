@@ -17,6 +17,8 @@ public class GameController : MonoBehaviourPunCallbacks
     [SerializeField] private int _startingLives = 5;
     [Space]
     [SerializeField] private GameUI _gameUI;
+    [Space]
+    [SerializeField] private TellyController _tellyController;
 
     List<Player> _currentPlayers = new List<Player>();
     Dictionary<string, bool> _readyPlayers = new Dictionary<string, bool>();
@@ -67,7 +69,11 @@ public class GameController : MonoBehaviourPunCallbacks
 
         if (PhotonNetwork.IsMasterClient)
             _readyUpCoroutine = StartCoroutine(StartHenshin());
+    }
 
+    private void Update()
+    {
+        _tellyController.UpdateRegular();
     }
 
     private void OnDestroy()
@@ -149,6 +155,9 @@ public class GameController : MonoBehaviourPunCallbacks
     {
         _isGameStarted = true;
         _localPlayerContoller.StartGame();
+
+        if (PhotonNetwork.IsMasterClient)
+            _tellyController.StartSpawningTellys();
     }
 
     private void OnLocalPlayerDead(string attackerID) => photonView.RPC(nameof(OnPlayerDeathRPC), RpcTarget.All, _localPlayerID, attackerID);
@@ -202,7 +211,8 @@ public class GameController : MonoBehaviourPunCallbacks
     [PunRPC]
     private void StopGame()
     {
-
+        if (PhotonNetwork.IsMasterClient)
+            _tellyController.KillAndStopSpawningTellys();
     }
 
     #endregion
@@ -222,7 +232,12 @@ public class GameController : MonoBehaviourPunCallbacks
         }
 
         if (!_isGameStarted)
+        {
             CheckIfAllPlayersAreReady();
+            return;
+        }
+
+        _tellyController.TakeOver();
     }
 
     public override void OnPlayerLeftRoom(Player otherPlayer)

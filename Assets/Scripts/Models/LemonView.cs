@@ -42,10 +42,10 @@ public class LemonView : MonoBehaviourPunCallbacks, IAttack
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        var damageable = collision.GetComponent<IDamageable>();
-        var attack = collision.GetComponent<IAttack>();
+        var damageable = collision.gameObject.GetComponent<IDamageable>();
+        var attack = collision.gameObject.GetComponent<IAttack>();
         if ((damageable != null && damageable.PlayerID.Equals(_playerID)) ||
-            attack != null)
+            attack != null || collision.isTrigger)
             return;
 
         if (_disableCoroutine != null)
