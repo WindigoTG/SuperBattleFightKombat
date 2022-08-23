@@ -73,7 +73,10 @@ public class PlayerView : MonoBehaviourPunCallbacks, IDamageable
         if (!photonView.IsMine)
             _rigidBody.bodyType = RigidbodyType2D.Kinematic;
         else
+        {
+            FindObjectOfType<Cinemachine.CinemachineVirtualCamera>().Follow = transform;
             SetPlayerName(PhotonNetwork.LocalPlayer.NickName);
+        }
     }
 
     private void Update()
@@ -90,6 +93,14 @@ public class PlayerView : MonoBehaviourPunCallbacks, IDamageable
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (!photonView.IsMine)
+            return;
+
+        CheckForAttack(collision.gameObject);
+    }
+
+    private void OnCollisionStay2D(Collision2D collision)
     {
         if (!photonView.IsMine)
             return;

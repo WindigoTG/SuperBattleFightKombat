@@ -168,6 +168,8 @@ public class GameController : MonoBehaviourPunCallbacks
             _gameUI.UpdateScoreForPlayer(_scorePerPlayer[attackerID], attackerID);
         }
 
+        Debug.Log($"---------- {playerID} = {_localPlayerID} : {playerID.Equals(_localPlayerID)} ----------");
+
         if (playerID.Equals(_localPlayerID))
             StartCoroutine(RespawnPlayer());
 
@@ -176,8 +178,9 @@ public class GameController : MonoBehaviourPunCallbacks
 
     private IEnumerator RespawnPlayer()
     {
+        Debug.Log("KBA");
         yield return new WaitForSeconds(_respawnTime);
-
+        Debug.Log("KPR");
         _localPlayerContoller.RespawnPlayer();
     }
 

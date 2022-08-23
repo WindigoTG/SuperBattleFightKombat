@@ -139,7 +139,7 @@ public class PlayerModel
 
         RaycastHit2D hit = Physics2D.Raycast(position, Vector3.down, Mathf.Infinity, LayerMask.GetMask("Ground"));
 
-        _view.transform.position = new Vector3(position.x, hit.collider.bounds.max.y, 0);
+        _view.transform.position = new Vector3(position.x, hit.point.y + 1.0f, 0);
 
         _view.Activate();
 
@@ -158,7 +158,7 @@ public class PlayerModel
 
         RaycastHit2D hit = Physics2D.Raycast(position, Vector3.down, Mathf.Infinity, LayerMask.GetMask("Ground"));
 
-        _view.transform.position = new Vector3(position.x, hit.collider.bounds.max.y, 0);
+        _view.transform.position = new Vector3(position.x, hit.point.y + 1f, 0);
 
         _view.Activate();
 
