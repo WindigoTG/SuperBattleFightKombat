@@ -30,21 +30,13 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunObservable
         _playerfactory = new PlayerFactory();
     }
 
-    private void Start()
-    {
-        if (!photonView.IsMine)
-            return;
-
-        _player = _playerfactory.CreatePlayer();
-
-        _player.NonHenshinStartAtPosition(new Vector3(Random.Range(-2f,2f), 0, 0));
-        _player.OnDeath += OnPlayerDeath;
-    }
-
     public void Update()
     {
         if (photonView.IsMine)
         {
+            if (_player == null)
+                return;
+
             if (_isReady)
             {
                 _horisontalInput = Input.GetAxisRaw("Horizontal");
@@ -69,6 +61,14 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunObservable
 
 
     #region Methods
+
+    public void Spawn(Character character)
+    {
+        _player = _playerfactory.CreatePlayer(character);
+
+        _player.NonHenshinStartAtPosition(new Vector3(Random.Range(-3f, 3f), 0, 0));
+        _player.OnDeath += OnPlayerDeath;
+    }
 
     private void OnHenshinFinished()
     {

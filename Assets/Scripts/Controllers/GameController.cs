@@ -17,11 +17,13 @@ public class GameController : MonoBehaviourPunCallbacks
     [SerializeField] private int _startingLives = 5;
     [Space]
     [SerializeField] private GameUI _gameUI;
+    [SerializeField] private CharacterSelectionUI _characterSelectionUI;
     [Space]
     [SerializeField] private TellyController _tellyController;
 
     List<Player> _currentPlayers = new List<Player>();
     Dictionary<string, bool> _readyPlayers = new Dictionary<string, bool>();
+    Dictionary<string, bool> _playersSelectedCharacter = new Dictionary<string, bool>();
     Dictionary<string, int> _livesPerPlayer = new Dictionary<string, int>();
     Dictionary<string, int> _scorePerPlayer = new Dictionary<string, int>();
 
@@ -30,6 +32,7 @@ public class GameController : MonoBehaviourPunCallbacks
 
     private bool _isGameStarted;
     private bool _isReadySequenceStarted;
+    private bool _areCharactersSelected;
 
     private Coroutine _readyUpCoroutine;
     private Coroutine _startUpCoroutine;
@@ -38,6 +41,12 @@ public class GameController : MonoBehaviourPunCallbacks
 
 
     #region Unity Methods
+
+    private void Awake()
+    {
+        _characterSelectionUI.Init();
+        _characterSelectionUI.SetEnabled(false);
+    }
 
     void Start()
     {
@@ -55,6 +64,7 @@ public class GameController : MonoBehaviourPunCallbacks
         {
             _currentPlayers.Add(player.Value);
             _readyPlayers.Add(player.Value.UserId, false);
+            _playersSelectedCharacter.Add(player.Value.UserId, false);
         }
         ResetLivesAndScore();
 
@@ -67,8 +77,8 @@ public class GameController : MonoBehaviourPunCallbacks
         _localPlayerContoller.OnReady += OnLocalPlayerReady;
         _localPlayerContoller.OnDeath += OnLocalPlayerDead;
 
-        if (PhotonNetwork.IsMasterClient)
-            _readyUpCoroutine = StartCoroutine(StartHenshin());
+        _characterSelectionUI.SetEnabled(true);
+        _characterSelectionUI.OnCharacterSelected += OnCharacterSelected;
     }
 
     private void Update()
@@ -101,6 +111,24 @@ public class GameController : MonoBehaviourPunCallbacks
 
         foreach (var player in _currentPlayers)
             _scorePerPlayer.Add(player.UserId, 0);
+    }
+
+    private void OnCharacterSelected(Character character)
+    {
+        _characterSelectionUI.SetEnabled(false);
+        _characterSelectionUI.OnCharacterSelected -= OnCharacterSelected;
+
+        _localPlayerContoller.Spawn(character);
+        photonView.RPC(nameof(SetPlayerMadeSelectionRPC), RpcTarget.All, _localPlayerID);
+    }
+
+    [PunRPC]
+    private void SetPlayerMadeSelectionRPC(string playerId)
+    {
+        if (_playersSelectedCharacter.ContainsKey(playerId))
+            _playersSelectedCharacter[playerId] = true;
+
+        CheckIfAllCharactersSelected();
     }
 
     private void OnLocalPlayerReady()
@@ -143,6 +171,18 @@ public class GameController : MonoBehaviourPunCallbacks
         _startUpCoroutine = StartCoroutine(StartUp());
     }
 
+    private void CheckIfAllCharactersSelected()
+    {
+        foreach (var player in _playersSelectedCharacter)
+            if (!player.Value)
+                return;
+
+        _areCharactersSelected = true;
+
+        if (PhotonNetwork.IsMasterClient)
+            _readyUpCoroutine = StartCoroutine(StartHenshin());
+    }
+
     private IEnumerator StartUp()
     {
         yield return new WaitForSeconds(_preHenshinDelay);
@@ -177,8 +217,6 @@ public class GameController : MonoBehaviourPunCallbacks
             _gameUI.UpdateScoreForPlayer(_scorePerPlayer[attackerID], attackerID);
         }
 
-        Debug.Log($"---------- {playerID} = {_localPlayerID} : {playerID.Equals(_localPlayerID)} ----------");
-
         if (playerID.Equals(_localPlayerID))
             StartCoroutine(RespawnPlayer());
 
@@ -187,9 +225,8 @@ public class GameController : MonoBehaviourPunCallbacks
 
     private IEnumerator RespawnPlayer()
     {
-        Debug.Log("KBA");
         yield return new WaitForSeconds(_respawnTime);
-        Debug.Log("KPR");
+
         _localPlayerContoller.RespawnPlayer();
     }
 
@@ -225,6 +262,12 @@ public class GameController : MonoBehaviourPunCallbacks
         if (!PhotonNetwork.IsMasterClient)
             return;
 
+        if (!_areCharactersSelected)
+        {
+            CheckIfAllCharactersSelected();
+            return;
+        }
+
         if (!_isReadySequenceStarted)
         {
             _readyUpCoroutine = StartCoroutine(StartHenshin());
@@ -255,6 +298,9 @@ public class GameController : MonoBehaviourPunCallbacks
 
         if (_scorePerPlayer.ContainsKey(otherPlayer.UserId))
             _scorePerPlayer.Remove(otherPlayer.UserId);
+
+        if (_playersSelectedCharacter.ContainsKey(otherPlayer.UserId))
+            _playersSelectedCharacter.Remove(otherPlayer.UserId);
     }
 
     #endregion
