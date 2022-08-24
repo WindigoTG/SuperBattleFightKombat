@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3357953842816536174
+--- !u!1 &1730645319466003826
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,26 +8,26 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3357953842816536165}
-  - component: {fileID: 3357953842816536162}
-  - component: {fileID: 3357953842816536163}
-  - component: {fileID: 3357953842816536160}
-  - component: {fileID: 3357953842816536161}
-  - component: {fileID: -7985241002935005291}
+  - component: {fileID: 1730645319466003833}
+  - component: {fileID: 1730645319466003838}
+  - component: {fileID: 1730645319466003839}
+  - component: {fileID: 1730645319466003836}
+  - component: {fileID: 1730645319466003837}
+  - component: {fileID: 2860661080699874441}
   m_Layer: 0
-  m_Name: Lemon
+  m_Name: Kunai
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3357953842816536165
+--- !u!4 &1730645319466003833
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3357953842816536174}
+  m_GameObject: {fileID: 1730645319466003826}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -36,13 +36,13 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &3357953842816536162
+--- !u!212 &1730645319466003838
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3357953842816536174}
+  m_GameObject: {fileID: 1730645319466003826}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -77,9 +77,9 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -946107545, guid: dcd40520a476cad4d81e42988199f69c, type: 3}
+  m_Sprite: {fileID: -1049767344, guid: 4710613d2b750504db89332f15cb336c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 0.32, y: 0.28}
@@ -88,13 +88,13 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!70 &3357953842816536163
+--- !u!70 &1730645319466003839
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3357953842816536174}
+  m_GameObject: {fileID: 1730645319466003826}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -102,16 +102,16 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.32, y: 0.28}
+  m_Size: {x: 0.5, y: 0.28}
   m_Direction: 1
---- !u!50 &3357953842816536160
+--- !u!50 &1730645319466003836
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3357953842816536174}
+  m_GameObject: {fileID: 1730645319466003826}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -125,33 +125,33 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!114 &3357953842816536161
+--- !u!114 &1730645319466003837
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3357953842816536174}
+  m_GameObject: {fileID: 1730645319466003826}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d782e5a7fee62b744b6c15c7613d7c09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _spriteRenderer: {fileID: 3357953842816536162}
+  _spriteRenderer: {fileID: 1730645319466003838}
   _animationSpeed: 10
-  _spriteConfig: {fileID: 11400000, guid: 1f09da86e76e95a408c627b9bc830e48, type: 2}
-  _rigidBody: {fileID: 3357953842816536160}
+  _spriteConfig: {fileID: 0}
+  _rigidBody: {fileID: 1730645319466003836}
   _lifetime: 2
   _damage: 1
-  _effectsPrefab: {fileID: 0}
-  _soundEffectName: 
---- !u!114 &-7985241002935005291
+  _effectsPrefab: {fileID: 2254498614533326587, guid: 8450b3e6edc1c5a49a3005e1c67d7d66, type: 3}
+  _soundEffectName: Cling
+--- !u!114 &2860661080699874441
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3357953842816536174}
+  m_GameObject: {fileID: 1730645319466003826}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}

@@ -23,6 +23,7 @@ public class PlayerView : MonoBehaviourPunCallbacks, IDamageable
     [SerializeField] private Transform _groundDashAttack;
     [SerializeField] private Transform _wallAttack;
     [SerializeField] private Transform _airAttack;
+    [SerializeField] private Transform _groundUpAttack;
     [Space]
     [SerializeField] private SpriteAnimationsConfig _spriteAnimationsConfig;
     [Space]
@@ -50,6 +51,7 @@ public class PlayerView : MonoBehaviourPunCallbacks, IDamageable
     public Transform GroundDashAttackOrigin => _groundDashAttack;
     public Transform WallAttackOrigin => _wallAttack;
     public Transform AirAttackOrigin => _airAttack;
+    public Transform GroundUpAttackOrigin => _groundUpAttack;
     public string PlayerID => _playerID;
 
     #endregion
@@ -176,22 +178,34 @@ public class PlayerView : MonoBehaviourPunCallbacks, IDamageable
                 StartHurtAnimation();
                 break;
             case AnimationTrack.AttackStand:
-                StartShootStandAnimation();
+                StartAttackStandAnimation();
                 break;
             case AnimationTrack.AttackRun:
-                StartShootRunAnimation();
+                StartAttackRunAnimation();
                 break;
             case AnimationTrack.AttackJump:
-                StartShootJumpAnimation();
+                StartAttackJumpAnimation();
                 break;
             case AnimationTrack.AttakWallCling:
-                StartShootWallClingAnimation();
+                StartAttackWallClingAnimation();
                 break;
             case AnimationTrack.Death:
                 StartDeathAnimation();
                 break;
             case AnimationTrack.IdlePreHenshin:
                 StartIdlePreHenshinAnimation();
+                break;
+            case AnimationTrack.AttackStandAlter:
+                StartAttackStandAlterAnimation();
+                break;
+            case AnimationTrack.AttackJumpAlter:
+                StartAttackJumpAlterAnimation();
+                break;
+            case AnimationTrack.AttackStandUp:
+                StartAttackStandUpAnimation();
+                break;
+            case AnimationTrack.AttackStandUpAlter:
+                StartAttackStandUpAlterAnimation();
                 break;
         }
     }
@@ -220,17 +234,29 @@ public class PlayerView : MonoBehaviourPunCallbacks, IDamageable
     private void StartHurtAnimation() =>
         _animatorController?.StartAnimation(_spriteRenderer, AnimationTrack.TakeHit, false, _animationSpeed);
 
-    private void StartShootStandAnimation() =>
+    private void StartAttackStandAnimation() =>
             _animatorController?.StartAnimation(_spriteRenderer, AnimationTrack.AttackStand, false, _animationSpeed, true);
 
-    private void StartShootRunAnimation() =>
+    private void StartAttackStandAlterAnimation() =>
+            _animatorController?.StartAnimation(_spriteRenderer, AnimationTrack.AttackStandAlter, false, _animationSpeed, true);
+
+    private void StartAttackRunAnimation() =>
             _animatorController?.StartAnimation(_spriteRenderer, AnimationTrack.AttackRun, true, _animationSpeed);
 
-    private void StartShootJumpAnimation() =>
+    private void StartAttackJumpAnimation() =>
             _animatorController?.StartAnimation(_spriteRenderer, AnimationTrack.AttackJump, false, _animationSpeed, true);
 
-    private void StartShootWallClingAnimation() =>
+    private void StartAttackJumpAlterAnimation() =>
+            _animatorController?.StartAnimation(_spriteRenderer, AnimationTrack.AttackJumpAlter, false, _animationSpeed, true);
+
+    private void StartAttackWallClingAnimation() =>
         _animatorController?.StartAnimation(_spriteRenderer, AnimationTrack.AttakWallCling, false, _animationSpeed, true);
+
+    private void StartAttackStandUpAnimation() =>
+            _animatorController?.StartAnimation(_spriteRenderer, AnimationTrack.AttackStandUp, false, _animationSpeed, true);
+
+    private void StartAttackStandUpAlterAnimation() =>
+            _animatorController?.StartAnimation(_spriteRenderer, AnimationTrack.AttackStandUpAlter, false, _animationSpeed, true);
 
     private void StartDeathAnimation() =>
         _animatorController?.StartAnimation(_spriteRenderer, AnimationTrack.Death, false, _animationSpeed);

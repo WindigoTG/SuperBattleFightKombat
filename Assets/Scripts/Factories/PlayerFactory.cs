@@ -36,6 +36,32 @@ public class PlayerFactory
                     { CharacterState.IdlePreHenshin, new IdlePreHenshinState() },
                     { CharacterState.Henshin, new HenshinState() }
                 };
+            case Character.ModelP:
+                return new Dictionary<CharacterState, PlayerState>
+                {
+                    { CharacterState.Idle, new IdleState() },
+                    { CharacterState.Run, new ModelPRunState() },
+                    { CharacterState.Jump, new JumpState() },
+                    { CharacterState.Fall, new FallState() },
+                    { CharacterState.WallCling, new WallClingState() },
+                    { CharacterState.Hurt, new HurtState() },
+                    { CharacterState.Death, new DeathState() },
+                    { CharacterState.IdlePreHenshin, new IdlePreHenshinState() },
+                    { CharacterState.Henshin, new HenshinState() }
+                };
+            case Character.ModelF:
+                return new Dictionary<CharacterState, PlayerState>
+                {
+                    { CharacterState.Idle, new ModelFIdleState() },
+                    { CharacterState.Run, new ModelFRunState() },
+                    { CharacterState.Jump, new ModelFJumpState() },
+                    { CharacterState.Fall, new ModelFFallState() },
+                    { CharacterState.WallCling, new ModelFWallClingState() },
+                    { CharacterState.Hurt, new HurtState() },
+                    { CharacterState.Death, new DeathState() },
+                    { CharacterState.IdlePreHenshin, new IdlePreHenshinState() },
+                    { CharacterState.Henshin, new HenshinState() }
+                };
         }
     }
 
@@ -45,7 +71,11 @@ public class PlayerFactory
         {
             case Character.ModelX:
             default:
-                return new PlayerWeapon();
+                return new ModelXWeapon();
+            case Character.ModelP:
+                return new ModelPWeapon();
+            case Character.ModelF:
+                return new ModelFWeapon();
         }
     }
 

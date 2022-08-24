@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class WallClingState : PlayerState
+public class ModelFWallClingState : PlayerState
 {
     #region Fields
 
@@ -32,7 +32,10 @@ public class WallClingState : PlayerState
     {
         _model.ResetWallCoyoteTime();
 
-        if (inputs.IsJumpPressed)
+        if (_isAttacking && _view.IsAnimationDone)
+            _isAttacking = false;
+
+        if (inputs.IsJumpPressed && !_isAttacking)
         {
             _model.SetState(CharacterState.Jump);
             return;
@@ -49,7 +52,7 @@ public class WallClingState : PlayerState
 
             return;
         }
-        
+
         Move(horisontal);
         if (!(Mathf.Abs(horisontal) > References.InputThreshold) ||
             (horisontal > 0 && !_contactPoller.HasRightContacts) ||
@@ -69,7 +72,7 @@ public class WallClingState : PlayerState
                 (inputHor < 0 && _contactPoller.HasLeftContacts))
                 newVelocity = Time.fixedDeltaTime * _model.CurrentSpeed * (inputHor < 0 ? -1 : 1);
         }
-        
+
         _view.RigidBody.velocity = _view.RigidBody.velocity.Change(x: newVelocity);
 
         if (newVelocity == 0)
@@ -78,6 +81,9 @@ public class WallClingState : PlayerState
 
     public override void Attack()
     {
+        if (_isAttacking && !_view.IsAnimationDone)
+            return;
+
         if (!_model.Weapon.Attack(_view.WallAttackOrigin.position, -_view.transform.localScale.x))
             return;
 

@@ -112,9 +112,1764 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: mmzxa_boss_modelf_atlas_0
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 1970
+        width: 22
+        height: 44
+      alignment: 9
+      pivot: {x: 0.32141945, y: 0.43489492}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 005cc3720019e2341aebda70280ac32d
+      internalID: 794373935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelf_atlas_1
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 1970
+        width: 22
+        height: 44
+      alignment: 9
+      pivot: {x: 0.3288602, y: 0.43303335}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97a9a4a01a9ffcb418913c79f5b6a76a
+      internalID: 183600366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelf_atlas_2
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 1970
+        width: 22
+        height: 44
+      alignment: 9
+      pivot: {x: 0.32513982, y: 0.43489492}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02c1b23e65bd89c41bbc0161df8c1da5
+      internalID: 401787390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelf_atlas_3
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 1970
+        width: 24
+        height: 44
+      alignment: 9
+      pivot: {x: 0.33397675, y: 0.43184593}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 630c3c1739da0954889a46c010508b5d
+      internalID: 2036972492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelf_atlas_4
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 1817
+        width: 28
+        height: 45
+      alignment: 9
+      pivot: {x: 0.46260616, y: 0.42438424}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c0364ff1c9cb38498eca534e5ee6a7b
+      internalID: -1058651790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelf_atlas_5
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 1817
+        width: 29
+        height: 40
+      alignment: 9
+      pivot: {x: 0.4499396, y: 0.47453308}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9afd4790af30bc4d89c66434aa3f72c
+      internalID: -1173274823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelf_atlas_6
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 1817
+        width: 30
+        height: 40
+      alignment: 9
+      pivot: {x: 0.43374836, y: 0.4745056}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21eda6beec06e3045878be40029b9673
+      internalID: -1589125699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelf_atlas_7
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 1818
+        width: 37
+        height: 32
+      alignment: 9
+      pivot: {x: 0.64827335, y: 0.5957489}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 146210d070418a44798cd6bc22e11a9c
+      internalID: 1478071155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelf_atlas_8
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 1668
+        width: 38
+        height: 30
+      alignment: 9
+      pivot: {x: 0.65683407, y: 0.6666463}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d13e0963f8772b84a973620567f2e152
+      internalID: 1568258914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelf_atlas_9
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 1668
+        width: 42
+        height: 54
+      alignment: 9
+      pivot: {x: 0.6934655, y: 0.36966732}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93e3b2afae2763441a2a90e1fe5e9240
+      internalID: 2075710229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelf_atlas_10
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 1668
+        width: 44
+        height: 94
+      alignment: 9
+      pivot: {x: 0.70492554, y: 0.21256337}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e938e5dad88887d489250ec0caaea469
+      internalID: 1767698951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelf_atlas_11
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 1668
+        width: 51
+        height: 96
+      alignment: 9
+      pivot: {x: 0.6678347, y: 0.20843633}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d48357e22a8c77241a95dffb8d4c4c9b
+      internalID: -686702002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelf_atlas_12
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 1668
+        width: 54
+        height: 99
+      alignment: 9
+      pivot: {x: 0.64884555, y: 0.20142834}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 414b46f1e24ecbd4aace27033bf66b32
+      internalID: 1129909595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelf_atlas_13
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 1668
+        width: 53
+        height: 107
+      alignment: 9
+      pivot: {x: 0.6014744, y: 0.18823585}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f246a056b6f61854bb226f5bf09fbdf0
+      internalID: 1241495224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelf_atlas_14
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 1668
+        width: 53
+        height: 103
+      alignment: 9
+      pivot: {x: 0.6233497, y: 0.1933416}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f412b8f543f5c464cb645238bb99c106
+      internalID: -1778765776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelf_atlas_15
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 1667
+        width: 51
+        height: 109
+      alignment: 9
+      pivot: {x: 0.5895697, y: 0.19266728}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ecde7877a572d34ca280ec171575aa5
+      internalID: -1614891032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelf_atlas_16
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 1668
+        width: 56
+        height: 107
+      alignment: 9
+      pivot: {x: 0.6076306, y: 0.18674362}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9c110fe792fa2d479cf8af27f02ffa0
+      internalID: -1421420545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelf_atlas_17
+      rect:
+        serializedVersion: 2
+        x: 506
+        y: 1668
+        width: 57
+        height: 110
+      alignment: 9
+      pivot: {x: 0.6304246, y: 0.18224654}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57f8662f65cdf9848a8fe14955db6db0
+      internalID: 633811554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelf_atlas_18
+      rect:
+        serializedVersion: 2
+        x: 573
+        y: 1668
+        width: 52
+        height: 104
+      alignment: 9
+      pivot: {x: 0.6362387, y: 0.191668}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 444574465582225488e5fb91b018f4e4
+      internalID: -1851285270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelf_atlas_19
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 1668
+        width: 33
+        height: 35
+      alignment: 9
+      pivot: {x: 0.6092437, y: 0.56989396}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a74531a97abf3514191596e6d8c8cab0
+      internalID: 130703885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelf_atlas_20
+      rect:
+        serializedVersion: 2
+        x: 673
+        y: 1668
+        width: 33
+        height: 35
+      alignment: 9
+      pivot: {x: 0.6071537, y: 0.57052875}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d1b39d9265d4b746b813835351964d1
+      internalID: -671184043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelf_atlas_21
+      rect:
+        serializedVersion: 2
+        x: 716
+        y: 1669
+        width: 33
+        height: 35
+      alignment: 9
+      pivot: {x: 0.6067949, y: 0.5717425}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90e501880db925b4d8304a239db91253
+      internalID: 1211661349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelf_atlas_22
+      rect:
+        serializedVersion: 2
+        x: 760
+        y: 1669
+        width: 33
+        height: 35
+      alignment: 9
+      pivot: {x: 0.6073442, y: 0.5727434}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c034977c4ffad4a469d04c98b6bdd1b7
+      internalID: 772503853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelf_atlas_23
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 1669
+        width: 33
+        height: 35
+      alignment: 9
+      pivot: {x: 0.6062585, y: 0.5723982}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a7f427d18dd49746b46b5fdd6a4992f
+      internalID: 494797490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelf_atlas_24
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 1568
+        width: 35
+        height: 41
+      alignment: 9
+      pivot: {x: 0.57282716, y: 0.46392375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3f6627a404a45b40a21c7fc7039087d
+      internalID: 567384340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelf_atlas_25
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 1568
+        width: 36
+        height: 42
+      alignment: 9
+      pivot: {x: 0.5564236, y: 0.45278496}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e3fb1c362670e94289f8284fdd36649
+      internalID: 967080027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelf_atlas_26
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 1568
+        width: 36
+        height: 42
+      alignment: 9
+      pivot: {x: 0.5571696, y: 0.45243618}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab0593c17a4edaf469ec55ec70ad5db5
+      internalID: -1154011492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelf_atlas_27
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 1568
+        width: 36
+        height: 43
+      alignment: 9
+      pivot: {x: 0.55601245, y: 0.4421642}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a44564a9c75bf34795e7379a9f065ac
+      internalID: 739959180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelf_atlas_28
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 1461
+        width: 40
+        height: 41
+      alignment: 9
+      pivot: {x: 0.5257187, y: 0.44060534}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d64f9aec99c391646a1b020e56dc8d5f
+      internalID: 21973787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelf_atlas_29
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 1462
+        width: 32
+        height: 39
+      alignment: 9
+      pivot: {x: 0.53317547, y: 0.4614383}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5efb2f06e6c703e4e8c99eb2858390dc
+      internalID: 304213105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelf_atlas_30
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 1461
+        width: 28
+        height: 38
+      alignment: 9
+      pivot: {x: 0.64335304, y: 0.4745066}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b030ecc9b6f776f489f49e0b1081f62f
+      internalID: -1925683683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelf_atlas_31
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 1462
+        width: 31
+        height: 40
+      alignment: 9
+      pivot: {x: 0.5824713, y: 0.44971925}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4c238f14897f3942abfb961d75aa19a
+      internalID: 477627503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelf_atlas_32
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 1462
+        width: 36
+        height: 39
+      alignment: 9
+      pivot: {x: 0.5278108, y: 0.4358223}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dedbb95be3efe8e4bbe2f548e15ce866
+      internalID: 126041518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelf_atlas_33
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 1462
+        width: 34
+        height: 41
+      alignment: 9
+      pivot: {x: 0.5588244, y: 0.46341762}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a68810769bfa19e488bb4af183b32144
+      internalID: 2001824659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelf_atlas_34
+      rect:
+        serializedVersion: 2
+        x: 506
+        y: 1460
+        width: 31
+        height: 40
+      alignment: 9
+      pivot: {x: 0.6136612, y: 0.47533876}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dee6ac30c1a47db419d1bd7406a1177a
+      internalID: -1152824352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelf_atlas_35
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 1460
+        width: 29
+        height: 39
+      alignment: 9
+      pivot: {x: 0.6200035, y: 0.48667243}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 849462647cc73e94dbdad71c961843bd
+      internalID: 2034789231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelf_atlas_36
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 1461
+        width: 33
+        height: 41
+      alignment: 9
+      pivot: {x: 0.54599464, y: 0.46298292}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27e1d31ddb73d8042bd6a8b6954e730b
+      internalID: 1367639100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelf_atlas_37
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 1462
+        width: 36
+        height: 38
+      alignment: 9
+      pivot: {x: 0.50116307, y: 0.42167905}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b213633d41fbffc49bfa1f1b18e9f73d
+      internalID: 204782607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelf_atlas_38
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 1413
+        width: 36
+        height: 38
+      alignment: 9
+      pivot: {x: 0.6135356, y: 0.5000032}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd8d9acaa35b8854f868cac47e0ee0d7
+      internalID: 46387569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelf_atlas_39
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 1412
+        width: 44
+        height: 32
+      alignment: 9
+      pivot: {x: 0.63614583, y: 0.5954361}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64fdb7e521310ad4b805391abf3d8255
+      internalID: -141579456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelf_atlas_40
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 1413
+        width: 45
+        height: 30
+      alignment: 9
+      pivot: {x: 0.60014105, y: 0.6352905}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dc6f14fc99f5494c9c0552736390062
+      internalID: -1257772149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelf_atlas_41
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 1360
+        width: 39
+        height: 42
+      alignment: 9
+      pivot: {x: 0.40972275, y: 0.427839}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f65888b94d3be345a2e32c708406090
+      internalID: 416280069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelf_atlas_42
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 1360
+        width: 39
+        height: 42
+      alignment: 9
+      pivot: {x: 0.40976736, y: 0.42763847}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 891464358385ec34f8300d8da1762d50
+      internalID: 1900552025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelf_atlas_43
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 1262
+        width: 32
+        height: 45
+      alignment: 9
+      pivot: {x: 0.49937057, y: 0.44444716}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 783f86d2a82d48a4ca504cd50d332df2
+      internalID: 1872779949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelf_atlas_44
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 1262
+        width: 31
+        height: 47
+      alignment: 9
+      pivot: {x: 0.48258135, y: 0.44723445}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0f53d09bcbd9104685102b01535c6b4
+      internalID: 1395108509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelf_atlas_45
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 1262
+        width: 32
+        height: 47
+      alignment: 9
+      pivot: {x: 0.50000095, y: 0.4468111}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52a205c4c9cf44246b95833b97765f36
+      internalID: -1368792102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelf_atlas_46
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 1261
+        width: 30
+        height: 46
+      alignment: 9
+      pivot: {x: 0.4993337, y: 0.4565244}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 871289cc2c4213a438f031a731a6fbde
+      internalID: 603616462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelf_atlas_47
+      rect:
+        serializedVersion: 2
+        x: 493
+        y: 1260
+        width: 31
+        height: 44
+      alignment: 9
+      pivot: {x: 0.51546943, y: 0.45411822}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 122a447cfca978046b9cc3ce52456f94
+      internalID: -886372231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelf_atlas_48
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 1210
+        width: 27
+        height: 46
+      alignment: 9
+      pivot: {x: 0.51777816, y: 0.49956745}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c18675728314c93409780313111bd2b4
+      internalID: -133994795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelf_atlas_49
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 1212
+        width: 28
+        height: 39
+      alignment: 9
+      pivot: {x: 0.42785755, y: 0.4876928}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1a420de26d768440bf57aa79a484046
+      internalID: -213223748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelf_atlas_50
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 1210
+        width: 32
+        height: 41
+      alignment: 9
+      pivot: {x: 0.37526226, y: 0.46329853}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: faac66471c905394580d123587cb899f
+      internalID: -1751362741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelf_atlas_51
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 1208
+        width: 31
+        height: 43
+      alignment: 9
+      pivot: {x: 0.3533709, y: 0.48894837}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 090fbb42145e6014184730d2574a69e6
+      internalID: 1636407641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelf_atlas_52
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 882
+        width: 54
+        height: 42
+      alignment: 9
+      pivot: {x: 0.68531203, y: 0.45200458}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6504e28696d472446b572d968cf252f1
+      internalID: 1168449425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelf_atlas_53
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 882
+        width: 47
+        height: 42
+      alignment: 9
+      pivot: {x: 0.63791996, y: 0.45167032}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24179b66aff316b48aa50270f69c9747
+      internalID: 1828172167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelf_atlas_54
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 882
+        width: 47
+        height: 42
+      alignment: 9
+      pivot: {x: 0.65964913, y: 0.4514785}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f155e3906c5999746ba22f0de6a2846d
+      internalID: -1142042539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelf_atlas_55
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 882
+        width: 48
+        height: 42
+      alignment: 9
+      pivot: {x: 0.6674633, y: 0.45284453}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0cc9961d49ac5942a0929cb4b7470ad
+      internalID: -926401587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelf_atlas_56
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 882
+        width: 49
+        height: 42
+      alignment: 9
+      pivot: {x: 0.67366, y: 0.45205253}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6daa2667d4be93e438fbb4ef8f15d835
+      internalID: -532957156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelf_atlas_57
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 882
+        width: 42
+        height: 42
+      alignment: 9
+      pivot: {x: 0.61923724, y: 0.45230103}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5502c7ab0b933045a1d8a8fa6679c3d
+      internalID: -240027511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelf_atlas_58
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 882
+        width: 43
+        height: 42
+      alignment: 9
+      pivot: {x: 0.62744284, y: 0.45238242}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f58cd5c1558dbc4e860c485298c889e
+      internalID: -121863592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelf_atlas_59
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 882
+        width: 44
+        height: 42
+      alignment: 9
+      pivot: {x: 0.636365, y: 0.45238242}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 165cdb28e79ec1e4fbbd060e6774f6d6
+      internalID: -1970378402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelf_atlas_60
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 832
+        width: 57
+        height: 44
+      alignment: 9
+      pivot: {x: 0.632673, y: 0.4774461}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb9abec9226e6f24589bf3e3e214feb1
+      internalID: 100017049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelf_atlas_61
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 832
+        width: 50
+        height: 44
+      alignment: 9
+      pivot: {x: 0.5805389, y: 0.47846708}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77db3c97a8bbf964f8d54b3ca816da6f
+      internalID: -1469167472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelf_atlas_62
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 832
+        width: 50
+        height: 44
+      alignment: 9
+      pivot: {x: 0.5993494, y: 0.47742116}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a56013f4eead35d438fb24f834d704eb
+      internalID: -292273088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelf_atlas_63
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 832
+        width: 50
+        height: 44
+      alignment: 9
+      pivot: {x: 0.6196118, y: 0.47693148}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b333f70207fa7884b9d8493fb675fcea
+      internalID: 2125975699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelf_atlas_64
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 832
+        width: 47
+        height: 44
+      alignment: 9
+      pivot: {x: 0.6809355, y: 0.47715342}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ebbd8367c2bcfb46a7555e597cc01b5
+      internalID: 1574453028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelf_atlas_65
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 832
+        width: 40
+        height: 44
+      alignment: 9
+      pivot: {x: 0.6494743, y: 0.47706744}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce85c1ccda1c25e43a372e36ca2991a6
+      internalID: -1991538550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelf_atlas_66
+      rect:
+        serializedVersion: 2
+        x: 507
+        y: 832
+        width: 40
+        height: 44
+      alignment: 9
+      pivot: {x: 0.62511903, y: 0.47734487}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6368f707e9d35da43b27037bc96c533d
+      internalID: 1679951595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelf_atlas_67
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 832
+        width: 41
+        height: 44
+      alignment: 9
+      pivot: {x: 0.65881497, y: 0.4775793}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78bc38e404759e24d94471be66e4d55a
+      internalID: -1808902084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelf_atlas_68
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 783
+        width: 52
+        height: 43
+      alignment: 9
+      pivot: {x: 0.21106955, y: 0.488321}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 331f1d96dd58c054fbb93e87ec3771ec
+      internalID: -1342846313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelf_atlas_69
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 783
+        width: 44
+        height: 43
+      alignment: 9
+      pivot: {x: 0.2492107, y: 0.4883366}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e087202ab4b289f4f9e784a24ed02acc
+      internalID: 1400485610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelf_atlas_70
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 781
+        width: 46
+        height: 42
+      alignment: 9
+      pivot: {x: 0.23878147, y: 0.50069463}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bdf9212a47873e4ea864b26b2a71f43
+      internalID: 165372167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelf_atlas_71
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 781
+        width: 45
+        height: 43
+      alignment: 9
+      pivot: {x: 0.24423964, y: 0.48876244}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dae71797fd49dd34d9392f7d693e8bce
+      internalID: -1942608335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelf_atlas_72
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 557
+        width: 32
+        height: 53
+      alignment: 9
+      pivot: {x: 0.50000095, y: 0.3577478}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bd736ead97f2704ca847b6da8e096e0
+      internalID: 1079168323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelf_atlas_73
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 557
+        width: 32
+        height: 52
+      alignment: 9
+      pivot: {x: 0.49999905, y: 0.36566398}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ad5fbab6e0a7c641b0fdda9a76543a3
+      internalID: -1855660541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelf_atlas_74
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 557
+        width: 32
+        height: 50
+      alignment: 9
+      pivot: {x: 0.49999905, y: 0.38027465}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b95ed1f070dfee34db7a20ca79c03cfd
+      internalID: -338594794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelf_atlas_75
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 557
+        width: 32
+        height: 52
+      alignment: 9
+      pivot: {x: 0.49933147, y: 0.36552313}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8e43098b15b60d42890231c7a194dbc
+      internalID: -2009219179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelf_atlas_76
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 557
+        width: 32
+        height: 50
+      alignment: 9
+      pivot: {x: 0.5, y: 0.38018188}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 072f367778f92904290f919ac61cd94d
+      internalID: -1304192791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelf_atlas_77
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 557
+        width: 32
+        height: 50
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3795227}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a1b87a711e6936409190e19527b6d89
+      internalID: 1187864692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelf_atlas_78
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 7
+        width: 34
+        height: 39
+      alignment: 9
+      pivot: {x: 0.5577877, y: 0.4875888}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d969e503d31387848babd5a13ebc1fa9
+      internalID: 2022152383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelf_atlas_79
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 7
+        width: 34
+        height: 37
+      alignment: 9
+      pivot: {x: 0.5862624, y: 0.51321125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 578aee789aedd4c4d8b1bc1e0eeab1b4
+      internalID: 893781393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelf_atlas_80
+      rect:
+        serializedVersion: 2
+        x: 637
+        y: 7
+        width: 31
+        height: 30
+      alignment: 9
+      pivot: {x: 0.5161645, y: 0.6326924}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48fbb117c44c9d04db4d21bad29a1370
+      internalID: -419217076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelf_atlas_81
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 7
+        width: 30
+        height: 27
+      alignment: 9
+      pivot: {x: 0.5347575, y: 0.7036361}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47aa12bf0e72fca449ee90be78c9f3c6
+      internalID: -1401978201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelf_atlas_82
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 7
+        width: 30
+        height: 28
+      alignment: 9
+      pivot: {x: 0.53193563, y: 0.67896086}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e9c78d9fee4a9942b3e9389403644cd
+      internalID: -1775092426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -125,7 +1880,90 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      mmzxa_boss_modelf_atlas_34: -1152824352
+      mmzxa_boss_modelf_atlas_45: -1368792102
+      mmzxa_boss_modelf_atlas_30: -1925683683
+      mmzxa_boss_modelf_atlas_58: -121863592
+      mmzxa_boss_modelf_atlas_11: -686702002
+      mmzxa_boss_modelf_atlas_14: -1778765776
+      mmzxa_boss_modelf_atlas_62: -292273088
+      mmzxa_boss_modelf_atlas_19: 130703885
+      mmzxa_boss_modelf_atlas_23: 494797490
+      mmzxa_boss_modelf_atlas_43: 1872779949
+      mmzxa_boss_modelf_atlas_25: 967080027
+      mmzxa_boss_modelf_atlas_5: -1173274823
+      mmzxa_boss_modelf_atlas_75: -2009219179
+      mmzxa_boss_modelf_atlas_27: 739959180
+      mmzxa_boss_modelf_atlas_6: -1589125699
+      mmzxa_boss_modelf_atlas_81: -1401978201
+      mmzxa_boss_modelf_atlas_13: 1241495224
+      mmzxa_boss_modelf_atlas_61: -1469167472
+      mmzxa_boss_modelf_atlas_37: 204782607
+      mmzxa_boss_modelf_atlas_72: 1079168323
+      mmzxa_boss_modelf_atlas_39: -141579456
+      mmzxa_boss_modelf_atlas_79: 893781393
+      mmzxa_boss_modelf_atlas_35: 2034789231
+      mmzxa_boss_modelf_atlas_24: 567384340
+      mmzxa_boss_modelf_atlas_36: 1367639100
+      mmzxa_boss_modelf_atlas_8: 1568258914
+      mmzxa_boss_modelf_atlas_65: -1991538550
+      mmzxa_boss_modelf_atlas_69: 1400485610
+      mmzxa_boss_modelf_atlas_4: -1058651790
+      mmzxa_boss_modelf_atlas_38: 46387569
+      mmzxa_boss_modelf_atlas_64: 1574453028
+      mmzxa_boss_modelf_atlas_76: -1304192791
+      mmzxa_boss_modelf_atlas_73: -1855660541
+      mmzxa_boss_modelf_atlas_80: -419217076
+      mmzxa_boss_modelf_atlas_31: 477627503
+      mmzxa_boss_modelf_atlas_59: -1970378402
+      mmzxa_boss_modelf_atlas_74: -338594794
+      mmzxa_boss_modelf_atlas_22: 772503853
+      mmzxa_boss_modelf_atlas_44: 1395108509
+      mmzxa_boss_modelf_atlas_32: 126041518
+      mmzxa_boss_modelf_atlas_16: -1421420545
+      mmzxa_boss_modelf_atlas_28: 21973787
+      mmzxa_boss_modelf_atlas_66: 1679951595
+      mmzxa_boss_modelf_atlas_71: -1942608335
+      mmzxa_boss_modelf_atlas_70: 165372167
+      mmzxa_boss_modelf_atlas_60: 100017049
+      mmzxa_boss_modelf_atlas_50: -1751362741
+      mmzxa_boss_modelf_atlas_57: -240027511
+      mmzxa_boss_modelf_atlas_63: 2125975699
+      mmzxa_boss_modelf_atlas_12: 1129909595
+      mmzxa_boss_modelf_atlas_33: 2001824659
+      mmzxa_boss_modelf_atlas_26: -1154011492
+      mmzxa_boss_modelf_atlas_10: 1767698951
+      mmzxa_boss_modelf_atlas_15: -1614891032
+      mmzxa_boss_modelf_atlas_40: -1257772149
+      mmzxa_boss_modelf_atlas_68: -1342846313
+      mmzxa_boss_modelf_atlas_53: 1828172167
+      mmzxa_boss_modelf_atlas_78: 2022152383
+      mmzxa_boss_modelf_atlas_47: -886372231
+      mmzxa_boss_modelf_atlas_9: 2075710229
+      mmzxa_boss_modelf_atlas_55: -926401587
+      mmzxa_boss_modelf_atlas_51: 1636407641
+      mmzxa_boss_modelf_atlas_17: 633811554
+      mmzxa_boss_modelf_atlas_2: 401787390
+      mmzxa_boss_modelf_atlas_1: 183600366
+      mmzxa_boss_modelf_atlas_29: 304213105
+      mmzxa_boss_modelf_atlas_3: 2036972492
+      mmzxa_boss_modelf_atlas_46: 603616462
+      mmzxa_boss_modelf_atlas_49: -213223748
+      mmzxa_boss_modelf_atlas_18: -1851285270
+      mmzxa_boss_modelf_atlas_54: -1142042539
+      mmzxa_boss_modelf_atlas_7: 1478071155
+      mmzxa_boss_modelf_atlas_41: 416280069
+      mmzxa_boss_modelf_atlas_20: -671184043
+      mmzxa_boss_modelf_atlas_21: 1211661349
+      mmzxa_boss_modelf_atlas_42: 1900552025
+      mmzxa_boss_modelf_atlas_48: -133994795
+      mmzxa_boss_modelf_atlas_52: 1168449425
+      mmzxa_boss_modelf_atlas_56: -532957156
+      mmzxa_boss_modelf_atlas_82: -1775092426
+      mmzxa_boss_modelf_atlas_77: 1187864692
+      mmzxa_boss_modelf_atlas_0: 794373935
+      mmzxa_boss_modelf_atlas_67: -1808902084
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

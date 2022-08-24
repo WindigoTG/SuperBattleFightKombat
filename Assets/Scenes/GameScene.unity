@@ -1350,7 +1350,7 @@ MonoBehaviour:
       CharacterInfoImage: {fileID: 0}
     - Character: 1
       Mugshot: {fileID: -881384637, guid: b5a720c3b8f3a7a4bbcd5d1f8aaaa612, type: 3}
-      RequiredLevel: 2
+      RequiredLevel: 1
       CharacterInfoImage: {fileID: 0}
     - Character: 2
       Mugshot: {fileID: -2090285025, guid: b5a720c3b8f3a7a4bbcd5d1f8aaaa612, type: 3}
@@ -1362,7 +1362,7 @@ MonoBehaviour:
       CharacterInfoImage: {fileID: 0}
     - Character: 4
       Mugshot: {fileID: 891935749, guid: b5a720c3b8f3a7a4bbcd5d1f8aaaa612, type: 3}
-      RequiredLevel: 2
+      RequiredLevel: 1
       CharacterInfoImage: {fileID: 0}
   _tellyController:
     _tellyPrefab: {fileID: 4148760292211424560, guid: 42d0428e7cbe5e343a914c6fbfd9ac41, type: 3}
@@ -14685,8 +14685,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1018633197}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -25.9991, y: -14.501801, z: 0}
-  m_LocalScale: {x: 1.9919446, y: 2.9984405, z: 1}
+  m_LocalPosition: {x: -25.4991, y: -14.501801, z: 0}
+  m_LocalScale: {x: 2.9919007, y: 2.9984405, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1236228876}
@@ -14705,7 +14705,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.000000059604645, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -14716,7 +14716,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.0000001, y: 1}
   m_EdgeRadius: 0
 --- !u!212 &1018633200
 SpriteRenderer:
@@ -18850,7 +18850,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7792642, y: 1}
+    m_SensorSize: {x: 1.7780321, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -19784,6 +19784,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 3a3b8a3831cf557489eee2a0471d413f, type: 3}
   - {fileID: 8300000, guid: 04d05e36603dbd3409e642411d7a3881, type: 3}
   - {fileID: 8300000, guid: ab326649c9fd42540af7f629f0594c53, type: 3}
+  - {fileID: 8300000, guid: 38455f8ff746a2742ac722ddd62a1ba3, type: 3}
+  - {fileID: 8300000, guid: 5cfa55695f3baab45aabc0c3b8a8092d, type: 3}
+  - {fileID: 8300000, guid: 2c88717053c6bae4ebf39d4494f07bf8, type: 3}
   _soundPool: {fileID: 1686700851}
 --- !u!4 &1686700853
 Transform:

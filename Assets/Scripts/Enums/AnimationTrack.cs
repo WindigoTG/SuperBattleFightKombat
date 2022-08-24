@@ -12,5 +12,9 @@ public enum AnimationTrack
     IdlePreHenshin = 9,
     Henshin = 10,
     Death = 11,
-    AttakWallCling = 12
+    AttakWallCling = 12,
+    AttackStandAlter = 13,
+    AttackJumpAlter = 14,
+    AttackStandUp = 15,
+    AttackStandUpAlter = 16
 }

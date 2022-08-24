@@ -1,6 +1,7 @@
+
 using UnityEngine;
 
-public class RunState : PlayerState
+public class ModelPRunState : PlayerState
 {
     #region Fields
 
@@ -11,7 +12,7 @@ public class RunState : PlayerState
     private int _lastFrame;
     private int _frameCount;
     private bool _isAttacking;
-    private static int _attackFrameCount = 5;
+    private static int _attackFrameCount = 2;
 
     #endregion
 
@@ -88,7 +89,7 @@ public class RunState : PlayerState
 
     public override void Attack()
     {
-        if (!_model.Weapon.Attack(_view.GroundRunAttackOrigin.position, _view.transform.localScale.x))
+        if (!_model.Weapon.Attack(_view.GroundRunAttackOrigin.position, _view.transform.localScale.x, true))
             return;
 
         _view.StartAnimation(AnimationTrack.AttackRun);

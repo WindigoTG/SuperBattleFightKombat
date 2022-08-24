@@ -114,7 +114,2212 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: mmzxa_boss_modelp_siarnaq_0
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 1553
+        width: 41
+        height: 41
+      alignment: 9
+      pivot: {x: 0.41294602, y: 0.43859863}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 375cf2a1b9d063b4c9a294778eb37f42
+      internalID: 531294760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelp_siarnaq_1
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 1553
+        width: 42
+        height: 39
+      alignment: 9
+      pivot: {x: 0.42799377, y: 0.46122858}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: deb948c21763a2a42a6fb1ff98bc43ca
+      internalID: 1409524859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelp_siarnaq_2
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 1553
+        width: 43
+        height: 39
+      alignment: 9
+      pivot: {x: 0.420078, y: 0.46122858}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ffdd650dbc8b144aba05dfec7b5cfb5
+      internalID: 1433033998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelp_siarnaq_3
+      rect:
+        serializedVersion: 2
+        x: 461
+        y: 1553
+        width: 45
+        height: 39
+      alignment: 9
+      pivot: {x: 0.40071887, y: 0.46122858}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fe109db0682b874eb03c49d0040f36b
+      internalID: 375932829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelp_siarnaq_4
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 1553
+        width: 43
+        height: 39
+      alignment: 9
+      pivot: {x: 0.41847974, y: 0.45946327}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 307c00a168b57dd49877c436eb88e356
+      internalID: 369264362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelp_siarnaq_5
+      rect:
+        serializedVersion: 2
+        x: 563
+        y: 1553
+        width: 43
+        height: 39
+      alignment: 9
+      pivot: {x: 0.3944191, y: 0.4617513}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7bf6d1de28d54845935deea5e81d59f
+      internalID: -621997956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelp_siarnaq_6
+      rect:
+        serializedVersion: 2
+        x: 613
+        y: 1553
+        width: 42
+        height: 40
+      alignment: 9
+      pivot: {x: 0.40016392, y: 0.45147094}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebb30b0bb4cb4d64b8961ddc9b6cf513
+      internalID: 718469795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelp_siarnaq_7
+      rect:
+        serializedVersion: 2
+        x: 662
+        y: 1553
+        width: 45
+        height: 46
+      alignment: 9
+      pivot: {x: 0.39904648, y: 0.3875918}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e91b22179cd98745a64f0db8cb69848
+      internalID: 2076270395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelp_siarnaq_8
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 1553
+        width: 46
+        height: 49
+      alignment: 9
+      pivot: {x: 0.37036797, y: 0.36763343}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9264bb4eb17ace4692e00db8e56da72
+      internalID: -1304565346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelp_siarnaq_9
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 1476
+        width: 46
+        height: 50
+      alignment: 9
+      pivot: {x: 0.38119572, y: 0.36223388}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3303b893c6637a4cb00d001b6844bb2
+      internalID: -2047168009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelp_siarnaq_10
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 1476
+        width: 48
+        height: 50
+      alignment: 9
+      pivot: {x: 0.37775612, y: 0.36180907}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cb9e4ac156bcdf4eb27e4dcfd5961a3
+      internalID: 1985058134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelp_siarnaq_11
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 1476
+        width: 49
+        height: 50
+      alignment: 9
+      pivot: {x: 0.3669991, y: 0.3593164}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f3b2158b5470514b9d841a36b380cb2
+      internalID: 1314905466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelp_siarnaq_12
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 1476
+        width: 47
+        height: 52
+      alignment: 9
+      pivot: {x: 0.33814254, y: 0.34781587}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12560d922b10bd64da717c4df2810533
+      internalID: 940140553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelp_siarnaq_13
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 1478
+        width: 46
+        height: 52
+      alignment: 9
+      pivot: {x: 0.32608363, y: 0.30785194}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce2e273e4861c0f489b632030c65f130
+      internalID: 1636787264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelp_siarnaq_14
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 1486
+        width: 52
+        height: 43
+      alignment: 9
+      pivot: {x: 0.306623, y: 0.18698049}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88da7221704ada44fbdd3bc15bc4d6b4
+      internalID: 1500647385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelp_siarnaq_15
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 1474
+        width: 52
+        height: 51
+      alignment: 9
+      pivot: {x: 0.30835137, y: 0.39219037}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 129255ad38725df4ab3398bebaee4072
+      internalID: 1235230935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelp_siarnaq_16
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 1475
+        width: 51
+        height: 49
+      alignment: 9
+      pivot: {x: 0.29438213, y: 0.3672423}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bdf506504cadba479e639290e941845
+      internalID: -190518991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelp_siarnaq_17
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 1474
+        width: 48
+        height: 68
+      alignment: 9
+      pivot: {x: 0.37278748, y: 0.27826825}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4b1244ee86ba8b439bf9e799e9da549
+      internalID: 1184441755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelp_siarnaq_18
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 1475
+        width: 49
+        height: 66
+      alignment: 9
+      pivot: {x: 0.26711226, y: 0.28506747}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60d7896d9bd7c2b4ca814fe37d95c5ad
+      internalID: 469097772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelp_siarnaq_19
+      rect:
+        serializedVersion: 2
+        x: 667
+        y: 1475
+        width: 48
+        height: 67
+      alignment: 9
+      pivot: {x: 0.25023523, y: 0.28698185}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0dbf8878c38901d42a3deddc54082214
+      internalID: 1908415171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelp_siarnaq_20
+      rect:
+        serializedVersion: 2
+        x: 722
+        y: 1475
+        width: 53
+        height: 69
+      alignment: 9
+      pivot: {x: 0.36149627, y: 0.27622035}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 121190090b9274c409e36c135792d831
+      internalID: -495043040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelp_siarnaq_21
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 1476
+        width: 52
+        height: 66
+      alignment: 9
+      pivot: {x: 0.4039154, y: 0.2760435}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f231454e6fb2e0f418a36738fd4e2d23
+      internalID: -209061361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelp_siarnaq_22
+      rect:
+        serializedVersion: 2
+        x: 839
+        y: 1476
+        width: 35
+        height: 38
+      alignment: 9
+      pivot: {x: 0.34711915, y: 0.47214228}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de35b8eae6a5d7f41aaf398c2d070ad8
+      internalID: -890837504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelp_siarnaq_23
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 1425
+        width: 35
+        height: 38
+      alignment: 9
+      pivot: {x: 0.34357387, y: 0.47350112}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66edbe17518326e46b7b2fd3fcb2e940
+      internalID: -1130263430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelp_siarnaq_24
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 1425
+        width: 33
+        height: 37
+      alignment: 9
+      pivot: {x: 0.36569306, y: 0.48483688}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6724c750adbbc74085281bc3ee37341
+      internalID: 455248069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelp_siarnaq_25
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 1425
+        width: 31
+        height: 37
+      alignment: 9
+      pivot: {x: 0.3869117, y: 0.48756203}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01e47bcccfdbc9249abeecc039824d66
+      internalID: 1114013570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelp_siarnaq_26
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 1425
+        width: 31
+        height: 37
+      alignment: 9
+      pivot: {x: 0.38880378, y: 0.48502824}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ce76becce148d04782673fa8b6e9f04
+      internalID: 847773511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelp_siarnaq_27
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 1425
+        width: 32
+        height: 38
+      alignment: 9
+      pivot: {x: 0.37758064, y: 0.47462544}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e8508dc4cd4385468e6e607ec056a5f
+      internalID: 1625388341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelp_siarnaq_28
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 1425
+        width: 33
+        height: 38
+      alignment: 9
+      pivot: {x: 0.3633016, y: 0.47481817}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a19a229b78770d14baec975cd6007db9
+      internalID: 588275167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelp_siarnaq_29
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 1425
+        width: 32
+        height: 39
+      alignment: 9
+      pivot: {x: 0.38095474, y: 0.4625557}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a377a0be5503ba4cb10f03fae82efa6
+      internalID: -919336151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelp_siarnaq_30
+      rect:
+        serializedVersion: 2
+        x: 559
+        y: 1425
+        width: 33
+        height: 39
+      alignment: 9
+      pivot: {x: 0.36507347, y: 0.4600392}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b41b68a3294ef43449200a8a13a678d1
+      internalID: 1085279480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelp_siarnaq_31
+      rect:
+        serializedVersion: 2
+        x: 597
+        y: 1425
+        width: 35
+        height: 38
+      alignment: 9
+      pivot: {x: 0.34615478, y: 0.475708}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81372a9917761334bac861cd0ee20538
+      internalID: 689377254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelp_siarnaq_32
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 1330
+        width: 41
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f66e29f32ee157a41a672969dd64733a
+      internalID: 794264609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelp_siarnaq_33
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 1330
+        width: 40
+        height: 34
+      alignment: 9
+      pivot: {x: 0.27622908, y: 0.4985531}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e5003cedb20f63428d7cd6bfad7e303
+      internalID: -1878877895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelp_siarnaq_34
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 1330
+        width: 40
+        height: 33
+      alignment: 9
+      pivot: {x: 0.27625656, y: 0.511937}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3df71e7a5eb9d04486d99ebbb2977b5
+      internalID: 1381106086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelp_siarnaq_35
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 1330
+        width: 41
+        height: 33
+      alignment: 9
+      pivot: {x: 0.2670757, y: 0.5148926}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb31faafa4958ad42a0e3c2414722495
+      internalID: -925164547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelp_siarnaq_36
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 1330
+        width: 41
+        height: 33
+      alignment: 9
+      pivot: {x: 0.2687884, y: 0.51702327}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05e3b5c9d5e0f8f468da3b4301a734ff
+      internalID: 1369244339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelp_siarnaq_37
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 1330
+        width: 39
+        height: 35
+      alignment: 9
+      pivot: {x: 0.2831108, y: 0.5139439}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1753a921b4f7a904b8481334e1b9b403
+      internalID: -558824081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelp_siarnaq_38
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 1330
+        width: 40
+        height: 34
+      alignment: 9
+      pivot: {x: 0.27430114, y: 0.5307186}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0297fac0a1dea7c4894edec35f62e7ae
+      internalID: 1699155735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelp_siarnaq_39
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 1330
+        width: 40
+        height: 34
+      alignment: 9
+      pivot: {x: 0.2744034, y: 0.53070784}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fa80c3add46bab4a8e1d57f7f9a5a27
+      internalID: -1138841571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelp_siarnaq_40
+      rect:
+        serializedVersion: 2
+        x: 633
+        y: 1330
+        width: 40
+        height: 36
+      alignment: 9
+      pivot: {x: 0.276268, y: 0.4958564}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e1e87417f084954f82928b4b87a1f32
+      internalID: -902159645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelp_siarnaq_41
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 1330
+        width: 42
+        height: 34
+      alignment: 9
+      pivot: {x: 0.26206172, y: 0.47148582}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 835f6a19583e84d41962f3a6348c5b27
+      internalID: -625142069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelp_siarnaq_42
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 123
+        width: 34
+        height: 38
+      alignment: 9
+      pivot: {x: 0.32684955, y: 0.47854856}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 756c0577b1c634f4fa806c2816159ac9
+      internalID: -204309518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelp_siarnaq_43
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 123
+        width: 29
+        height: 33
+      alignment: 9
+      pivot: {x: 0.34370264, y: 0.5445954}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c056f78d1b81b01488f8771129db23e4
+      internalID: 1828003423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelp_siarnaq_44
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 122
+        width: 29
+        height: 28
+      alignment: 9
+      pivot: {x: 0.31122458, y: 0.6786984}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84953cec412301549b7b6e13cb02c694
+      internalID: -1409711987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelp_siarnaq_45
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 122
+        width: 30
+        height: 29
+      alignment: 9
+      pivot: {x: 0.29789633, y: 0.65426636}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e81c12e9bc1cf946b49100cad2e310d
+      internalID: -1684171485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelp_siarnaq_46
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 1232
+        width: 45
+        height: 39
+      alignment: 9
+      pivot: {x: 0.35575628, y: 0.4618264}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: caa31b6c856aa144784844ed565f300a
+      internalID: -927572718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelp_siarnaq_47
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 1232
+        width: 47
+        height: 39
+      alignment: 9
+      pivot: {x: 0.36369032, y: 0.46010804}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 274c14a89cfb09147b7b6dae0e3e74ac
+      internalID: -246300880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelp_siarnaq_48
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 1079
+        width: 35
+        height: 42
+      alignment: 9
+      pivot: {x: 0.34379664, y: 0.50086904}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30ac526c876a4a14da8c49c02b886095
+      internalID: -305624876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelp_siarnaq_49
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 1082
+        width: 33
+        height: 37
+      alignment: 9
+      pivot: {x: 0.36342183, y: 0.51282066}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6896f38f78ef8524d9b79e7326329151
+      internalID: 468926442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelp_siarnaq_50
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 1082
+        width: 36
+        height: 37
+      alignment: 9
+      pivot: {x: 0.33358085, y: 0.5136158}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d914cd76cb91ae84a959601933dc5552
+      internalID: 302104044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelp_siarnaq_51
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 1080
+        width: 39
+        height: 40
+      alignment: 9
+      pivot: {x: 0.30855227, y: 0.4753662}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed00944640b71c34798499b84bef7ad0
+      internalID: -1812225955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelp_siarnaq_52
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 1079
+        width: 38
+        height: 43
+      alignment: 9
+      pivot: {x: 0.31590915, y: 0.48741823}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 358bf0f40f85bc04abf6450b00fa29a2
+      internalID: 417638829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelp_siarnaq_53
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 1079
+        width: 38
+        height: 43
+      alignment: 9
+      pivot: {x: 0.3154297, y: 0.48954454}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fb182bf9877c8341b9a36d102582655
+      internalID: -1806109269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelp_siarnaq_54
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 1079
+        width: 38
+        height: 43
+      alignment: 9
+      pivot: {x: 0.3157196, y: 0.48879793}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5e304c913462d24e9eb1b1fd0e242dc
+      internalID: -807035111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelp_siarnaq_55
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 1079
+        width: 36
+        height: 43
+      alignment: 9
+      pivot: {x: 0.33113945, y: 0.48896542}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81b70b1f621346e47898faa36cb6376d
+      internalID: 1639388235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelp_siarnaq_56
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 1133
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12c1621e9ca1f2949bea5f6ac424471c
+      internalID: -1268866171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelp_siarnaq_57
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 1133
+        width: 31
+        height: 42
+      alignment: 9
+      pivot: {x: 0.48319858, y: 0.5000029}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22421ba94c7ec5a4885adc82f389627b
+      internalID: -405389271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelp_siarnaq_58
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 1133
+        width: 32
+        height: 42
+      alignment: 9
+      pivot: {x: 0.46775436, y: 0.5007964}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 956f4ea9652325a429f20f0412912ab0
+      internalID: -917476544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelp_siarnaq_59
+      rect:
+        serializedVersion: 2
+        x: 373
+        y: 1133
+        width: 32
+        height: 42
+      alignment: 9
+      pivot: {x: 0.46860504, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97463e2570076d74187fc0a7da21a5de
+      internalID: 2072294482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelp_siarnaq_60
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 1133
+        width: 29
+        height: 42
+      alignment: 9
+      pivot: {x: 0.5165521, y: 0.50047666}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e81799a6e5221f4f9b3cb154b310878
+      internalID: -2057353764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelp_siarnaq_61
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 1133
+        width: 32
+        height: 43
+      alignment: 9
+      pivot: {x: 0.50000095, y: 0.4883721}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a30180fcb6c1484bbf167132ac94d0b
+      internalID: 643843913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelp_siarnaq_62
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 1133
+        width: 39
+        height: 42
+      alignment: 9
+      pivot: {x: 0.3836936, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5cd71b3af230b143af211777cea2f2b
+      internalID: -169653090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelp_siarnaq_63
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 1133
+        width: 39
+        height: 42
+      alignment: 9
+      pivot: {x: 0.38498473, y: 0.47555396}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdd49d8e3b80505489de38e75ecedbea
+      internalID: -1854047510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelp_siarnaq_64
+      rect:
+        serializedVersion: 2
+        x: 563
+        y: 1133
+        width: 36
+        height: 43
+      alignment: 9
+      pivot: {x: 0.4165734, y: 0.4647728}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bbe0bc1edb663b459294b5844603f6e
+      internalID: 1145244282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelp_siarnaq_65
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 1133
+        width: 32
+        height: 48
+      alignment: 9
+      pivot: {x: 0.46734238, y: 0.41639456}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d54ea3e3faae1b44b1fef658898294e
+      internalID: -1851866860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelp_siarnaq_66
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 1133
+        width: 32
+        height: 48
+      alignment: 9
+      pivot: {x: 0.4671917, y: 0.4161555}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c14f3fe71bdf424dbe5c81c3486495c
+      internalID: -1569791126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelp_siarnaq_67
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 1286
+        width: 31
+        height: 34
+      alignment: 9
+      pivot: {x: 0.58012044, y: 0.5610962}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ea42930884de8b48a50822bbbf86c74
+      internalID: 223509000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelp_siarnaq_68
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 1286
+        width: 41
+        height: 36
+      alignment: 9
+      pivot: {x: 0.60754544, y: 0.5286492}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 577f95ab99d151c479ff74c5292b5ca8
+      internalID: -740174655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelp_siarnaq_69
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 1287
+        width: 43
+        height: 28
+      alignment: 9
+      pivot: {x: 0.55819064, y: 0.67724174}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16511fb4b5a202d428acf5c58601af1b
+      internalID: -1962833052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelp_siarnaq_70
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 1287
+        width: 43
+        height: 28
+      alignment: 9
+      pivot: {x: 0.5564824, y: 0.67936486}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50c748deadddad84ca608d51d3e8c2e8
+      internalID: 1069562218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelp_siarnaq_71
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 1287
+        width: 43
+        height: 28
+      alignment: 9
+      pivot: {x: 0.5560253, y: 0.67852783}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9eba0709d0fad5f42a90032fecdf87ae
+      internalID: -1140090404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelp_siarnaq_72
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 1287
+        width: 43
+        height: 28
+      alignment: 9
+      pivot: {x: 0.55781734, y: 0.6790641}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26f72ce92339c8346aa72934e97f090e
+      internalID: -1443619160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelp_siarnaq_73
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 629
+        width: 38
+        height: 38
+      alignment: 9
+      pivot: {x: 0.44791293, y: 0.47048467}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c3124c3b69838c4991ed299bdcecf88
+      internalID: 270108186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelp_siarnaq_74
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 629
+        width: 40
+        height: 36
+      alignment: 9
+      pivot: {x: 0.4206398, y: 0.5032654}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22c6cf2dd57676f468a60f3ebb49fd68
+      internalID: 461549730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelp_siarnaq_75
+      rect:
+        serializedVersion: 2
+        x: 493
+        y: 629
+        width: 42
+        height: 34
+      alignment: 9
+      pivot: {x: 0.4044829, y: 0.52831495}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf105d83790aa7e428f8f111dfccb93c
+      internalID: -969420673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelp_siarnaq_76
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 629
+        width: 41
+        height: 34
+      alignment: 9
+      pivot: {x: 0.41493633, y: 0.5288499}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebbce138625084144bd87fa11803ee5c
+      internalID: -995410139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelp_siarnaq_77
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 572
+        width: 37
+        height: 45
+      alignment: 9
+      pivot: {x: 0.4057502, y: 0.39925674}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9502bde457cfbc42ae300fda1933f9e
+      internalID: -478786904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelp_siarnaq_78
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 572
+        width: 36
+        height: 45
+      alignment: 9
+      pivot: {x: 0.4161733, y: 0.4031345}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d21dc1d41c7668144a4bde0b77a1aabc
+      internalID: -227607765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelp_siarnaq_79
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 572
+        width: 35
+        height: 41
+      alignment: 9
+      pivot: {x: 0.31389335, y: 0.4393519}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee47cd6df30fa3d408c5170aad5d1555
+      internalID: -1769490101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelp_siarnaq_80
+      rect:
+        serializedVersion: 2
+        x: 518
+        y: 572
+        width: 34
+        height: 43
+      alignment: 9
+      pivot: {x: 0.32362098, y: 0.41970187}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfb80a26b5e213b46ad3852f472ef15f
+      internalID: 1365448440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelp_siarnaq_81
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 456
+        width: 44
+        height: 42
+      alignment: 9
+      pivot: {x: 0.27297905, y: 0.5019902}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91fac0f53154d834b81b372f4be99feb
+      internalID: 358825829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelp_siarnaq_82
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 455
+        width: 41
+        height: 42
+      alignment: 9
+      pivot: {x: 0.2932769, y: 0.5013922}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03a79d800211e724ebdedf2768a9f06f
+      internalID: 1883623248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelp_siarnaq_83
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 455
+        width: 43
+        height: 42
+      alignment: 9
+      pivot: {x: 0.27914357, y: 0.5005559}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46c779b61cfcc82438f7c2deb5d272aa
+      internalID: 1761747953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelp_siarnaq_84
+      rect:
+        serializedVersion: 2
+        x: 579
+        y: 455
+        width: 36
+        height: 42
+      alignment: 9
+      pivot: {x: 0.33346048, y: 0.50148153}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55ee3a946c6255b4aae6ede9ee8df775
+      internalID: 1233518947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelp_siarnaq_85
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 455
+        width: 32
+        height: 42
+      alignment: 9
+      pivot: {x: 0.37540054, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4b4f02b70fb0794f8b4652a2caf26a9
+      internalID: 2015935348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelp_siarnaq_86
+      rect:
+        serializedVersion: 2
+        x: 655
+        y: 455
+        width: 32
+        height: 42
+      alignment: 9
+      pivot: {x: 0.37521172, y: 0.49999854}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e08595e341f87745a63d47f5bb6abf1
+      internalID: -881556029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelp_siarnaq_87
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 528
+        width: 50
+        height: 29
+      alignment: 9
+      pivot: {x: 0.5394513, y: 0.65547335}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d39a1776654e3d49a5d1f2704d88c5a
+      internalID: -1789226319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelp_siarnaq_88
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 528
+        width: 49
+        height: 28
+      alignment: 9
+      pivot: {x: 0.5305126, y: 0.68006027}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d899c55cc8e1b324da215ce7078462e5
+      internalID: -1105246164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelp_siarnaq_89
+      rect:
+        serializedVersion: 2
+        x: 521
+        y: 528
+        width: 45
+        height: 27
+      alignment: 9
+      pivot: {x: 0.49020317, y: 0.7017551}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 243dc3c6016f07a45b7bea1724412d7b
+      internalID: -1008631095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelp_siarnaq_90
+      rect:
+        serializedVersion: 2
+        x: 568
+        y: 528
+        width: 43
+        height: 28
+      alignment: 9
+      pivot: {x: 0.5120708, y: 0.6779393}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7220f84fb0f02d2468d53034dc29e144
+      internalID: 1493525619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelp_siarnaq_91
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 319
+        width: 42
+        height: 35
+      alignment: 9
+      pivot: {x: 0.31198412, y: 0.48611537}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f629d4a9da7f854daa19ed775951af0
+      internalID: 1776027575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelp_siarnaq_92
+      rect:
+        serializedVersion: 2
+        x: 653
+        y: 319
+        width: 41
+        height: 34
+      alignment: 9
+      pivot: {x: 0.26801133, y: 0.50130147}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3716b6a3052b70438699c8ae0051825
+      internalID: 623548761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelp_siarnaq_93
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 319
+        width: 41
+        height: 33
+      alignment: 9
+      pivot: {x: 0.2931191, y: 0.5146882}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6b7a595e2c621645bbc90a008386475
+      internalID: 553351765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelp_siarnaq_94
+      rect:
+        serializedVersion: 2
+        x: 699
+        y: 319
+        width: 42
+        height: 35
+      alignment: 9
+      pivot: {x: 0.25939795, y: 0.48523474}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51af6fec071b41340befe257b2e79835
+      internalID: 2053633810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelp_siarnaq_95
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 319
+        width: 40
+        height: 34
+      alignment: 9
+      pivot: {x: 0.24699402, y: 0.5037375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c7ce9bbd6d9b9d48b447a7b88a8c2a9
+      internalID: 489574253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelp_siarnaq_96
+      rect:
+        serializedVersion: 2
+        x: 789
+        y: 319
+        width: 40
+        height: 36
+      alignment: 9
+      pivot: {x: 0.27333984, y: 0.50379604}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ea4b2f255541c949810b5be5ffd6840
+      internalID: 1690710957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelp_siarnaq_97
+      rect:
+        serializedVersion: 2
+        x: 833
+        y: 319
+        width: 41
+        height: 35
+      alignment: 9
+      pivot: {x: 0.24223067, y: 0.5167036}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c082029a59313f479c4fef36bf4b514
+      internalID: -483128177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelp_siarnaq_98
+      rect:
+        serializedVersion: 2
+        x: 878
+        y: 319
+        width: 42
+        height: 34
+      alignment: 9
+      pivot: {x: 0.23667109, y: 0.5274739}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6df500e54f1e4e4f8cad63b03b86961
+      internalID: 1053767417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelp_siarnaq_99
+      rect:
+        serializedVersion: 2
+        x: 925
+        y: 319
+        width: 41
+        height: 36
+      alignment: 9
+      pivot: {x: 0.21760671, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 049100c6e91710440832ce876e1d6761
+      internalID: -1063040792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelp_siarnaq_100
+      rect:
+        serializedVersion: 2
+        x: 972
+        y: 319
+        width: 42
+        height: 34
+      alignment: 9
+      pivot: {x: 0.23733374, y: 0.46965384}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e06c210fbdd4ebd4bbf92411328addef
+      internalID: -1179345879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelp_siarnaq_101
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 286
+        width: 36
+        height: 26
+      alignment: 9
+      pivot: {x: 0.2222273, y: 0.6159351}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfe6a740d0ed2aa4da6b3346f2e56fca
+      internalID: 1631980116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelp_siarnaq_102
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 288
+        width: 30
+        height: 18
+      alignment: 9
+      pivot: {x: 0.030304972, y: 0.8354933}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50abf03a6e62f6e4589954567f1acacb
+      internalID: 153683473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelp_siarnaq_103
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 290
+        width: 19
+        height: 16
+      alignment: 9
+      pivot: {x: -0.5374242, y: 0.8120842}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37b1ea14f9efcaa479f4d3558899f25c
+      internalID: 1581834171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelp_siarnaq_104
+      rect:
+        serializedVersion: 2
+        x: 502
+        y: 104
+        width: 16
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7103527552643a74c9c3551c2f6b4a4f
+      internalID: -1049767344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -125,7 +2330,112 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      mmzxa_boss_modelp_siarnaq_3: 375932829
+      mmzxa_boss_modelp_siarnaq_24: 455248069
+      mmzxa_boss_modelp_siarnaq_78: -227607765
+      mmzxa_boss_modelp_siarnaq_62: -169653090
+      mmzxa_boss_modelp_siarnaq_103: 1581834171
+      mmzxa_boss_modelp_siarnaq_104: -1049767344
+      mmzxa_boss_modelp_siarnaq_101: 1631980116
+      mmzxa_boss_modelp_siarnaq_81: 358825829
+      mmzxa_boss_modelp_siarnaq_93: 553351765
+      mmzxa_boss_modelp_siarnaq_97: -483128177
+      mmzxa_boss_modelp_siarnaq_52: 417638829
+      mmzxa_boss_modelp_siarnaq_6: 718469795
+      mmzxa_boss_modelp_siarnaq_33: -1878877895
+      mmzxa_boss_modelp_siarnaq_87: -1789226319
+      mmzxa_boss_modelp_siarnaq_72: -1443619160
+      mmzxa_boss_modelp_siarnaq_57: -405389271
+      mmzxa_boss_modelp_siarnaq_38: 1699155735
+      mmzxa_boss_modelp_siarnaq_27: 1625388341
+      mmzxa_boss_modelp_siarnaq_96: 1690710957
+      mmzxa_boss_modelp_siarnaq_67: 223509000
+      mmzxa_boss_modelp_siarnaq_12: 940140553
+      mmzxa_boss_modelp_siarnaq_15: 1235230935
+      mmzxa_boss_modelp_siarnaq_4: 369264362
+      mmzxa_boss_modelp_siarnaq_5: -621997956
+      mmzxa_boss_modelp_siarnaq_21: -209061361
+      mmzxa_boss_modelp_siarnaq_66: -1569791126
+      mmzxa_boss_modelp_siarnaq_16: -190518991
+      mmzxa_boss_modelp_siarnaq_35: -925164547
+      mmzxa_boss_modelp_siarnaq_47: -246300880
+      mmzxa_boss_modelp_siarnaq_30: -80344945
+      mmzxa_boss_modelp_siarnaq_71: -1140090404
+      mmzxa_boss_modelp_siarnaq_23: -1130263430
+      mmzxa_boss_modelp_siarnaq_54: -807035111
+      mmzxa_boss_modelp_siarnaq_10: 1985058134
+      mmzxa_boss_modelp_siarnaq_73: 270108186
+      mmzxa_boss_modelp_siarnaq_40: -902159645
+      mmzxa_boss_modelp_siarnaq_61: 643843913
+      mmzxa_boss_modelp_siarnaq_18: 469097772
+      mmzxa_boss_modelp_siarnaq_98: 1053767417
+      mmzxa_boss_modelp_siarnaq_63: -1854047510
+      mmzxa_boss_modelp_siarnaq_25: 1114013570
+      mmzxa_boss_modelp_siarnaq_9: -2047168009
+      mmzxa_boss_modelp_siarnaq_82: 1883623248
+      mmzxa_boss_modelp_siarnaq_45: -1684171485
+      mmzxa_boss_modelp_siarnaq_39: -1138841571
+      mmzxa_boss_modelp_siarnaq_0: 531294760
+      mmzxa_boss_modelp_siarnaq_50: 302104044
+      mmzxa_boss_modelp_siarnaq_90: 1493525619
+      mmzxa_boss_modelp_siarnaq_20: -495043040
+      mmzxa_boss_modelp_siarnaq_48: -305624876
+      mmzxa_boss_modelp_siarnaq_31: -919336151
+      mmzxa_boss_modelp_siarnaq_17: 1184441755
+      mmzxa_boss_modelp_siarnaq_49: 468926442
+      mmzxa_boss_modelp_siarnaq_76: -995410139
+      mmzxa_boss_modelp_siarnaq_69: -1962833052
+      mmzxa_boss_modelp_siarnaq_84: 1233518947
+      mmzxa_boss_modelp_siarnaq_41: -625142069
+      mmzxa_boss_modelp_siarnaq_42: -204309518
+      mmzxa_boss_modelp_siarnaq_64: 1145244282
+      mmzxa_boss_modelp_siarnaq_22: -890837504
+      mmzxa_boss_modelp_siarnaq_29: -2037583106
+      mmzxa_boss_modelp_siarnaq_59: 2072294482
+      mmzxa_boss_modelp_siarnaq_95: 489574253
+      mmzxa_boss_modelp_siarnaq_68: -740174655
+      mmzxa_boss_modelp_siarnaq_13: 1636787264
+      mmzxa_boss_modelp_siarnaq_28: 588275167
+      mmzxa_boss_modelp_siarnaq_99: -1063040792
+      mmzxa_boss_modelp_siarnaq_83: 1761747953
+      mmzxa_boss_modelp_siarnaq_36: 1369244339
+      mmzxa_boss_modelp_siarnaq_75: -969420673
+      mmzxa_boss_modelp_siarnaq_14: 1500647385
+      mmzxa_boss_modelp_siarnaq_70: 1069562218
+      mmzxa_boss_modelp_siarnaq_46: -927572718
+      mmzxa_boss_modelp_siarnaq_56: -1268866171
+      mmzxa_boss_modelp_siarnaq_2: 1433033998
+      mmzxa_boss_modelp_siarnaq_102: 153683473
+      mmzxa_boss_modelp_siarnaq_55: 1639388235
+      mmzxa_boss_modelp_siarnaq_88: -1105246164
+      mmzxa_boss_modelp_siarnaq_85: 2015935348
+      mmzxa_boss_modelp_siarnaq_79: -1769490101
+      mmzxa_boss_modelp_siarnaq_34: 1381106086
+      mmzxa_boss_modelp_siarnaq_60: -2057353764
+      mmzxa_boss_modelp_siarnaq_74: 461549730
+      mmzxa_boss_modelp_siarnaq_80: 1365448440
+      mmzxa_boss_modelp_siarnaq_92: 623548761
+      mmzxa_boss_modelp_siarnaq_32: 794264609
+      mmzxa_boss_modelp_siarnaq_91: 1776027575
+      mmzxa_boss_modelp_siarnaq_43: 1828003423
+      mmzxa_boss_modelp_siarnaq_51: -1812225955
+      mmzxa_boss_modelp_siarnaq_58: -917476544
+      mmzxa_boss_modelp_siarnaq_1: 1409524859
+      mmzxa_boss_modelp_siarnaq_37: -558824081
+      mmzxa_boss_modelp_siarnaq_8: -1304565346
+      mmzxa_boss_modelp_siarnaq_89: -1008631095
+      mmzxa_boss_modelp_siarnaq_100: -1179345879
+      mmzxa_boss_modelp_siarnaq_7: 2076270395
+      mmzxa_boss_modelp_siarnaq_65: -1851866860
+      mmzxa_boss_modelp_siarnaq_94: 2053633810
+      mmzxa_boss_modelp_siarnaq_77: -478786904
+      mmzxa_boss_modelp_siarnaq_86: -881556029
+      mmzxa_boss_modelp_siarnaq_26: 847773511
+      mmzxa_boss_modelp_siarnaq_19: 1908415171
+      mmzxa_boss_modelp_siarnaq_53: -1806109269
+      mmzxa_boss_modelp_siarnaq_11: 1314905466
+      mmzxa_boss_modelp_siarnaq_44: -1409711987
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

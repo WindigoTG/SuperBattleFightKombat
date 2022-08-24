@@ -20,13 +20,13 @@ public class IdleState : PlayerState
         _model = model;
         _view = view;
         _contactPoller = contactPoller;
-        _isAttacking = false;
     }
 
     public override void Activate()
     {
         _view.RigidBody.velocity = _view.RigidBody.velocity.Change(x: 0.0f);
         _view.StartAnimation(AnimationTrack.Idle);
+        _isAttacking = false;
     }
 
     public override void Update(CurrentInputs inputs)
@@ -63,7 +63,7 @@ public class IdleState : PlayerState
 
     public override void Attack()
     {
-        if (!_model.Weapon.Shoot(_view.GroundStandAttackOrigin.position, _view.transform.localScale.x))
+        if (!_model.Weapon.Attack(_view.GroundStandAttackOrigin.position, _view.transform.localScale.x))
             return;
 
         _isAttacking = true;

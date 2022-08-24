@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class JumpState : PlayerState
+public class ModelFJumpState : PlayerState
 {
     #region Fields
 
@@ -9,6 +9,9 @@ public class JumpState : PlayerState
     private ContactsPoller _contactPoller;
 
     private float _buffer;
+
+    private bool _isAttacking;
+    private bool _isLastAttackAnimationPrimary;
 
     #endregion
 
@@ -52,10 +55,16 @@ public class JumpState : PlayerState
 
         _view.RigidBody.AddForce((Vector2.up * _model.JumpForce) + horisontalForce);
         _view.StartAnimation(AnimationTrack.Jump);
+
+        _isAttacking = false;
+        _isLastAttackAnimationPrimary = false;
     }
 
     public override void Update(CurrentInputs inputs)
     {
+        if (_isAttacking && _view.IsAnimationDone)
+            _isAttacking = false;
+
         var horisontal = inputs.Horisontal;
         Move(horisontal);
         VerticalCheck(horisontal);
@@ -70,7 +79,8 @@ public class JumpState : PlayerState
 
         if (Mathf.Abs(inputHor) > References.InputThreshold)
         {
-            _view.transform.localScale = (inputHor < 0 ? References.LeftScale : References.RightScale);
+            if (!_isAttacking)
+                _view.transform.localScale = (inputHor < 0 ? References.LeftScale : References.RightScale);
 
             if ((inputHor > 0 && !_contactPoller.HasRightContacts) ||
                 (inputHor < 0 && !_contactPoller.HasLeftContacts) ||
@@ -85,7 +95,7 @@ public class JumpState : PlayerState
 
     private void VerticalCheck(float inputHor)
     {
-        if (_view.RigidBody.velocity.y < References.FallThreshold)
+        if (_view.RigidBody.velocity.y < References.FallThreshold && !_isAttacking)
         {
             _model.SetState(CharacterState.Fall);
             return;
@@ -115,7 +125,18 @@ public class JumpState : PlayerState
         if (!_model.Weapon.Attack(_view.AirAttackOrigin.position, _view.transform.localScale.x))
             return;
 
-        _view.StartAnimation(AnimationTrack.AttackJump);
+        _isAttacking = true;
+
+        if (!_isLastAttackAnimationPrimary)
+        {
+            _view.StartAnimation(AnimationTrack.AttackJump);
+            _isLastAttackAnimationPrimary = true;
+        }
+        else
+        {
+            _view.StartAnimation(AnimationTrack.AttackJumpAlter);
+            _isLastAttackAnimationPrimary = false;
+        }
     }
 
     #endregion

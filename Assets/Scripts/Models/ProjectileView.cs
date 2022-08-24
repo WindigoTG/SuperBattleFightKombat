@@ -3,7 +3,7 @@ using System;
 using System.Collections;
 using UnityEngine;
 
-public class LemonView : MonoBehaviourPunCallbacks, IAttack
+public class ProjectileView : MonoBehaviourPunCallbacks, IAttack
 {
     #region Fields
 
@@ -11,16 +11,19 @@ public class LemonView : MonoBehaviourPunCallbacks, IAttack
     [SerializeField] private float _animationSpeed = 1f;
     [SerializeField] private SpriteAnimationsConfig _spriteConfig;
     [SerializeField] private Rigidbody2D _rigidBody;
-    [SerializeField] private Collider2D _collider;
 
     [SerializeField] float _lifetime = 2f;
     [SerializeField] private int _damage = 1;
+    [Space]
+    [SerializeField] GameObject _effectsPrefab;
+    [Space]
+    [SerializeField] private string _soundEffectName;
 
     private Coroutine _disableCoroutine;
 
     private SpriteAnimatorController _animatorController;
 
-    private Action<LemonView> _onCollisionCallback;
+    private Action<ProjectileView> _onCollisionCallback;
 
     private string _playerID;
 
@@ -56,12 +59,14 @@ public class LemonView : MonoBehaviourPunCallbacks, IAttack
 
     private void Awake()
     {
-        _animatorController = new SpriteAnimatorController(_spriteConfig);
+        if (_spriteConfig != null)
+            _animatorController = new SpriteAnimatorController(_spriteConfig);
     }
 
     void Update()
     {
-        _animatorController.UpdateRegular();
+        if (_animatorController != null)
+            _animatorController.UpdateRegular();
     }
 
     #endregion
@@ -69,27 +74,15 @@ public class LemonView : MonoBehaviourPunCallbacks, IAttack
 
     #region Methods
 
-    public void Activate(Vector3 position, Vector2 velocity, string playerID, Action<LemonView> onCollisionCallback)
+    public void Activate(Vector3 position, Vector2 velocity, string playerID, Action<ProjectileView> onCollisionCallback, bool spawnEffects = false, bool playSound = true)
     {
         _onCollisionCallback = onCollisionCallback;
 
-        _disableCoroutine = StartCoroutine(DisableLemon());
-
-        _animatorController.StartAnimation(_spriteRenderer, AnimationTrack.Idle, true, _animationSpeed);
-
-        transform.position = position;
-        transform.localScale = velocity.x > 0 ? References.RightScale : References.LeftScale;
-        _rigidBody.velocity = velocity;
-
-        _playerID = playerID;
-
-        photonView.RPC(nameof(ActivateRPC), RpcTarget.Others, position, velocity, playerID);
-
-        SoundManager.Instance?.PlaySound(References.PEW_SOUND);
+        photonView.RPC(nameof(ActivateRPC), RpcTarget.All, position, velocity, playerID, spawnEffects, playSound);
     }
 
     [PunRPC]
-    private void ActivateRPC(Vector3 position, Vector2 velocity, string playerID)
+    private void ActivateRPC(Vector3 position, Vector2 velocity, string playerID, bool spawnEffects = false, bool playSound = true)
     {
         _disableCoroutine = StartCoroutine(DisableLemon());
 
@@ -99,9 +92,22 @@ public class LemonView : MonoBehaviourPunCallbacks, IAttack
 
         _playerID = playerID;
 
-        _animatorController.StartAnimation(_spriteRenderer, AnimationTrack.Idle, true, _animationSpeed);
+        if (_animatorController != null)
+            _animatorController.StartAnimation(_spriteRenderer, AnimationTrack.Idle, true, _animationSpeed);
 
-        SoundManager.Instance?.PlaySound(References.PEW_SOUND);
+        if (spawnEffects && _effectsPrefab != null)
+        {
+            var effect = Instantiate(_effectsPrefab, position, Quaternion.identity);
+            effect.transform.localScale = transform.localScale;
+        }
+
+        if (!playSound)
+            return;
+
+        if (string.IsNullOrEmpty(_soundEffectName))
+            SoundManager.Instance?.PlaySound(References.PEW_SOUND);
+        else
+            SoundManager.Instance?.PlaySound(_soundEffectName);
     }
 
     public void Deactivate()

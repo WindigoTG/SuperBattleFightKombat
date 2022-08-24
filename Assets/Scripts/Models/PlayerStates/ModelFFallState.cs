@@ -1,12 +1,15 @@
 using UnityEngine;
 
-public class FallState : PlayerState
+public class ModelFFallState : PlayerState
 {
     #region Fields
 
     private PlayerModel _model;
     private PlayerView _view;
     private ContactsPoller _contactPoller;
+
+    private bool _isAttacking;
+    private bool _isLastAttackAnimationPrimary;
 
     #endregion
 
@@ -22,12 +25,18 @@ public class FallState : PlayerState
 
     public override void Activate()
     {
+        if (_isAttacking && _view.IsAnimationDone)
+            _isAttacking = false;
+
         _view.StartAnimation(AnimationTrack.Fall);
+
+        _isAttacking = false;
+        _isLastAttackAnimationPrimary = false;
     }
 
     public override void Update(CurrentInputs inputs)
     {
-        if (inputs.IsJumpPressed && (_model.IsGroundCoyoteTime || _model.IsWallCoyoteTime))
+        if (inputs.IsJumpPressed && (_model.IsGroundCoyoteTime || _model.IsWallCoyoteTime) && !_isAttacking)
         {
             _model.SetState(CharacterState.Jump);
             return;
@@ -44,7 +53,8 @@ public class FallState : PlayerState
 
         if (Mathf.Abs(inputHor) > References.InputThreshold)
         {
-            _view.transform.localScale = (inputHor < 0 ? References.LeftScale : References.RightScale);
+            if (!_isAttacking)
+                _view.transform.localScale = (inputHor < 0 ? References.LeftScale : References.RightScale);
 
             if ((inputHor > 0 && !_contactPoller.HasRightContacts) ||
                 (inputHor < 0 && !_contactPoller.HasLeftContacts) ||
@@ -83,7 +93,18 @@ public class FallState : PlayerState
         if (!_model.Weapon.Attack(_view.AirAttackOrigin.position, _view.transform.localScale.x))
             return;
 
-        _view.StartAnimation(AnimationTrack.AttackJump);
+        _isAttacking = true;
+
+        if (!_isLastAttackAnimationPrimary)
+        {
+            _view.StartAnimation(AnimationTrack.AttackJump);
+            _isLastAttackAnimationPrimary = true;
+        }
+        else
+        {
+            _view.StartAnimation(AnimationTrack.AttackJumpAlter);
+            _isLastAttackAnimationPrimary = false;
+        }
     }
 
     #endregion

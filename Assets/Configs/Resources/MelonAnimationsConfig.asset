@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db483d8634870fa4d89ebe9d17d01f08, type: 3}
+  m_Name: MelonAnimationsConfig
+  m_EditorClassIdentifier: 
+  Sequences:
+  - Track: 0
+    Sprites:
+    - {fileID: -591019673, guid: b4b0734706fd2be428965b5119c05997, type: 3}
+    - {fileID: 792345414, guid: b4b0734706fd2be428965b5119c05997, type: 3}
+    - {fileID: 94957001, guid: b4b0734706fd2be428965b5119c05997, type: 3}
+    - {fileID: -189447746, guid: b4b0734706fd2be428965b5119c05997, type: 3}
