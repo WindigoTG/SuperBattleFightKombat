@@ -9,7 +9,7 @@ public class ModelXWeapon : PlayerWeapon
 
     private const int MAX_LEMONS = 3;
 
-    public override bool Attack(Vector3 attackOrigin, float direction, bool spawnEffects = false)
+    public override bool Attack(Vector3 attackOrigin, float direction, bool spawnEffects = false, int _ = 0)
     {
         if (_lemons.Count >= MAX_LEMONS)
             return false;

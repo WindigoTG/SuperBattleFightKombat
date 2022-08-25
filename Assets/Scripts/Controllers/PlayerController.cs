@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunObservable
     private bool _isAttackPressed;
     private float _horisontalInput;
     private float _verticalInput;
+    private bool _isDashPressed;
 
     private bool _isReady;
 
@@ -44,20 +45,24 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunObservable
                 _verticalInput = Input.GetAxisRaw("Vertical");
                 _isJumpPressed = Input.GetKeyDown(KeyCode.Space);
                 _isAttackPressed = Input.GetMouseButtonDown(0);
+                _isDashPressed = Input.GetKeyDown(KeyCode.LeftShift);
             }
 
             _player.Update(new CurrentInputs
             {
                 Horisontal = _horisontalInput,
                 IsJumpPressed = _isJumpPressed,
-                IsAttackPressed = _isAttackPressed
-            });
+                IsAttackPressed = _isAttackPressed,
+                Vertical = _verticalInput,
+                IsDashPressed = _isDashPressed
+            }); ;
         }
 
         _horisontalInput = default;
         _verticalInput = default;
         _isJumpPressed = default;
         _isAttackPressed = default;
+        _isDashPressed = default;
     }
 
     #endregion
@@ -117,5 +122,6 @@ public struct CurrentInputs
     public float Vertical;
     public bool IsJumpPressed;
     public bool IsAttackPressed;
+    public bool IsDashPressed;
 }
 

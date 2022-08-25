@@ -47,7 +47,8 @@ public class PlayerFactory
                     { CharacterState.Hurt, new HurtState() },
                     { CharacterState.Death, new DeathState() },
                     { CharacterState.IdlePreHenshin, new IdlePreHenshinState() },
-                    { CharacterState.Henshin, new HenshinState() }
+                    { CharacterState.Henshin, new HenshinState() },
+                    { CharacterState.GroundDash, new GroundDashState() }
                 };
             case Character.ModelF:
                 return new Dictionary<CharacterState, PlayerState>
@@ -61,6 +62,22 @@ public class PlayerFactory
                     { CharacterState.Death, new DeathState() },
                     { CharacterState.IdlePreHenshin, new IdlePreHenshinState() },
                     { CharacterState.Henshin, new HenshinState() }
+                };
+            case Character.ModelH:
+                return new Dictionary<CharacterState, PlayerState>
+                {
+                    { CharacterState.Idle, new ModelHIdleState() },
+                    { CharacterState.Run, new ModelHRunState() },
+                    { CharacterState.Jump, new ModelHJumpState() },
+                    { CharacterState.Fall, new ModelHFallState() },
+                    { CharacterState.WallCling, new ModelHWallClingState() },
+                    { CharacterState.Hurt, new HurtState() },
+                    { CharacterState.Death, new DeathState() },
+                    { CharacterState.IdlePreHenshin, new IdlePreHenshinState() },
+                    { CharacterState.Henshin, new HenshinState() },
+                    { CharacterState.GroundDash, new GroundDashState() },
+                    { CharacterState.AirDash, new ModelHAirDashState() },
+                    { CharacterState.AirUpDash, new ModelHAirDashUpState() }
                 };
         }
     }
@@ -76,6 +93,8 @@ public class PlayerFactory
                 return new ModelPWeapon();
             case Character.ModelF:
                 return new ModelFWeapon();
+            case Character.ModelH:
+                return new ModelHWeapon();
         }
     }
 

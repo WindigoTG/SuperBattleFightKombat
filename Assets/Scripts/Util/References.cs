@@ -36,5 +36,8 @@ public class References
     private static string _pewSound = "Pew";
     public static string PEW_SOUND => _pewSound;
 
+    private static string _slashSound = "Slash1";
+    public static string SLASH_SOUND => _slashSound;
+
     #endregion
 }

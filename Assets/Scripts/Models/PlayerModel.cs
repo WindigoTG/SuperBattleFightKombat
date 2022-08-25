@@ -40,6 +40,8 @@ public class PlayerModel
     public Action OnReady;
     public Action<string> OnDeath;
 
+    private bool _hasAirdashed;
+
     #endregion
 
 
@@ -60,6 +62,8 @@ public class PlayerModel
     public float WallJumpForceMultiplier => _wallJumpForceMultiplier;
 
     public PlayerWeapon Weapon => _weapon;
+
+    public bool HasAirDashed => _hasAirdashed;
 
     #endregion
 
@@ -132,6 +136,8 @@ public class PlayerModel
     public void ReserGroundCoyoteTime() => _currentGroundCoyoteTime = COYOTE_TIME;
 
     public void ResetWallCoyoteTime() => _currentWallCoyoteTime = COYOTE_TIME;
+
+    public void SetHasAirDashed(bool hasAirDashed) => _hasAirdashed = hasAirDashed;
 
     public void StartAtPosition(Vector3 position)
     {

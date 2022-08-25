@@ -14,6 +14,7 @@ public class ProjectileView : MonoBehaviourPunCallbacks, IAttack
 
     [SerializeField] float _lifetime = 2f;
     [SerializeField] private int _damage = 1;
+    [SerializeField] private int _priority;
     [Space]
     [SerializeField] GameObject _effectsPrefab;
     [Space]
@@ -37,6 +38,7 @@ public class ProjectileView : MonoBehaviourPunCallbacks, IAttack
     public float Lifetime => _lifetime;
     public string PlayerID => _playerID;
     public int Damage => _damage;
+    public int Priority => _priority;
 
     #endregion
 
@@ -84,7 +86,7 @@ public class ProjectileView : MonoBehaviourPunCallbacks, IAttack
     [PunRPC]
     private void ActivateRPC(Vector3 position, Vector2 velocity, string playerID, bool spawnEffects = false, bool playSound = true)
     {
-        _disableCoroutine = StartCoroutine(DisableLemon());
+        _disableCoroutine = StartCoroutine(DisableProjectile());
 
         transform.position = position;
         transform.localScale = velocity.x > 0 ? References.RightScale : References.LeftScale;
@@ -121,7 +123,7 @@ public class ProjectileView : MonoBehaviourPunCallbacks, IAttack
         }
     }
 
-    private IEnumerator DisableLemon()
+    private IEnumerator DisableProjectile()
     {
         yield return new WaitForSeconds(_lifetime);
 

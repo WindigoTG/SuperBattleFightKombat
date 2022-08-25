@@ -8,6 +8,10 @@ public class FallState : PlayerState
     private PlayerView _view;
     private ContactsPoller _contactPoller;
 
+    private bool _isBoosted;
+    private float _boostDirection;
+    private float _boostSpeedModifier = 1.75f;
+
     #endregion
 
 
@@ -23,6 +27,12 @@ public class FallState : PlayerState
     public override void Activate()
     {
         _view.StartAnimation(AnimationTrack.Fall);
+
+        if (_model.PreviousState == CharacterState.GroundDash)
+        {
+            _isBoosted = true;
+            _boostDirection = _view.RigidBody.velocity.x;
+        }
     }
 
     public override void Update(CurrentInputs inputs)
@@ -40,6 +50,12 @@ public class FallState : PlayerState
 
     public void Move(float inputHor)
     {
+        if (_isBoosted)
+        {
+            if (inputHor == 0 || _boostDirection > 0 && inputHor < 0 || _boostDirection < 0 && inputHor > 0)
+                _isBoosted = false;
+        }
+
         var newVelocity = 0f;
 
         if (Mathf.Abs(inputHor) > References.InputThreshold)
@@ -49,7 +65,12 @@ public class FallState : PlayerState
             if ((inputHor > 0 && !_contactPoller.HasRightContacts) ||
                 (inputHor < 0 && !_contactPoller.HasLeftContacts) ||
                 (inputHor != 0))
-                newVelocity = Time.fixedDeltaTime * _model.CurrentSpeed * (inputHor < 0 ? -1 : 1);
+            {
+                if (_isBoosted)
+                    newVelocity = Time.fixedDeltaTime * _model.CurrentSpeed * _boostSpeedModifier * (inputHor < 0 ? -1 : 1);
+                else
+                    newVelocity = Time.fixedDeltaTime * _model.CurrentSpeed * (inputHor < 0 ? -1 : 1);
+            }
 
             WallCheck(inputHor);
         }

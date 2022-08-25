@@ -11,7 +11,7 @@ public class ModelFWeapon : PlayerWeapon
 
     private const int MAX_MELONS = 4;
 
-    public override bool Attack(Vector3 attackOrigin, float direction, bool spawnEffects = false)
+    public override bool Attack(Vector3 attackOrigin, float direction, bool spawnEffects = false, int _ = 0)
     {
         if (_melons.Count >= MAX_MELONS)
             return false;

@@ -14,18 +14,22 @@ public class PlayerHealth
 
     PlayerView _playerView;
 
+    private int _lastAttackPriority;
+
     public PlayerHealth()
     {
         Reset();
     }
 
-    public void TakeDamage(int damage, string attackerID)
+    public void TakeDamage(int damage, string attackerID, int priority)
     {
         if (_currentHealth <= 0)
             return;
 
-        if (Time.time - _lastHitTime > _invincibilityPeriod)
+        if (Time.time - _lastHitTime > _invincibilityPeriod || priority > _lastAttackPriority)
         {
+            _lastAttackPriority = priority;
+
             _lastHitTime = Time.time;
 
             _currentHealth -= damage;

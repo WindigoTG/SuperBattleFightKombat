@@ -9,7 +9,7 @@ public class ModelPWeapon : PlayerWeapon
 
     private const int MAX_KUNAIS = 5;
 
-    public override bool Attack(Vector3 attackOrigin, float direction, bool spawnEffects = false)
+    public override bool Attack(Vector3 attackOrigin, float direction, bool spawnEffects = false, int _ = 0)
     {
         if (_kunais.Count >= MAX_KUNAIS)
             return false;

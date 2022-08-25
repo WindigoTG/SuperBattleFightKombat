@@ -253,6 +253,7 @@ MonoBehaviour:
   _rigidBody: {fileID: 2874904123377532351}
   _spriteRenderer: {fileID: 1782642757434780647}
   _animationSpeed: 7.5
+  _dashAnimationSpeedModifier: 2
   _regularCollider: {fileID: 2874904123377532350}
   _dashCollider: {fileID: 8550794875596849521}
   _mainCollider: {fileID: 5913897947197746720}
@@ -261,6 +262,7 @@ MonoBehaviour:
   _groundDashAttack: {fileID: 4568093924521774354}
   _wallAttack: {fileID: 1883672486808176998}
   _airAttack: {fileID: 6537645200707832340}
+  _groundUpAttack: {fileID: 0}
   _spriteAnimationsConfig: {fileID: 11400000, guid: bf585ec96331b0d449ffe9bf78ab3554, type: 2}
   _playerUiPrefab: {fileID: 5148342906116226796, guid: 6200220d05f006e45bd2f52bbd2a565e, type: 3}
 --- !u!61 &8550794875596849521

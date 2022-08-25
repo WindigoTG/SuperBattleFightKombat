@@ -21,6 +21,6 @@ public class Test : MonoBehaviour
         var damageable = collision.transform.GetComponentInChildren<IDamageable>();
 
         if (damageable != null)
-            damageable.TakeDamage(1, "");
+            damageable.TakeDamage(1, "", 0);
     }
 }

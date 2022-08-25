@@ -10,6 +10,10 @@ public class JumpState : PlayerState
 
     private float _buffer;
 
+    private bool _isBoosted;
+    private float _boostDirection;
+    private float _boostSpeedModifier = 1.75f;
+
     #endregion
 
 
@@ -52,6 +56,12 @@ public class JumpState : PlayerState
 
         _view.RigidBody.AddForce((Vector2.up * _model.JumpForce) + horisontalForce);
         _view.StartAnimation(AnimationTrack.Jump);
+
+        if (_model.PreviousState == CharacterState.GroundDash)
+        {
+            _isBoosted = true;
+            _boostDirection = _view.RigidBody.velocity.x;
+        }
     }
 
     public override void Update(CurrentInputs inputs)
@@ -66,6 +76,12 @@ public class JumpState : PlayerState
 
     public void Move(float inputHor)
     {
+        if (_isBoosted)
+        {
+            if (inputHor == 0 || _boostDirection > 0 && inputHor < 0 || _boostDirection < 0 && inputHor > 0)
+                _isBoosted = false;
+        }
+
         var newVelocity = 0f;
 
         if (Mathf.Abs(inputHor) > References.InputThreshold)
@@ -75,7 +91,12 @@ public class JumpState : PlayerState
             if ((inputHor > 0 && !_contactPoller.HasRightContacts) ||
                 (inputHor < 0 && !_contactPoller.HasLeftContacts) ||
                 (inputHor != 0))
-                newVelocity = Time.fixedDeltaTime * _model.CurrentSpeed * (inputHor < 0 ? -1 : 1);
+            {
+                if (_isBoosted)
+                    newVelocity = Time.fixedDeltaTime * _model.CurrentSpeed * _boostSpeedModifier * (inputHor < 0 ? -1 : 1);
+                else
+                    newVelocity = Time.fixedDeltaTime * _model.CurrentSpeed * (inputHor < 0 ? -1 : 1);
+            }
 
             WallCheck(inputHor);
         }

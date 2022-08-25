@@ -1354,7 +1354,7 @@ MonoBehaviour:
       CharacterInfoImage: {fileID: 0}
     - Character: 2
       Mugshot: {fileID: -2090285025, guid: b5a720c3b8f3a7a4bbcd5d1f8aaaa612, type: 3}
-      RequiredLevel: 2
+      RequiredLevel: 1
       CharacterInfoImage: {fileID: 0}
     - Character: 3
       Mugshot: {fileID: 1567726477, guid: b5a720c3b8f3a7a4bbcd5d1f8aaaa612, type: 3}
@@ -18850,7 +18850,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7780321, y: 1}
+    m_SensorSize: {x: 1.7785715, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -19787,6 +19787,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 38455f8ff746a2742ac722ddd62a1ba3, type: 3}
   - {fileID: 8300000, guid: 5cfa55695f3baab45aabc0c3b8a8092d, type: 3}
   - {fileID: 8300000, guid: 2c88717053c6bae4ebf39d4494f07bf8, type: 3}
+  - {fileID: 8300000, guid: 545888565c58b7b4599767ff2084fc69, type: 3}
+  - {fileID: 8300000, guid: d669c4d92cc8ac74286e47398bd39b98, type: 3}
   _soundPool: {fileID: 1686700851}
 --- !u!4 &1686700853
 Transform:

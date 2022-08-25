@@ -12,6 +12,7 @@ public class PlayerView : MonoBehaviourPunCallbacks, IDamageable
     [SerializeField] private Rigidbody2D _rigidBody;
     [SerializeField] private SpriteRenderer _spriteRenderer;
     [SerializeField] private float _animationSpeed = 7.5f;
+    [SerializeField] private float _dashAnimationSpeedModifier = 2f;
     [Space]
     [SerializeField] private BoxCollider2D _regularCollider;
     [SerializeField] private BoxCollider2D _dashCollider;
@@ -31,11 +32,13 @@ public class PlayerView : MonoBehaviourPunCallbacks, IDamageable
 
     private string _playerID;
 
-    public Action<int, string> OnDamageTaken;
+    public Action<int, string, int> OnDamageTaken;
 
     Coroutine _blinking;
 
     private PlayerInfoUI _playerUi;
+
+    private AnimationTrack _currentAnimation;
 
     #endregion
 
@@ -53,6 +56,8 @@ public class PlayerView : MonoBehaviourPunCallbacks, IDamageable
     public Transform AirAttackOrigin => _airAttack;
     public Transform GroundUpAttackOrigin => _groundUpAttack;
     public string PlayerID => _playerID;
+
+    public AnimationTrack CurrentAnimation => _currentAnimation;
 
     #endregion
 
@@ -120,7 +125,7 @@ public class PlayerView : MonoBehaviourPunCallbacks, IDamageable
     {
         var attack = go.GetComponent<IAttack>();
         if (attack != null && attack.PlayerID != _playerID)
-            TakeDamage(attack.Damage, attack.PlayerID);
+            TakeDamage(attack.Damage, attack.PlayerID, attack.Priority);
     }
 
     public void SetPlayerID(string playerID)
@@ -207,7 +212,24 @@ public class PlayerView : MonoBehaviourPunCallbacks, IDamageable
             case AnimationTrack.AttackStandUpAlter:
                 StartAttackStandUpAlterAnimation();
                 break;
+            case AnimationTrack.GroundDash:
+                StartGroundDashAnimation();
+                break;
+            case AnimationTrack.GroundDashAttack:
+                StartGroundDashAttackAnimation();
+                break;
+            case AnimationTrack.AirDash:
+                StartAirDashAnimation();
+                break;
+            case AnimationTrack.AirDashUp:
+                StartAirDashUpAnimation();
+                break;
+            case AnimationTrack.AirDashAttack:
+                StartAirDashAttackAnimation();
+                break;
         }
+
+        _currentAnimation = animation;
     }
 
     private void StartIdleAnimation() =>
@@ -260,6 +282,21 @@ public class PlayerView : MonoBehaviourPunCallbacks, IDamageable
 
     private void StartDeathAnimation() =>
         _animatorController?.StartAnimation(_spriteRenderer, AnimationTrack.Death, false, _animationSpeed);
+
+    private void StartGroundDashAnimation() =>
+        _animatorController?.StartAnimation(_spriteRenderer, AnimationTrack.GroundDash, false, _animationSpeed * _dashAnimationSpeedModifier, false);
+
+    private void StartAirDashAnimation() =>
+        _animatorController?.StartAnimation(_spriteRenderer, AnimationTrack.AirDash, false, _animationSpeed * _dashAnimationSpeedModifier, false);
+
+    private void StartAirDashUpAnimation() =>
+        _animatorController?.StartAnimation(_spriteRenderer, AnimationTrack.AirDashUp, false, _animationSpeed * _dashAnimationSpeedModifier, false);
+
+    private void StartGroundDashAttackAnimation() =>
+        _animatorController?.StartAnimation(_spriteRenderer, AnimationTrack.GroundDashAttack, false, _animationSpeed * _dashAnimationSpeedModifier, true);
+
+    private void StartAirDashAttackAnimation() =>
+        _animatorController?.StartAnimation(_spriteRenderer, AnimationTrack.AirDashAttack, false, _animationSpeed * _dashAnimationSpeedModifier, true);
 
     public void Activate() => photonView.RPC(nameof(SetActiveRPC), RpcTarget.All, true);
 
@@ -343,9 +380,9 @@ public class PlayerView : MonoBehaviourPunCallbacks, IDamageable
 
     #region IDamageable
 
-    public void TakeDamage(int damage, string attackerID)
+    public void TakeDamage(int damage, string attackerID, int priority)
     {
-        OnDamageTaken?.Invoke(damage, attackerID);
+        OnDamageTaken?.Invoke(damage, attackerID, priority);
     }
 
     #endregion

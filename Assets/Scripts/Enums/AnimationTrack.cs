@@ -16,5 +16,10 @@ public enum AnimationTrack
     AttackStandAlter = 13,
     AttackJumpAlter = 14,
     AttackStandUp = 15,
-    AttackStandUpAlter = 16
+    AttackStandUpAlter = 16,
+    GroundDash = 17,
+    GroundDashAttack = 18,
+    AirDash = 19,
+    AirDashUp = 20,
+    AirDashAttack = 21
 }

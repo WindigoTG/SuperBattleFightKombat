@@ -63,6 +63,9 @@ public class ModelPRunState : PlayerState
                 _isAttacking = false;
             }
         }
+
+        if (inputs.IsDashPressed && !_isAttacking)
+            _model.SetState(CharacterState.GroundDash);
     }
 
     private void Move(float inputHor)

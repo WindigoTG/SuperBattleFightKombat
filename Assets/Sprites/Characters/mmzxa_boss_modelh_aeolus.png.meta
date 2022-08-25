@@ -114,7 +114,2632 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_0
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 1647
+        width: 35
+        height: 40
+      alignment: 9
+      pivot: {x: 0.57222205, y: 0.4756958}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 687f8dfc3ec765d41813c76617682c34
+      internalID: -399077415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_1
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 1647
+        width: 36
+        height: 41
+      alignment: 9
+      pivot: {x: 0.5556446, y: 0.46454006}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0184ea70f57e62247ab1d7dd2baa7bcb
+      internalID: 217720998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_2
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 1647
+        width: 36
+        height: 41
+      alignment: 9
+      pivot: {x: 0.5554106, y: 0.46350396}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee08e5b73eb08de4eab6b27d7919a427
+      internalID: 923578564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_3
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 1647
+        width: 36
+        height: 42
+      alignment: 9
+      pivot: {x: 0.55611163, y: 0.45333716}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f464e37ba3656eb4d8979f9e844f87ee
+      internalID: -1713443328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_4
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 1541
+        width: 40
+        height: 39
+      alignment: 9
+      pivot: {x: 0.526487, y: 0.46060884}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57784738a93979b4e8e9f4282b3dca02
+      internalID: -2013309345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_5
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 1542
+        width: 32
+        height: 38
+      alignment: 9
+      pivot: {x: 0.5307865, y: 0.47304496}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ddafc7b3e1d4084791997f22f4a1143
+      internalID: 1431670853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_6
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 1541
+        width: 22
+        height: 37
+      alignment: 9
+      pivot: {x: 0.59131414, y: 0.48497877}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5d3e1b84b210f744b263d5e4dc7c7c0
+      internalID: -1416177230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_7
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 1542
+        width: 30
+        height: 39
+      alignment: 9
+      pivot: {x: 0.56569314, y: 0.46210188}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0b968fada9292a4f86fd92a9d47def2
+      internalID: 617322406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_8
+      rect:
+        serializedVersion: 2
+        x: 473
+        y: 1542
+        width: 36
+        height: 38
+      alignment: 9
+      pivot: {x: 0.52729964, y: 0.44690904}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4944301907c207049a6559bd0f1f6be5
+      internalID: -1009604839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_9
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 1542
+        width: 34
+        height: 40
+      alignment: 9
+      pivot: {x: 0.5592418, y: 0.474823}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b512d30918f38443ae1baa37a0050a8
+      internalID: 1091489668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_10
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 1540
+        width: 30
+        height: 39
+      alignment: 9
+      pivot: {x: 0.63178915, y: 0.48841584}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53a97f3b96543894bb9d8bbb0147295a
+      internalID: 1258167927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_11
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 1540
+        width: 25
+        height: 38
+      alignment: 9
+      pivot: {x: 0.64062256, y: 0.50164795}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc799445b4873d948984fc5beb75f7f3
+      internalID: 76866217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_12
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 1541
+        width: 27
+        height: 40
+      alignment: 9
+      pivot: {x: 0.44263148, y: 0.47579956}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48a81350c2c52664894c6a14414539f4
+      internalID: 897342132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_13
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 1541
+        width: 36
+        height: 37
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43285474}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cebc9f106da8dac48a1fc14460ec0707
+      internalID: -1638940156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_14
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 1485
+        width: 36
+        height: 37
+      alignment: 9
+      pivot: {x: 0.61121875, y: 0.51326275}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 124a3090c2e4ac44896d3020fbe1ea19
+      internalID: -1238098386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_15
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 1485
+        width: 42
+        height: 31
+      alignment: 9
+      pivot: {x: 0.61793447, y: 0.61504537}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62da70781f4e0d2438fa7aa65dc49a73
+      internalID: 1769611141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_16
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 1485
+        width: 45
+        height: 31
+      alignment: 9
+      pivot: {x: 0.64246553, y: 0.5839765}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec89c000a6836334ea967b7314c7482c
+      internalID: -1090831461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_17
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 1430
+        width: 39
+        height: 40
+      alignment: 9
+      pivot: {x: 0.4110624, y: 0.45012206}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf47d257cedb4034a939cbdb91778513
+      internalID: -265884693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_18
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1430
+        width: 39
+        height: 40
+      alignment: 9
+      pivot: {x: 0.41171342, y: 0.4499176}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4b6f367da7b83342ab9353d482dd2c4
+      internalID: -973463139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_19
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 1316
+        width: 31
+        height: 46
+      alignment: 9
+      pivot: {x: 0.48323008, y: 0.45560092}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad16f71d77510384cb8b6fcd3364f8c4
+      internalID: -1604010806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_20
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 1317
+        width: 30
+        height: 46
+      alignment: 9
+      pivot: {x: 0.500001, y: 0.45767346}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 872e9c04c75e54247ac5e41db9f252cf
+      internalID: -1327462900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_21
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 1316
+        width: 31
+        height: 46
+      alignment: 9
+      pivot: {x: 0.48345947, y: 0.45665178}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 478a8edb0114cb145bbe4f91f0216712
+      internalID: 885280018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_22
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 1314
+        width: 30
+        height: 45
+      alignment: 9
+      pivot: {x: 0.49913126, y: 0.46636826}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0d2b8ecd8a037a4b9dc9df115b161e6
+      internalID: 1228316380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_23
+      rect:
+        serializedVersion: 2
+        x: 518
+        y: 1313
+        width: 30
+        height: 42
+      alignment: 9
+      pivot: {x: 0.49933472, y: 0.4761963}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 075e75e75def0b045957a5b62f12123f
+      internalID: 1183568982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_24
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 1253
+        width: 56
+        height: 49
+      alignment: 9
+      pivot: {x: 0.32173428, y: 0.55093074}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f775000a89e6ed4c9b7f910991a708c
+      internalID: -355838600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_25
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 1254
+        width: 52
+        height: 47
+      alignment: 9
+      pivot: {x: 0.30709723, y: 0.5325668}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f4a9005180c2a84e9d0a609112d961a
+      internalID: -655629315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_26
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 1252
+        width: 49
+        height: 49
+      alignment: 9
+      pivot: {x: 0.30612308, y: 0.5510229}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0ad932eb1895054f953b16f6b03e9bf
+      internalID: -251140467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_27
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 1253
+        width: 46
+        height: 47
+      alignment: 9
+      pivot: {x: 0.30452695, y: 0.5317902}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfd67f30b0bf8bb43978b444dcfc7ebc
+      internalID: 512394024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_28
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 1201
+        width: 36
+        height: 37
+      alignment: 9
+      pivot: {x: 0.6117198, y: 0.5134112}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1d7a7fc79f1cec46bd646fbec49ae32
+      internalID: 488803233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_29
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 1202
+        width: 37
+        height: 32
+      alignment: 9
+      pivot: {x: 0.70286024, y: 0.5943947}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac0fa03ed0c1d7245afeea0c932f41b8
+      internalID: 1793039575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_30
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 1203
+        width: 56
+        height: 37
+      alignment: 9
+      pivot: {x: 0.5166686, y: 0.48738718}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ce35b01ef02f3b4282ad7fd60436788
+      internalID: -672522414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_31
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 1202
+        width: 49
+        height: 37
+      alignment: 9
+      pivot: {x: 0.5907481, y: 0.49038285}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6946f3ba3cbe4c4e986a99ddba03aca
+      internalID: -1628187998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_32
+      rect:
+        serializedVersion: 2
+        x: 506
+        y: 1203
+        width: 46
+        height: 37
+      alignment: 9
+      pivot: {x: 0.6297395, y: 0.48617637}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9f3eae533fe58244a8dd4d8ca19a567
+      internalID: 1397750055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_33
+      rect:
+        serializedVersion: 2
+        x: 561
+        y: 1202
+        width: 45
+        height: 35
+      alignment: 9
+      pivot: {x: 0.64481336, y: 0.51301616}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1e04aeea8e5a484da9c2a08acc2630d
+      internalID: 1106342427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_34
+      rect:
+        serializedVersion: 2
+        x: 613
+        y: 1201
+        width: 45
+        height: 31
+      alignment: 9
+      pivot: {x: 0.6402588, y: 0.58290935}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 090ba1193145f3443984e097b652494a
+      internalID: -1747792753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_35
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 1141
+        width: 31
+        height: 37
+      alignment: 9
+      pivot: {x: 0.51623833, y: 0.433795}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 417349d8f04ca044bbb793983a416440
+      internalID: 1837766535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_36
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 1140
+        width: 35
+        height: 40
+      alignment: 9
+      pivot: {x: 0.48566285, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07a72dcea695ec54a8afba69b0fcf3a0
+      internalID: 159658675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_37
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 1141
+        width: 48
+        height: 51
+      alignment: 9
+      pivot: {x: 0.2916832, y: 0.41214287}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7198c60af6f2a7c4690b51d63cf75b46
+      internalID: -963172807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_38
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 1141
+        width: 45
+        height: 51
+      alignment: 9
+      pivot: {x: 0.289249, y: 0.4119179}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd0dcdd02c401ff4aae6d8ff61757e7c
+      internalID: 19939101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_39
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 1142
+        width: 41
+        height: 51
+      alignment: 9
+      pivot: {x: 0.31783983, y: 0.41232958}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0f33dcf89c90ce4cb4fbd58389eb1cf
+      internalID: -1861571477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_40
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 1141
+        width: 37
+        height: 51
+      alignment: 9
+      pivot: {x: 0.3518924, y: 0.4117671}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f09dc1e6882f0af46926e2946b9ed515
+      internalID: 337935795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_41
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 1138
+        width: 30
+        height: 52
+      alignment: 9
+      pivot: {x: 0.43322957, y: 0.40407386}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 142bc5c4cddf8804895fe2177d58bd6a
+      internalID: 877084758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_42
+      rect:
+        serializedVersion: 2
+        x: 651
+        y: 1138
+        width: 35
+        height: 46
+      alignment: 9
+      pivot: {x: 0.4571446, y: 0.4560892}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 817253789ee2eed43914d875c29c4499
+      internalID: 177574426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_43
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 1085
+        width: 26
+        height: 45
+      alignment: 9
+      pivot: {x: 0.46206313, y: 0.4671224}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d07d1fc36a2977d47a67ae59a2b11d9c
+      internalID: 1899065406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_44
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 1089
+        width: 27
+        height: 38
+      alignment: 9
+      pivot: {x: 0.44283718, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f25af7c758dd0e49977db9cb174a676
+      internalID: -2004462457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_45
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 1088
+        width: 31
+        height: 40
+      alignment: 9
+      pivot: {x: 0.38842577, y: 0.47529298}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6ba3859aa2993c4ab593781001ce739
+      internalID: 1626103039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_46
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 1085
+        width: 32
+        height: 44
+      alignment: 9
+      pivot: {x: 0.3742571, y: 0.47598267}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 979f6f48b09846448996b83c70a8caaf
+      internalID: -2075619855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_47
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 732
+        width: 68
+        height: 43
+      alignment: 9
+      pivot: {x: 0.6610686, y: 0.4422139}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbb021854200a014da489c569bcac2a6
+      internalID: -376420361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_48
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 732
+        width: 69
+        height: 43
+      alignment: 9
+      pivot: {x: 0.6517069, y: 0.44101307}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 645bb3dd9206e0e4ba86e7bfd427293d
+      internalID: -720477859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_49
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 732
+        width: 68
+        height: 43
+      alignment: 9
+      pivot: {x: 0.64712614, y: 0.44079307}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 678e3c27f3e2a7e42bfa15589108ea3b
+      internalID: -2123067542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_50
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 732
+        width: 44
+        height: 44
+      alignment: 9
+      pivot: {x: 0.47655973, y: 0.4312453}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86639bcad64392f4b84a8227026fb411
+      internalID: 619409602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_51
+      rect:
+        serializedVersion: 2
+        x: 562
+        y: 732
+        width: 43
+        height: 44
+      alignment: 9
+      pivot: {x: 0.48724082, y: 0.43211225}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7319130a7030e44aa1ea1770eaf8506
+      internalID: -1526984471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_52
+      rect:
+        serializedVersion: 2
+        x: 606
+        y: 732
+        width: 42
+        height: 44
+      alignment: 9
+      pivot: {x: 0.5008269, y: 0.43214557}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72526f34adaaf6c4185581f1ddb952a1
+      internalID: 928856801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_53
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 732
+        width: 45
+        height: 45
+      alignment: 9
+      pivot: {x: 0.4662557, y: 0.42150608}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 441fb4564eb0d6d4cb637842c2a0e753
+      internalID: 2018867664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_54
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 732
+        width: 35
+        height: 37
+      alignment: 9
+      pivot: {x: 0.60121375, y: 0.5121378}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18283e0cecf302942ab77d5f4cee783c
+      internalID: 1358328645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_55
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 670
+        width: 90
+        height: 58
+      alignment: 9
+      pivot: {x: 0.6004279, y: 0.32720736}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ffee7e801de32744bacc0d26b19aaa1
+      internalID: 1631135154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_56
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 670
+        width: 90
+        height: 58
+      alignment: 9
+      pivot: {x: 0.5998983, y: 0.32734102}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05ffb04226f4ff549a9599c64c9c0a31
+      internalID: 2071316291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_57
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 668
+        width: 68
+        height: 57
+      alignment: 9
+      pivot: {x: 0.79376805, y: 0.3333676}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 750827c2420d4ce47bd73c6a07ebcfd4
+      internalID: 1957605204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_58
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 668
+        width: 64
+        height: 36
+      alignment: 9
+      pivot: {x: 0.7813139, y: 0.52733696}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3700d0cc1a438b74891f89a954daea57
+      internalID: -411993109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_59
+      rect:
+        serializedVersion: 2
+        x: 583
+        y: 668
+        width: 43
+        height: 36
+      alignment: 9
+      pivot: {x: 0.6743505, y: 0.5270199}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7556e1d286b116f47a43e6ca221c5df6
+      internalID: -1523577694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_60
+      rect:
+        serializedVersion: 2
+        x: 633
+        y: 668
+        width: 43
+        height: 36
+      alignment: 9
+      pivot: {x: 0.67478484, y: 0.52789307}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3052d191c11ecd49bbb8d3ba3f9ca8e
+      internalID: -766407008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_61
+      rect:
+        serializedVersion: 2
+        x: 679
+        y: 668
+        width: 43
+        height: 36
+      alignment: 9
+      pivot: {x: 0.6739544, y: 0.52777946}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13bbc0b24642a184b9e1829188d14ac5
+      internalID: 1341902030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_62
+      rect:
+        serializedVersion: 2
+        x: 732
+        y: 668
+        width: 36
+        height: 36
+      alignment: 9
+      pivot: {x: 0.6124488, y: 0.5276015}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3095e9d5ef2377a4cb83f4a3f0571a96
+      internalID: -421237014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_63
+      rect:
+        serializedVersion: 2
+        x: 772
+        y: 668
+        width: 31
+        height: 39
+      alignment: 9
+      pivot: {x: 0.54918253, y: 0.4871842}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e449f7b1154d81945aabe7fe271f08ac
+      internalID: -929140556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_64
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 549
+        width: 64
+        height: 42
+      alignment: 9
+      pivot: {x: 0.75159836, y: 0.4513143}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c8d1060c26aa1448be3dcaaca8875fd
+      internalID: -576632409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_65
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 549
+        width: 64
+        height: 42
+      alignment: 9
+      pivot: {x: 0.75014687, y: 0.4522211}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f1bc02ecc20d254a805185f3a320624
+      internalID: 255132629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_66
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 550
+        width: 64
+        height: 39
+      alignment: 9
+      pivot: {x: 0.7500162, y: 0.48723426}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b901a825d73ffe14ca61e646d856c1fb
+      internalID: 559234707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_67
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 551
+        width: 51
+        height: 31
+      alignment: 9
+      pivot: {x: 0.6867341, y: 0.61396444}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1e551e011bb5d24a970156c032108e4
+      internalID: -493853107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_68
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 550
+        width: 44
+        height: 31
+      alignment: 9
+      pivot: {x: 0.6143757, y: 0.6147579}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbbadeaf5bfc94c45b786eaba526dcc8
+      internalID: -1690254646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_69
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 550
+        width: 46
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5862785, y: 0.62607384}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34734af37f68c164db1db174c517f14a
+      internalID: 199541589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_70
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 550
+        width: 47
+        height: 33
+      alignment: 9
+      pivot: {x: 0.57418627, y: 0.6354}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6caeb31344da4b44fb85d2429786bddf
+      internalID: 1539785632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_71
+      rect:
+        serializedVersion: 2
+        x: 642
+        y: 552
+        width: 43
+        height: 31
+      alignment: 9
+      pivot: {x: 0.6278303, y: 0.6132832}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cf7de40571c8aa4baaa6490fc2e8c14
+      internalID: 192099531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_72
+      rect:
+        serializedVersion: 2
+        x: 739
+        y: 552
+        width: 34
+        height: 34
+      alignment: 9
+      pivot: {x: 0.52893424, y: 0.5578667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1a69295d0752a4499100f5aaeb10c32
+      internalID: 388898297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_73
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 415
+        width: 75
+        height: 56
+      alignment: 9
+      pivot: {x: 0.666947, y: 0.37546158}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16f007f458ae0c646bef498b8e4901bb
+      internalID: 518707086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_74
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 415
+        width: 77
+        height: 56
+      alignment: 9
+      pivot: {x: 0.64982945, y: 0.37561363}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fc618a7543597e42b3d5242979742d8
+      internalID: 862813569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_75
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 419
+        width: 76
+        height: 53
+      alignment: 9
+      pivot: {x: 0.6586998, y: 0.33860058}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecb37ad35306d794c90a8f176f3ea45f
+      internalID: -1226570679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_76
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 419
+        width: 67
+        height: 53
+      alignment: 9
+      pivot: {x: 0.61011565, y: 0.34039596}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b4604e36b7f82c44bf6abbf38450d3d
+      internalID: 837930843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_77
+      rect:
+        serializedVersion: 2
+        x: 606
+        y: 419
+        width: 48
+        height: 47
+      alignment: 9
+      pivot: {x: 0.5412763, y: 0.38407606}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d53d318e32652145bbfc5d5661a0073
+      internalID: -866759688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_78
+      rect:
+        serializedVersion: 2
+        x: 661
+        y: 419
+        width: 45
+        height: 45
+      alignment: 9
+      pivot: {x: 0.5553223, y: 0.4011624}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 083158ce17ae1c047a6e72d55d94c45a
+      internalID: 908869511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_79
+      rect:
+        serializedVersion: 2
+        x: 717
+        y: 417
+        width: 42
+        height: 38
+      alignment: 9
+      pivot: {x: 0.6188427, y: 0.47331962}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9be4f3a120fb0d84885c7655e9d5239b
+      internalID: -1081903095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_80
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 295
+        width: 63
+        height: 46
+      alignment: 9
+      pivot: {x: 0.18992203, y: 0.5013879}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fb302c995d509c499e0f651e131465e
+      internalID: -819870653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_81
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 295
+        width: 62
+        height: 46
+      alignment: 9
+      pivot: {x: 0.19359022, y: 0.501084}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4da7080b84898514493c65a1795f46ba
+      internalID: -2078550145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_82
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 295
+        width: 62
+        height: 45
+      alignment: 9
+      pivot: {x: 0.19406226, y: 0.5116218}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ce2066cc9b269b4d85d5f7bc49e2709
+      internalID: -1937205742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_83
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 296
+        width: 56
+        height: 44
+      alignment: 9
+      pivot: {x: 0.21416473, y: 0.52308935}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3b2210e0a33c8a4cb60ee0b8d24f7b7
+      internalID: -1116619304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_84
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 294
+        width: 37
+        height: 45
+      alignment: 9
+      pivot: {x: 0.3249627, y: 0.5340861}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31aff8a0ccbe60f49b7a582db0d2887c
+      internalID: -1336886395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_85
+      rect:
+        serializedVersion: 2
+        x: 638
+        y: 293
+        width: 37
+        height: 47
+      alignment: 9
+      pivot: {x: 0.32529593, y: 0.55358434}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0f700933a4437d4ca72ef1897dbccb2
+      internalID: 342900960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_86
+      rect:
+        serializedVersion: 2
+        x: 685
+        y: 291
+        width: 38
+        height: 47
+      alignment: 9
+      pivot: {x: 0.3168046, y: 0.55304086}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27e3b8c8858312a498d48c0b8f8c3adb
+      internalID: -413214209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_87
+      rect:
+        serializedVersion: 2
+        x: 732
+        y: 295
+        width: 32
+        height: 42
+      alignment: 9
+      pivot: {x: 0.37273788, y: 0.5011132}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74f5e35f93723c842aa5a98fc6eec461
+      internalID: -990538924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_88
+      rect:
+        serializedVersion: 2
+        x: 573
+        y: 246
+        width: 41
+        height: 37
+      alignment: 9
+      pivot: {x: 0.5118944, y: 0.48682052}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9691db1cd7638743b2fbfe878c845d9
+      internalID: -402521341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_89
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 245
+        width: 34
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b564025e3e0ffb94081895b7ea5b9308
+      internalID: 875818098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_90
+      rect:
+        serializedVersion: 2
+        x: 662
+        y: 247
+        width: 34
+        height: 35
+      alignment: 9
+      pivot: {x: 0.55941236, y: 0.51420635}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08c7aadc698eaa344a7d1fad4db7ff19
+      internalID: -314196826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_91
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 245
+        width: 34
+        height: 37
+      alignment: 9
+      pivot: {x: 0.5307294, y: 0.48682383}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 666bbcf3eb183b546bf9b0a1b2d584d9
+      internalID: 1989337733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_92
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 245
+        width: 34
+        height: 36
+      alignment: 9
+      pivot: {x: 0.49931425, y: 0.47263166}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb861470350fa7646b38c2ac534d8558
+      internalID: 1785384852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_93
+      rect:
+        serializedVersion: 2
+        x: 791
+        y: 246
+        width: 35
+        height: 38
+      alignment: 9
+      pivot: {x: 0.5428589, y: 0.5000008}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e2649ed8ba9e0242a88d5d5578ea3ab
+      internalID: 1887735374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_94
+      rect:
+        serializedVersion: 2
+        x: 835
+        y: 246
+        width: 34
+        height: 37
+      alignment: 9
+      pivot: {x: 0.53000057, y: 0.5140546}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: caa63eaab1af7f840bebbf98ec002518
+      internalID: 2136472193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_95
+      rect:
+        serializedVersion: 2
+        x: 875
+        y: 247
+        width: 34
+        height: 36
+      alignment: 9
+      pivot: {x: 0.5294136, y: 0.5277786}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef31058279fd44248a64501718c3c829
+      internalID: -108992624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_96
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 247
+        width: 34
+        height: 37
+      alignment: 9
+      pivot: {x: 0.5010502, y: 0.51255673}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b6d2c244b34864408737abc387ffd29
+      internalID: -1691498284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_97
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 247
+        width: 36
+        height: 35
+      alignment: 9
+      pivot: {x: 0.5, y: 0.45636684}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de387ea01dcd8d04cbe4d47c2f05a5b0
+      internalID: -1840499962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_98
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 132
+        width: 58
+        height: 51
+      alignment: 9
+      pivot: {x: 0.5858986, y: 0.33527002}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0194f094148dd1948920186d13530b20
+      internalID: 585266992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_99
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 133
+        width: 58
+        height: 51
+      alignment: 9
+      pivot: {x: 0.5864842, y: 0.33425424}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3b767e92614bef499621f3b69e31c01
+      internalID: 1138739490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_100
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 133
+        width: 48
+        height: 47
+      alignment: 9
+      pivot: {x: 0.708519, y: 0.36370915}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64e99f053200eb94896c4220d2e4b9af
+      internalID: 1356618288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_101
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 133
+        width: 46
+        height: 39
+      alignment: 9
+      pivot: {x: 0.6959766, y: 0.4359757}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8f5d64ce20f02844b80c57013ec1392
+      internalID: -687320297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_102
+      rect:
+        serializedVersion: 2
+        x: 509
+        y: 131
+        width: 29
+        height: 41
+      alignment: 9
+      pivot: {x: 0.5172856, y: 0.46332756}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cbb0aaa63e19fb48b8449a39f5b91b5
+      internalID: -604966259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_103
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 130
+        width: 29
+        height: 40
+      alignment: 9
+      pivot: {x: 0.5195755, y: 0.5016697}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 494adee2d2a153242a03fc80c51b7a97
+      internalID: 1844594071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_104
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 130
+        width: 29
+        height: 40
+      alignment: 9
+      pivot: {x: 0.51639533, y: 0.50098956}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d33ffa9b59a51db458b05ee31a4895b7
+      internalID: -2054567836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_105
+      rect:
+        serializedVersion: 2
+        x: 619
+        y: 132
+        width: 29
+        height: 39
+      alignment: 9
+      pivot: {x: 0.5173508, y: 0.48790488}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb4105c06d2efbd428c29b98d7fea91c
+      internalID: 1198785210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_106
+      rect:
+        serializedVersion: 2
+        x: 653
+        y: 131
+        width: 31
+        height: 44
+      alignment: 9
+      pivot: {x: 0.51617825, y: 0.4999993}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e77898dfe91781a47910274833d309ad
+      internalID: 928345200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_107
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 65
+        width: 76
+        height: 59
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4739045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 183146944ea95ef49863276751e580af
+      internalID: -1605370055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_108
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 63
+        width: 77
+        height: 59
+      alignment: 9
+      pivot: {x: 0.4935136, y: 0.4576734}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: caea234b2f308e54fa556d87d899965c
+      internalID: 136721800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_109
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 63
+        width: 76
+        height: 55
+      alignment: 9
+      pivot: {x: 0.50027746, y: 0.4911811}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9645f78c08264043bbded25538dbf4e
+      internalID: 2047718600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_110
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 62
+        width: 76
+        height: 47
+      alignment: 9
+      pivot: {x: 0.4999992, y: 0.5964945}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b545659c60ab5714d921a4ec3de37cb6
+      internalID: -1146921557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_111
+      rect:
+        serializedVersion: 2
+        x: 583
+        y: 64
+        width: 47
+        height: 45
+      alignment: 9
+      pivot: {x: 0.23398411, y: 0.57853156}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 470cc968dfac7884cae7e322310781f9
+      internalID: -1903664186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_112
+      rect:
+        serializedVersion: 2
+        x: 635
+        y: 63
+        width: 45
+        height: 46
+      alignment: 9
+      pivot: {x: 0.2000651, y: 0.5872663}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 169c947b0f0898f499f75915c6dbaa34
+      internalID: 638765324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_113
+      rect:
+        serializedVersion: 2
+        x: 688
+        y: 64
+        width: 49
+        height: 46
+      alignment: 9
+      pivot: {x: 0.26528868, y: 0.5440075}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a990f6aae6e369d45b0963ca8ae0d553
+      internalID: 1138178765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_114
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 7
+        width: 32
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cab3bb459ecff74bbefc9ea73f6f8e5
+      internalID: 1467230989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_115
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 7
+        width: 29
+        height: 33
+      alignment: 9
+      pivot: {x: 0.5164963, y: 0.57345295}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99ed2a8f590661242bbd2bd68e57e9cd
+      internalID: 645569362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_116
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 7
+        width: 28
+        height: 31
+      alignment: 9
+      pivot: {x: 0.4988218, y: 0.6130357}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21323a929b192ad4e944787fa6934656
+      internalID: -636973057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_117
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 7
+        width: 28
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5934901}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b6e4f4b7e654a145a9bafa782a28401
+      internalID: 234013603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_118
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 192
+        width: 71
+        height: 34
+      alignment: 9
+      pivot: {x: 0.502468, y: 0.2044893}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d06fd28287040a4f9ea591773bb2240
+      internalID: 1719014211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_119
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 192
+        width: 71
+        height: 34
+      alignment: 9
+      pivot: {x: 0.502468, y: 0.2044893}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c52775a74e583b54c9e0b9253c77260b
+      internalID: -578139801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_120
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 194
+        width: 71
+        height: 32
+      alignment: 9
+      pivot: {x: 0.52263415, y: 0.14511156}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7e8541b2ad04f545ad3f61b166771cc
+      internalID: -170427187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_121
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 211
+        width: 29
+        height: 15
+      alignment: 9
+      pivot: {x: -0.21300638, y: -0.8070597}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ef6cbd9436bc7d49bd3aacd3b55d6d8
+      internalID: 420079338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_122
+      rect:
+        serializedVersion: 2
+        x: 589
+        y: 212
+        width: 19
+        height: 14
+      alignment: 9
+      pivot: {x: -0.7348793, y: -0.9233758}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 825b0e63acc6e574c853403f69fae493
+      internalID: -1156965176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_123
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 213
+        width: 20
+        height: 14
+      alignment: 9
+      pivot: {x: -0.8666779, y: -1.0427399}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 867becf2da5d9254d94d8d08ac9e82f5
+      internalID: 229041734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmzxa_boss_modelh_aeolus_124
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 213
+        width: 20
+        height: 15
+      alignment: 9
+      pivot: {x: -1.5193207, y: -0.94802755}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ea1b412d6257cc4fbdd6c1c2b85e783
+      internalID: -427712416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -125,7 +2750,132 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      mmzxa_boss_modelh_aeolus_4: -2013309345
+      mmzxa_boss_modelh_aeolus_41: 877084758
+      mmzxa_boss_modelh_aeolus_84: -1336886395
+      mmzxa_boss_modelh_aeolus_89: 875818098
+      mmzxa_boss_modelh_aeolus_34: -1747792753
+      mmzxa_boss_modelh_aeolus_88: -402521341
+      mmzxa_boss_modelh_aeolus_115: 645569362
+      mmzxa_boss_modelh_aeolus_42: 177574426
+      mmzxa_boss_modelh_aeolus_85: 342900960
+      mmzxa_boss_modelh_aeolus_46: -2075619855
+      mmzxa_boss_modelh_aeolus_67: -493853107
+      mmzxa_boss_modelh_aeolus_103: 1844594071
+      mmzxa_boss_modelh_aeolus_26: -251140467
+      mmzxa_boss_modelh_aeolus_2: 923578564
+      mmzxa_boss_modelh_aeolus_70: 1539785632
+      mmzxa_boss_modelh_aeolus_92: 1785384852
+      mmzxa_boss_modelh_aeolus_63: -929140556
+      mmzxa_boss_modelh_aeolus_81: -2078550145
+      mmzxa_boss_modelh_aeolus_123: 229041734
+      mmzxa_boss_modelh_aeolus_22: 1228316380
+      mmzxa_boss_modelh_aeolus_75: -1226570679
+      mmzxa_boss_modelh_aeolus_50: 619409602
+      mmzxa_boss_modelh_aeolus_60: -766407008
+      mmzxa_boss_modelh_aeolus_96: -1691498284
+      mmzxa_boss_modelh_aeolus_8: -1009604839
+      mmzxa_boss_modelh_aeolus_28: 488803233
+      mmzxa_boss_modelh_aeolus_36: 159658675
+      mmzxa_boss_modelh_aeolus_94: 2136472193
+      mmzxa_boss_modelh_aeolus_14: -1238098386
+      mmzxa_boss_modelh_aeolus_117: 234013603
+      mmzxa_boss_modelh_aeolus_6: -1416177230
+      mmzxa_boss_modelh_aeolus_98: 585266992
+      mmzxa_boss_modelh_aeolus_38: 19939101
+      mmzxa_boss_modelh_aeolus_43: 1899065406
+      mmzxa_boss_modelh_aeolus_99: 1138739490
+      mmzxa_boss_modelh_aeolus_45: 1626103039
+      mmzxa_boss_modelh_aeolus_61: 1341902030
+      mmzxa_boss_modelh_aeolus_69: 199541589
+      mmzxa_boss_modelh_aeolus_74: 862813569
+      mmzxa_boss_modelh_aeolus_13: 76866217
+      mmzxa_boss_modelh_aeolus_77: -866759688
+      mmzxa_boss_modelh_aeolus_3: -1713443328
+      mmzxa_boss_modelh_aeolus_33: 1106342427
+      mmzxa_boss_modelh_aeolus_113: 1138178765
+      mmzxa_boss_modelh_aeolus_86: -413214209
+      mmzxa_boss_modelh_aeolus_1: 217720998
+      mmzxa_boss_modelh_aeolus_111: -1903664186
+      mmzxa_boss_modelh_aeolus_37: -963172807
+      mmzxa_boss_modelh_aeolus_52: 928856801
+      mmzxa_boss_modelh_aeolus_40: 337935795
+      mmzxa_boss_modelh_aeolus_0: -399077415
+      mmzxa_boss_modelh_aeolus_53: 2018867664
+      mmzxa_boss_modelh_aeolus_35: 1837766535
+      mmzxa_boss_modelh_aeolus_100: 1356618288
+      mmzxa_boss_modelh_aeolus_16: -1090831461
+      mmzxa_boss_modelh_aeolus_58: -411993109
+      mmzxa_boss_modelh_aeolus_18: -973463139
+      mmzxa_boss_modelh_aeolus_7: 617322406
+      mmzxa_boss_modelh_aeolus_21: 885280018
+      mmzxa_boss_modelh_aeolus_122: -1156965176
+      mmzxa_boss_modelh_aeolus_47: -376420361
+      mmzxa_boss_modelh_aeolus_72: 388898297
+      mmzxa_boss_modelh_aeolus_82: -1937205742
+      mmzxa_boss_modelh_aeolus_56: 2071316291
+      mmzxa_boss_modelh_aeolus_19: -1604010806
+      mmzxa_boss_modelh_aeolus_55: 1631135154
+      mmzxa_boss_modelh_aeolus_121: 420079338
+      mmzxa_boss_modelh_aeolus_68: -1690254646
+      mmzxa_boss_modelh_aeolus_87: -990538924
+      mmzxa_boss_modelh_aeolus_25: -655629315
+      mmzxa_boss_modelh_aeolus_95: -108992624
+      mmzxa_boss_modelh_aeolus_114: 1467230989
+      mmzxa_boss_modelh_aeolus_105: 1198785210
+      mmzxa_boss_modelh_aeolus_30: -672522414
+      mmzxa_boss_modelh_aeolus_57: 1957605204
+      mmzxa_boss_modelh_aeolus_62: -421237014
+      mmzxa_boss_modelh_aeolus_51: -1526984471
+      mmzxa_boss_modelh_aeolus_97: -1840499962
+      mmzxa_boss_modelh_aeolus_66: 559234707
+      mmzxa_boss_modelh_aeolus_118: 1719014211
+      mmzxa_boss_modelh_aeolus_23: 1183568982
+      mmzxa_boss_modelh_aeolus_124: -427712416
+      mmzxa_boss_modelh_aeolus_107: -1605370055
+      mmzxa_boss_modelh_aeolus_101: -687320297
+      mmzxa_boss_modelh_aeolus_39: -1861571477
+      mmzxa_boss_modelh_aeolus_65: 255132629
+      mmzxa_boss_modelh_aeolus_15: 1769611141
+      mmzxa_boss_modelh_aeolus_71: 192099531
+      mmzxa_boss_modelh_aeolus_106: 928345200
+      mmzxa_boss_modelh_aeolus_104: -2054567836
+      mmzxa_boss_modelh_aeolus_110: -1146921557
+      mmzxa_boss_modelh_aeolus_17: -265884693
+      mmzxa_boss_modelh_aeolus_91: 1989337733
+      mmzxa_boss_modelh_aeolus_5: 1431670853
+      mmzxa_boss_modelh_aeolus_54: 1358328645
+      mmzxa_boss_modelh_aeolus_93: 1887735374
+      mmzxa_boss_modelh_aeolus_120: -170427187
+      mmzxa_boss_modelh_aeolus_59: -1523577694
+      mmzxa_boss_modelh_aeolus_29: 1793039575
+      mmzxa_boss_modelh_aeolus_64: -576632409
+      mmzxa_boss_modelh_aeolus_9: -1753901940
+      mmzxa_boss_modelh_aeolus_83: -1116619304
+      mmzxa_boss_modelh_aeolus_76: 837930843
+      mmzxa_boss_modelh_aeolus_90: -314196826
+      mmzxa_boss_modelh_aeolus_116: -636973057
+      mmzxa_boss_modelh_aeolus_112: 638765324
+      mmzxa_boss_modelh_aeolus_31: -1628187998
+      mmzxa_boss_modelh_aeolus_44: -2004462457
+      mmzxa_boss_modelh_aeolus_78: 908869511
+      mmzxa_boss_modelh_aeolus_11: 1091489668
+      mmzxa_boss_modelh_aeolus_119: -578139801
+      mmzxa_boss_modelh_aeolus_80: -819870653
+      mmzxa_boss_modelh_aeolus_102: -604966259
+      mmzxa_boss_modelh_aeolus_24: -355838600
+      mmzxa_boss_modelh_aeolus_109: 2047718600
+      mmzxa_boss_modelh_aeolus_20: -1327462900
+      mmzxa_boss_modelh_aeolus_32: 1397750055
+      mmzxa_boss_modelh_aeolus_79: -1081903095
+      mmzxa_boss_modelh_aeolus_12: 1258167927
+      mmzxa_boss_modelh_aeolus_10: 795823993
+      mmzxa_boss_modelh_aeolus_27: 512394024
+      mmzxa_boss_modelh_aeolus_73: 518707086
+      mmzxa_boss_modelh_aeolus_49: -2123067542
+      mmzxa_boss_modelh_aeolus_48: -720477859
+      mmzxa_boss_modelh_aeolus_108: 136721800
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
