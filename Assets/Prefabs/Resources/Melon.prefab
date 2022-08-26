@@ -126,7 +126,7 @@ MonoBehaviour:
   _spriteConfig: {fileID: 11400000, guid: a8e057f6693ce7b40983dd27844daecc, type: 2}
   _rigidBody: {fileID: 5337076528495172934}
   _lifetime: 2
-  _damage: 2
+  _damage: 3
   _priority: 0
   _effectsPrefab: {fileID: 0}
   _soundEffectName: Pow

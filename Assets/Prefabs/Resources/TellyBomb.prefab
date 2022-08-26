@@ -170,7 +170,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _rigidBody: {fileID: 4148760292211424562}
   _pathRecalculationInterval: 1
-  _speed: 100
+  _speed: 150
   _sqrChaseRadius: 100
   _seeker: {fileID: 4148760292211424561}
   _minSqrDistanceToTarget: 0.2
@@ -232,4 +232,4 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 5
+  m_Radius: 7

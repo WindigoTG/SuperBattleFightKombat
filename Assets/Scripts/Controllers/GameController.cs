@@ -26,6 +26,12 @@ public class GameController : MonoBehaviourPunCallbacks
     [SerializeField] private TellyController _tellyController;
     [Space]
     [SerializeField] private SpawnPointHandler _spawnPointHandler;
+    [Space]
+    [SerializeField] private Animator _matchStartMessagesAnimator;
+    [SerializeField] private string _readyAnimationTrigger = "Ready";
+    [SerializeField] private string _figthAnimationTrigger = "Fight";
+    [Space]
+    [SerializeField] private PickupHandler _pickupHandler;
 
     List<Player> _currentPlayers = new List<Player>();
     Dictionary<string, bool> _readyPlayers = new Dictionary<string, bool>();
@@ -91,6 +97,7 @@ public class GameController : MonoBehaviourPunCallbacks
 
         _localPlayerContoller.OnReady += OnLocalPlayerReady;
         _localPlayerContoller.OnDeath += OnLocalPlayerDead;
+        _localPlayerContoller.OnLifePickup += OnLocalPlayerLifePickup;
 
         _characterSelectionUI.SetEnabled(true);
         _characterSelectionUI.OnCharacterSelected += OnCharacterSelected;
@@ -99,6 +106,8 @@ public class GameController : MonoBehaviourPunCallbacks
     private void Update()
     {
         _tellyController.UpdateRegular();
+        if (PhotonNetwork.IsMasterClient && _isGameStarted && !_isGameFinished)
+            _pickupHandler.UpdateRegular();
     }
 
     private void OnDestroy()
@@ -186,6 +195,8 @@ public class GameController : MonoBehaviourPunCallbacks
 
     private IEnumerator StartHenshin()
     {
+        photonView.RPC(nameof(SetAnimationTriggerRPC), RpcTarget.All, _readyAnimationTrigger);
+
         yield return new WaitForSeconds(_preHenshinDelay);
 
         photonView.RPC(nameof(StartHenshinRPC), RpcTarget.All);
@@ -215,8 +226,18 @@ public class GameController : MonoBehaviourPunCallbacks
             _readyUpCoroutine = StartCoroutine(StartHenshin());
     }
 
+    [PunRPC]
+    private void SetAnimationTriggerRPC(string trigger)
+    {
+        _matchStartMessagesAnimator.SetTrigger(trigger);
+        if (trigger.Equals(_readyAnimationTrigger))
+            SoundManager.Instance.PlaySound("Alert");
+    }
+
     private IEnumerator StartUp()
     {
+        photonView.RPC(nameof(SetAnimationTriggerRPC), RpcTarget.All, _figthAnimationTrigger);
+
         yield return new WaitForSeconds(_preHenshinDelay);
 
         photonView.RPC(nameof(StartGameRPC), RpcTarget.All);
@@ -238,6 +259,18 @@ public class GameController : MonoBehaviourPunCallbacks
     }
 
     private void OnLocalPlayerDead(string attackerID) => photonView.RPC(nameof(OnPlayerDeathRPC), RpcTarget.All, _localPlayerID, attackerID);
+
+    private void OnLocalPlayerLifePickup() => photonView.RPC(nameof(OnPlayerLifePickupRPC), RpcTarget.All, _localPlayerID);
+
+    [PunRPC] 
+    private void OnPlayerLifePickupRPC(string playerID)
+    {
+        if (_livesPerPlayer.ContainsKey(playerID))
+        {
+            _livesPerPlayer[playerID]++;
+            _gameUI.UpdateLivesForPLayer(_livesPerPlayer[playerID], playerID);
+        }
+    }
 
     [PunRPC]
     private void OnPlayerDeathRPC(string playerID, string attackerID)

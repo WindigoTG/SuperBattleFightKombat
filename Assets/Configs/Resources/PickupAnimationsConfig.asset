@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db483d8634870fa4d89ebe9d17d01f08, type: 3}
+  m_Name: PickupAnimationsConfig
+  m_EditorClassIdentifier: 
+  Sequences:
+  - Track: 0
+    Sprites:
+    - {fileID: -1895323229, guid: cdc23ec3dcd5bbe4db2018e1f985d87f, type: 3}
+    - {fileID: -454181232, guid: cdc23ec3dcd5bbe4db2018e1f985d87f, type: 3}
+    - {fileID: -961847023, guid: cdc23ec3dcd5bbe4db2018e1f985d87f, type: 3}
+    - {fileID: -454181232, guid: cdc23ec3dcd5bbe4db2018e1f985d87f, type: 3}
+  - Track: 1
+    Sprites:
+    - {fileID: 1678581376, guid: cdc23ec3dcd5bbe4db2018e1f985d87f, type: 3}
+    - {fileID: -1410641905, guid: cdc23ec3dcd5bbe4db2018e1f985d87f, type: 3}
+    - {fileID: 1442230423, guid: cdc23ec3dcd5bbe4db2018e1f985d87f, type: 3}
+    - {fileID: -1410641905, guid: cdc23ec3dcd5bbe4db2018e1f985d87f, type: 3}
+  - Track: 2
+    Sprites:
+    - {fileID: 1786436258, guid: cdc23ec3dcd5bbe4db2018e1f985d87f, type: 3}
+    - {fileID: 336663951, guid: cdc23ec3dcd5bbe4db2018e1f985d87f, type: 3}
+    - {fileID: 1125453691, guid: cdc23ec3dcd5bbe4db2018e1f985d87f, type: 3}
+    - {fileID: 1022987127, guid: cdc23ec3dcd5bbe4db2018e1f985d87f, type: 3}

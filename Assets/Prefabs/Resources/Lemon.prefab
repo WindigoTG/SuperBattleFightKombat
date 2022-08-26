@@ -142,7 +142,7 @@ MonoBehaviour:
   _spriteConfig: {fileID: 11400000, guid: 1f09da86e76e95a408c627b9bc830e48, type: 2}
   _rigidBody: {fileID: 3357953842816536160}
   _lifetime: 2
-  _damage: 1
+  _damage: 2
   _priority: 0
   _effectsPrefab: {fileID: 0}
   _soundEffectName: 

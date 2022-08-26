@@ -39,6 +39,7 @@ public class PlayerModel : IDisposable
 
     public Action OnReady;
     public Action<string> OnDeath;
+    public Action OnLifePickup;
 
     private bool _hasAirdashed;
 
@@ -81,6 +82,7 @@ public class PlayerModel : IDisposable
         _health.Death += Die;
 
         _view.OnDamageTaken += _health.TakeDamage;
+        _view.OnPickup += GetPickUp;
 
         _contactsPoller = new ContactsPoller(view.Collider);
 
@@ -211,6 +213,22 @@ public class PlayerModel : IDisposable
         StartAtPosition(position);
         _view.Activate();
         _view.SetUiEnabled(true);
+    }
+
+    private void GetPickUp(PickupType type)
+    {
+        switch (type)
+        {
+            case PickupType.HealthSmall:
+                _health.AddHealth(2);
+                break;
+            case PickupType.HealthLarge:
+                _health.AddHealth(8);
+                break;
+            case PickupType.Life:
+                OnLifePickup?.Invoke();
+                break;
+        }
     }
 
     public void Attack()

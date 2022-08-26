@@ -33,6 +33,7 @@ public class PlayerView : MonoBehaviourPunCallbacks, IDamageable
     private string _playerID;
 
     public Action<int, string, int> OnDamageTaken;
+    public Action<PickupType> OnPickup;
 
     Coroutine _blinking;
 
@@ -100,6 +101,7 @@ public class PlayerView : MonoBehaviourPunCallbacks, IDamageable
             return;
 
         CheckForAttack(collision.gameObject);
+        CheckForPickup(collision.gameObject);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -129,6 +131,16 @@ public class PlayerView : MonoBehaviourPunCallbacks, IDamageable
         var attack = go.GetComponent<IAttack>();
         if (attack != null && attack.PlayerID != _playerID)
             TakeDamage(attack.Damage, attack.PlayerID, attack.Priority);
+    }
+
+    private void CheckForPickup(GameObject go)
+    {
+        var pickup = go.GetComponent<IPickup>();
+        if (pickup != null)
+        {
+            OnPickup?.Invoke(pickup.Type);
+            pickup.PickUp();
+        }
     }
 
     public void SetPlayerID(string playerID)

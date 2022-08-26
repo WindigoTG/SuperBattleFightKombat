@@ -89,7 +89,7 @@ MonoBehaviour:
   _animationSpeed: 1
   _spriteConfig: {fileID: 0}
   _lifetime: 0.4
-  _damage: 2
+  _damage: 3
   _priority: 2
   _effectsPrefab: {fileID: 0}
   _soundEffectName: Slash2

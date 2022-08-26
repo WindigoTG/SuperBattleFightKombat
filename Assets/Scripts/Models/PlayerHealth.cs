@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class PlayerHealth
 {
-    int _maxHealth = 3;
+    int _maxHealth = 8;
     int _currentHealth;
 
     float _invincibilityPeriod = 1f;
@@ -56,6 +56,12 @@ public class PlayerHealth
     public void SetPlayerView(PlayerView view)
     {
         _playerView = view;
+        _playerView.SetPlayerHealth(_currentHealth);
+    }
+
+    public void AddHealth(int health)
+    {
+        _currentHealth = Mathf.Min(_currentHealth + health, _maxHealth);
         _playerView.SetPlayerHealth(_currentHealth);
     }
 }

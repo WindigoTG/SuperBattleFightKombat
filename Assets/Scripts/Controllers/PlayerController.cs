@@ -21,6 +21,7 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunObservable
 
     public Action OnReady;
     public Action<string> OnDeath;
+    public Action OnLifePickup;
 
     #endregion
 
@@ -76,6 +77,7 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunObservable
 
         _player.NonHenshinStartAtPosition(position);
         _player.OnDeath += OnPlayerDeath;
+        _player.OnLifePickup += LifePickup;
     }
 
     private void OnHenshinFinished()
@@ -104,12 +106,18 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunObservable
     {
         _isReady = false;
         if (_player != null)
+        {
+            _player.OnDeath -= OnPlayerDeath;
+            _player.OnLifePickup -= LifePickup;
             _player.Dispose();
+        }
         _player = null;
     }
 
     public void RespawnPlayer() => _player.Respawn();
     public void RespawnPlayerAtPosition(Vector3 position) => _player.RespawnAtPosition(position);
+
+    private void LifePickup() => OnLifePickup?.Invoke();
 
     #endregion
 

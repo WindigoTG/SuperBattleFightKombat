@@ -89,7 +89,7 @@ MonoBehaviour:
   _animationSpeed: 1
   _spriteConfig: {fileID: 0}
   _lifetime: 0.4
-  _damage: 1
+  _damage: 2
   _priority: 1
   _effectsPrefab: {fileID: 0}
   _soundEffectName: 

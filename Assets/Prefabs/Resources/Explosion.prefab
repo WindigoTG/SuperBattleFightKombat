@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0644d8cc83da96c4386700d6f32ef4d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _damage: 1
+  _damage: 3
   _priority: 0
   _playerId: Environment-Explosion
   _spriteRenderer: {fileID: 3491792003530447213}
