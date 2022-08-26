@@ -78,7 +78,10 @@ public class PlayerView : MonoBehaviourPunCallbacks, IDamageable
     private void Start()
     {
         if (!photonView.IsMine)
+        {
             _rigidBody.bodyType = RigidbodyType2D.Kinematic;
+            _rigidBody.gravityScale = 0;
+        }
         else
         {
             FindObjectOfType<Cinemachine.CinemachineVirtualCamera>().Follow = transform;
@@ -314,10 +317,16 @@ public class PlayerView : MonoBehaviourPunCallbacks, IDamageable
             _animatorController.StopAnimation(_spriteRenderer);
             _rigidBody.bodyType = RigidbodyType2D.Kinematic;
             _rigidBody.velocity = Vector2.zero;
+            _rigidBody.gravityScale = 0;
         }
         else
+        {
             if (photonView.IsMine)
-            _rigidBody.bodyType = RigidbodyType2D.Dynamic;
+            {
+                _rigidBody.bodyType = RigidbodyType2D.Dynamic;
+                _rigidBody.gravityScale = 1;
+            }
+        }
     }
 
     public void StartBlinking(float duration)

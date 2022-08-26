@@ -238,7 +238,14 @@ public class MatchMakingController : MonoBehaviourPunCallbacks
 
     public override void OnConnectedToMaster()
     {
-        PhotonNetwork.NickName = Random.Range(0, 10).ToString();
+        if (FirebaseManager.Instance != null)
+        {
+            PhotonNetwork.NickName = FirebaseManager.Instance.UserProfileHandler.UserName;
+        }
+        else
+        {
+            PhotonNetwork.NickName = Random.Range(0, 10).ToString();
+        }
         PhotonNetwork.JoinLobby(_customLobby);
         _roomsCanvas.enabled = true;
         ShowMainMenuPanel();

@@ -222,6 +222,7 @@ MonoBehaviour:
   _rigidBody: {fileID: 2982934773866802601}
   _spriteRenderer: {fileID: 1602451793530731505}
   _animationSpeed: 7.5
+  _dashAnimationSpeedModifier: 2
   _regularCollider: {fileID: 2982934773866802600}
   _dashCollider: {fileID: 8658931062961525095}
   _mainCollider: {fileID: 6670490306588622390}

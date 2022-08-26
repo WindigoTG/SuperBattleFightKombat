@@ -101,6 +101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damage: 1
+  _priority: 0
   _playerId: Environment-Explosion
   _spriteRenderer: {fileID: 3491792003530447213}
   _spriteAnimationsConfig: {fileID: 11400000, guid: bbd0383db93083c4ab8b37fb6b01d55c, type: 2}

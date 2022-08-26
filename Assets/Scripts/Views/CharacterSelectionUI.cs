@@ -87,7 +87,10 @@ public class CharacterSelectionUI
             foreach (var widget in _characterWidgets)
             {
                 widget.SetSelected(false);
-                widget.SetIsUnlocked(_characterConfigsByWidget[widget].RequiredLevel < 2);
+                if (FirebaseManager.Instance != null)
+                    widget.SetIsUnlocked(_characterConfigsByWidget[widget].RequiredLevel <= FirebaseManager.Instance.UserProfileHandler.UserLevel);
+                else
+                    widget.SetIsUnlocked(_characterConfigsByWidget[widget].RequiredLevel < 2);
             }
         }
     }

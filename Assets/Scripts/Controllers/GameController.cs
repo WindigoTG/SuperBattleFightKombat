@@ -4,6 +4,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 
 public class GameController : MonoBehaviourPunCallbacks
 {
@@ -18,12 +21,16 @@ public class GameController : MonoBehaviourPunCallbacks
     [Space]
     [SerializeField] private GameUI _gameUI;
     [SerializeField] private CharacterSelectionUI _characterSelectionUI;
+    [SerializeField] private MatchResultsPanel _matchResultsPanel;
     [Space]
     [SerializeField] private TellyController _tellyController;
+    [Space]
+    [SerializeField] private SpawnPointHandler _spawnPointHandler;
 
     List<Player> _currentPlayers = new List<Player>();
     Dictionary<string, bool> _readyPlayers = new Dictionary<string, bool>();
     Dictionary<string, bool> _playersSelectedCharacter = new Dictionary<string, bool>();
+    Dictionary<string, bool> _playersRequestingRematch = new Dictionary<string, bool>();
     Dictionary<string, int> _livesPerPlayer = new Dictionary<string, int>();
     Dictionary<string, int> _scorePerPlayer = new Dictionary<string, int>();
 
@@ -33,9 +40,12 @@ public class GameController : MonoBehaviourPunCallbacks
     private bool _isGameStarted;
     private bool _isReadySequenceStarted;
     private bool _areCharactersSelected;
+    private bool _isGameFinished;
 
     private Coroutine _readyUpCoroutine;
     private Coroutine _startUpCoroutine;
+
+    private Character _selectedCharacter;
 
     #endregion
 
@@ -46,6 +56,10 @@ public class GameController : MonoBehaviourPunCallbacks
     {
         _characterSelectionUI.Init();
         _characterSelectionUI.SetEnabled(false);
+        _matchResultsPanel.CloseResults();
+        _matchResultsPanel.LeaveMatchButton.onClick.AddListener(LeaveRoom);
+        _matchResultsPanel.QuitGameButton.onClick.AddListener(QuitGame);
+        _matchResultsPanel.RematchButton.onClick.AddListener(SendRematchRequest);
     }
 
     void Start()
@@ -65,6 +79,7 @@ public class GameController : MonoBehaviourPunCallbacks
             _currentPlayers.Add(player.Value);
             _readyPlayers.Add(player.Value.UserId, false);
             _playersSelectedCharacter.Add(player.Value.UserId, false);
+            _playersRequestingRematch.Add(player.Value.UserId, false);
         }
         ResetLivesAndScore();
 
@@ -118,8 +133,9 @@ public class GameController : MonoBehaviourPunCallbacks
         _characterSelectionUI.SetEnabled(false);
         _characterSelectionUI.OnCharacterSelected -= OnCharacterSelected;
 
-        _localPlayerContoller.Spawn(character);
-        photonView.RPC(nameof(SetPlayerMadeSelectionRPC), RpcTarget.All, _localPlayerID);
+        _selectedCharacter = character;
+
+        photonView.RPC(nameof(RequestSpawnPointRPC), RpcTarget.MasterClient, _localPlayerID);
     }
 
     [PunRPC]
@@ -129,6 +145,22 @@ public class GameController : MonoBehaviourPunCallbacks
             _playersSelectedCharacter[playerId] = true;
 
         CheckIfAllCharactersSelected();
+    }
+
+    [PunRPC]
+    private void RequestSpawnPointRPC(string playerId)
+    {
+        photonView.RPC(nameof(ReceiveSpawnPointRPC), RpcTarget.All, playerId, _spawnPointHandler.GetRandomSpawnPoint());
+    }
+
+    [PunRPC]
+    private  void ReceiveSpawnPointRPC(string playerID, Vector3 position)
+    {
+        if (!playerID.Equals(_localPlayerID))
+            return;
+
+        _localPlayerContoller.Spawn(_selectedCharacter, position);
+        photonView.RPC(nameof(SetPlayerMadeSelectionRPC), RpcTarget.All, _localPlayerID);
     }
 
     private void OnLocalPlayerReady()
@@ -198,6 +230,11 @@ public class GameController : MonoBehaviourPunCallbacks
 
         if (PhotonNetwork.IsMasterClient)
             _tellyController.StartSpawningTellys();
+
+        if (FirebaseManager.Instance != null)
+        {
+            FirebaseManager.Instance.UserProfileHandler.AddMatchPlayed();
+        }
     }
 
     private void OnLocalPlayerDead(string attackerID) => photonView.RPC(nameof(OnPlayerDeathRPC), RpcTarget.All, _localPlayerID, attackerID);
@@ -217,17 +254,18 @@ public class GameController : MonoBehaviourPunCallbacks
             _gameUI.UpdateScoreForPlayer(_scorePerPlayer[attackerID], attackerID);
         }
 
-        if (playerID.Equals(_localPlayerID))
+        if (playerID.Equals(_localPlayerID) && _livesPerPlayer[playerID] > 0)
             StartCoroutine(RespawnPlayer());
 
-        
+        CheckGameState();
     }
 
     private IEnumerator RespawnPlayer()
     {
         yield return new WaitForSeconds(_respawnTime);
 
-        _localPlayerContoller.RespawnPlayer();
+        if (!_isGameFinished)
+            _localPlayerContoller.RespawnPlayerAtPosition(_spawnPointHandler.GetRandomSpawnPoint());
     }
 
     private void CheckGameState()
@@ -250,6 +288,102 @@ public class GameController : MonoBehaviourPunCallbacks
     {
         if (PhotonNetwork.IsMasterClient)
             _tellyController.KillAndStopSpawningTellys();
+
+        _localPlayerContoller.StopGame();
+        _isGameFinished = true;
+        OpenResultsPanel();
+
+        if (FirebaseManager.Instance != null)
+        {
+            if (_livesPerPlayer[_localPlayerID] > 0)
+                FirebaseManager.Instance.UserProfileHandler.AddMatchWon();
+
+            FirebaseManager.Instance.UserProfileHandler.AddTotalScore(_scorePerPlayer[_localPlayerID]);
+        }
+            
+    }
+
+    private void OpenResultsPanel()
+    {
+        if (_isGameStarted)
+            _matchResultsPanel.OpenResults(_livesPerPlayer[_localPlayerID], _scorePerPlayer[_localPlayerID]);
+        else
+            _matchResultsPanel.OpenResults(0, 0);
+    }
+
+    private void SendRematchRequest()
+    {
+        photonView.RPC(nameof(RematchRequestedRPC), RpcTarget.All, _localPlayerID);
+    }
+
+    [PunRPC]
+    private void RematchRequestedRPC(string playerId)
+    {
+        if (!_playersRequestingRematch.ContainsKey(playerId))
+            return;
+
+        _playersRequestingRematch[playerId] = true;
+        _matchResultsPanel.SetPlayerRequestingRematch(playerId);
+
+        CheckIfAllPLayersRequestedRematch();
+    }
+
+    private void CheckIfAllPLayersRequestedRematch()
+    {
+        if (!PhotonNetwork.IsMasterClient || _playersRequestingRematch.Count < 2)
+            return;
+
+        foreach (var player in _playersRequestingRematch)
+            if (!player.Value)
+                return;
+
+        photonView.RPC(nameof(RestartRPC), RpcTarget.All);
+    }
+
+    [PunRPC]
+    private void RestartRPC()
+    {
+        ResetLivesAndScore();
+        foreach (var player in _currentPlayers)
+        {
+            _gameUI.UpdateLivesForPLayer(_startingLives, player.UserId);
+            _gameUI.UpdateScoreForPlayer(0, player.UserId);
+        }
+
+        _isGameStarted = false;
+        _isReadySequenceStarted = false;
+        _areCharactersSelected = false;
+        _isGameFinished = false;
+
+
+        foreach (var player in _currentPlayers)
+        {
+            _readyPlayers[player.UserId] = false;
+            _playersRequestingRematch[player.UserId] = false;
+            _playersSelectedCharacter[player.UserId] = false;
+        }
+
+        _characterSelectionUI.SetEnabled(true);
+        _characterSelectionUI.OnCharacterSelected += OnCharacterSelected;
+
+        _matchResultsPanel.CloseResults();
+    }
+
+    private void LeaveRoom()
+    {
+        PhotonNetwork.LeaveRoom();
+        SceneManager.LoadScene(1);
+    }
+
+    private void QuitGame()
+    {
+        PhotonNetwork.Disconnect();
+        
+#if UNITY_EDITOR
+        EditorApplication.ExitPlaymode();
+#else
+        Application.Quit();
+#endif
     }
 
     #endregion
@@ -281,6 +415,12 @@ public class GameController : MonoBehaviourPunCallbacks
         }
 
         _tellyController.TakeOver();
+
+        if (_isGameFinished)
+        {
+            _tellyController.KillAndStopSpawningTellys();
+            CheckIfAllPLayersRequestedRematch();
+        }
     }
 
     public override void OnPlayerLeftRoom(Player otherPlayer)
@@ -301,6 +441,15 @@ public class GameController : MonoBehaviourPunCallbacks
 
         if (_playersSelectedCharacter.ContainsKey(otherPlayer.UserId))
             _playersSelectedCharacter.Remove(otherPlayer.UserId);
+
+        if (_playersRequestingRematch.ContainsKey(otherPlayer.UserId))
+        {
+            _playersRequestingRematch.Remove(otherPlayer.UserId);
+            _matchResultsPanel.RemovePlayer(otherPlayer.UserId);
+        }
+
+        if (_currentPlayers.Count < 2 && !_isGameFinished)
+            StopGame();
     }
 
     #endregion

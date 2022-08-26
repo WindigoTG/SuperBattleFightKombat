@@ -70,11 +70,11 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunObservable
 
     #region Methods
 
-    public void Spawn(Character character)
+    public void Spawn(Character character, Vector3 position)
     {
         _player = _playerfactory.CreatePlayer(character);
 
-        _player.NonHenshinStartAtPosition(new Vector3(Random.Range(-3f, 3f), 0, 0));
+        _player.NonHenshinStartAtPosition(position);
         _player.OnDeath += OnPlayerDeath;
     }
 
@@ -100,7 +100,16 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunObservable
         _isReady = true;
     }
 
+    public void StopGame()
+    {
+        _isReady = false;
+        if (_player != null)
+            _player.Dispose();
+        _player = null;
+    }
+
     public void RespawnPlayer() => _player.Respawn();
+    public void RespawnPlayerAtPosition(Vector3 position) => _player.RespawnAtPosition(position);
 
     #endregion
 

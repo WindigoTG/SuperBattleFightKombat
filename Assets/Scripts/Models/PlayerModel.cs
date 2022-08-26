@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerModel
+public class PlayerModel : IDisposable
 {
     #region Fields
 
@@ -108,7 +108,7 @@ public class PlayerModel
         _activetState.Update(inputs);
 
         if (inputs.IsAttackPressed)
-            Shoot();
+            Attack();
     }
 
     #endregion
@@ -205,25 +205,27 @@ public class PlayerModel
         _view.SetUiEnabled(true);
     }
 
-    public void Shoot()
+    public void RespawnAtPosition(Vector3 position)
+    {
+        ResetState();
+        StartAtPosition(position);
+        _view.Activate();
+        _view.SetUiEnabled(true);
+    }
+
+    public void Attack()
     {
         _activetState.Attack();
-        //_weapon.Shoot(_view.GroundStandAttakOrigin.position, _view.transform.localScale.x);
+    }
 
-        //if (_isReady && !_isShooting)
-        //{
-            //if (!_isGrounded)
-            //    _view.StartShootJumpAnimation();
-            //else if (_isMoving)
-            //    _view.StartShootRunAnimation();
-            //else
-            //    _view.StartShootStandAnimation();
+    #endregion
 
-            //_weapon.Shoot(_player.transform.localScale.x);
 
-        //    _isShooting = true;
-        //    _currentShootingCD = _shootingCD;
-        //}
+    #region IDisposable
+
+    public void Dispose()
+    {
+        Photon.Pun.PhotonNetwork.Destroy(_view.photonView);
     }
 
     #endregion
