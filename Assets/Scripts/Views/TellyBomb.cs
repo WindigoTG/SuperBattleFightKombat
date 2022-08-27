@@ -1,6 +1,7 @@
 using UnityEngine;
 using Pathfinding;
 using Photon.Pun;
+using System.Collections;
 
 public class TellyBomb : MonoBehaviourPunCallbacks
 {
@@ -16,6 +17,10 @@ public class TellyBomb : MonoBehaviourPunCallbacks
     [SerializeField] private SpriteAnimationsConfig _spriteAnimationsConfig;
     [SerializeField] private float _animationSpeed = 10.0f;
     [SerializeField] private Explosion _explosionPrefab;
+    [SerializeField] private Explosion _explosionSmallPrefab;
+    [Space]
+    [SerializeField] private float _health;
+    [SerializeField] private TellyAttackDetector _attackDetector;
 
     private SpriteAnimatorController _animatorController;
 
@@ -28,6 +33,8 @@ public class TellyBomb : MonoBehaviourPunCallbacks
     private Transform _target;
 
     private Path _path;
+
+    Coroutine _blinking;
 
     #endregion
 
@@ -47,6 +54,7 @@ public class TellyBomb : MonoBehaviourPunCallbacks
             GetComponent<SpriteRenderer>();
 
         _animatorController = new SpriteAnimatorController(_spriteAnimationsConfig);
+        _attackDetector.OnAttackReceived = OndamageTaken;
     }
 
     private void Start()
@@ -115,6 +123,41 @@ public class TellyBomb : MonoBehaviourPunCallbacks
 
 
     #region Methods
+
+    private void OndamageTaken()
+    {
+        if (photonView.IsMine)
+            photonView.RPC(nameof(TakeDamageRPC), RpcTarget.All);
+    }
+
+    [PunRPC]
+    private void TakeDamageRPC()
+    {
+        _health--;
+
+        if (_health <=0 && photonView.IsMine)
+        {
+            PhotonNetwork.Instantiate(_explosionSmallPrefab.name, transform.position, Quaternion.identity);
+            PhotonNetwork.Destroy(photonView);
+        }
+
+        if (_health > 0)
+        {
+            if (_blinking != null)
+                StopCoroutine(_blinking);
+
+            _blinking = StartCoroutine(Blinking());
+        }
+    }
+
+    private IEnumerator Blinking()
+    {
+        _spriteRenderer.color = Color.red;
+
+        yield return new WaitForSeconds(0.15f);
+
+        _spriteRenderer.color = Color.white;
+    }
 
     public void SetWaypoints(Vector3[] wayPoints)
     {

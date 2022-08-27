@@ -143,8 +143,9 @@ MonoBehaviour:
   _rigidBody: {fileID: 1730645319466003836}
   _lifetime: 2
   _damage: 1
+  _priority: 1
   _effectsPrefab: {fileID: 2254498614533326587, guid: 8450b3e6edc1c5a49a3005e1c67d7d66, type: 3}
-  _soundEffectName: Cling
+  _soundEffectName: Swish
 --- !u!114 &2860661080699874441
 MonoBehaviour:
   m_ObjectHideFlags: 0

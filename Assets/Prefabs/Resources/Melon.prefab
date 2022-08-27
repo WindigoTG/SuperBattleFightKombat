@@ -127,7 +127,7 @@ MonoBehaviour:
   _rigidBody: {fileID: 5337076528495172934}
   _lifetime: 2
   _damage: 3
-  _priority: 0
+  _priority: 1
   _effectsPrefab: {fileID: 0}
   _soundEffectName: Pow
 --- !u!114 &8477597988399062195

@@ -38,6 +38,7 @@ public class MatchMakingController : MonoBehaviourPunCallbacks
 
         PhotonNetwork.AutomaticallySyncScene = true;
 
+        MusicManager.Instance.PLayMenuMusic();
     }
 
     private void OnDestroy()
@@ -53,24 +54,37 @@ public class MatchMakingController : MonoBehaviourPunCallbacks
     private void AddListeners()
     {
         _mainPanel.CreateRoomButton.onClick.AddListener(ShowCreateRoomPanel);
+        _mainPanel.CreateRoomButton.onClick.AddListener(PlayButtonSound);
         _mainPanel.JoinRoomButton.onClick.AddListener(ShowJoinRoomPanel);
+        _mainPanel.JoinRoomButton.onClick.AddListener(PlayButtonSound);
 
         _createRoomPanel.CreateRoom.onClick.AddListener(CreateRoom);
+        _createRoomPanel.CreateRoom.onClick.AddListener(PlayButtonSound);
         _createRoomPanel.BackButton.onClick.AddListener(ShowMainMenuPanel);
+        _createRoomPanel.BackButton.onClick.AddListener(PlayButtonSound);
 
         _joinRoomPanel.BackButton.onClick.AddListener(ShowMainMenuPanel);
+        _joinRoomPanel.BackButton.onClick.AddListener(PlayButtonSound);
         _joinRoomPanel.JoinSelectedButton.onClick.AddListener(JoinSelectedRoom);
+        _joinRoomPanel.JoinSelectedButton.onClick.AddListener(PlayButtonSound);
         _joinRoomPanel.JoinByNameButton.onClick.AddListener(JoinRoomByName);
+        _joinRoomPanel.JoinByNameButton.onClick.AddListener(PlayButtonSound);
 
         _inRoomPanel.LeaveRoomButton.onClick.AddListener(LeaveRoom);
+        _inRoomPanel.LeaveRoomButton.onClick.AddListener(PlayButtonSound);
         _inRoomPanel.IsOpenToggle.onValueChanged.AddListener(SetRoomOpen);
         _inRoomPanel.IsVisibleToggle.onValueChanged.AddListener(SetRoomVisible);
         _inRoomPanel.StartGameButton.onClick.AddListener(StartGame);
+        _inRoomPanel.StartGameButton.onClick.AddListener(PlayButtonSound);
 
         _backToMenuButton.onClick.AddListener(BackToMainMenu);
+        _backToMenuButton.onClick.AddListener(PlayButtonSound);
     }
 
-    
+    private void PlayButtonSound()
+    {
+        SoundManager.Instance.PlaySound(References.BUTTON_SOUND);
+    }
 
     private void RemoveListeners()
     {
@@ -212,7 +226,7 @@ public class MatchMakingController : MonoBehaviourPunCallbacks
         _inRoomPanel.IsVisibleToggle.interactable = isMasterClient;
         _inRoomPanel.IsVisibleToggle.isOn = PhotonNetwork.CurrentRoom.IsVisible;
 
-        _inRoomPanel.StartGameButton.interactable = isMasterClient;
+        _inRoomPanel.StartGameButton.interactable = isMasterClient && PhotonNetwork.CurrentRoom.PlayerCount >1;
     }
 
     private void StartGame()
@@ -377,6 +391,7 @@ public class MatchMakingController : MonoBehaviourPunCallbacks
         var masterId = PhotonNetwork.CurrentRoom.Players[PhotonNetwork.CurrentRoom.masterClientId].UserId;
         _playerListPanel.AddPlayer(newPlayer.UserId, newPlayer.NickName,
                 newPlayer.UserId.Equals(masterId));
+        UpdateRoomControl();
     }
 
     public override void OnPlayerLeftRoom(Player otherPlayer)
@@ -384,6 +399,7 @@ public class MatchMakingController : MonoBehaviourPunCallbacks
         Debug.Log($"{otherPlayer.NickName} left the room");
         _logManager?.LogMessage($"{otherPlayer.NickName} left the room");
         _playerListPanel.RemovePlayer(otherPlayer.UserId);
+        UpdateRoomControl();
     }
 
     public override void OnRoomPropertiesUpdate(ExitGames.Client.Photon.Hashtable propertiesThatChanged)

@@ -28,7 +28,25 @@ public class Pickup : MonoBehaviourPunCallbacks, IPickup
 
     public void PickUp()
     {
+        photonView.RPC(nameof(PlaySoundRPC), RpcTarget.All);
         PhotonNetwork.Destroy(photonView);
+    }
+
+    [PunRPC]
+    private void PlaySoundRPC()
+    {
+        switch(_type)
+        {
+            case PickupType.HealthSmall:
+                SoundManager.Instance.PlaySound(References.HEALTH_SMALL_SOUND);
+                break;
+            case PickupType.HealthLarge:
+                SoundManager.Instance.PlaySound(References.HEALTH_LARGE_SOUND);
+                break;
+            case PickupType.Life:
+                SoundManager.Instance.PlaySound(References.LIFE_SOUND);
+                break;
+        }
     }
 
     public void SetPickupType(PickupType type) => photonView.RPC(nameof(SetPickupTypeRPC), RpcTarget.All, type);

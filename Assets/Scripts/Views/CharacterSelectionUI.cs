@@ -95,7 +95,12 @@ public class CharacterSelectionUI
         }
     }
 
-    private void OnSelectedButtonClick() => OnCharacterSelected?.Invoke(_currentCharacter);
+    private void OnSelectedButtonClick()
+    {
+        SoundManager.Instance.PlaySound(References.BUTTON_SOUND);
+        
+        OnCharacterSelected?.Invoke(_currentCharacter);
+    }
 
     #endregion
 }

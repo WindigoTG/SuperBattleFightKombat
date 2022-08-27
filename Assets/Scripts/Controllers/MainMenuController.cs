@@ -67,6 +67,11 @@ public class MainMenuController : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        MusicManager.Instance.PLayMenuMusic();
+    }
+
     private void OnDestroy()
     {
         RemoveListeners();

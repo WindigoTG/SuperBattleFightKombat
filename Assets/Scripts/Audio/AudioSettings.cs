@@ -90,10 +90,9 @@ public class AudioSettings : MonoBehaviour
         val = Mathf.Max(0.0001f, val / 10f);
         _audioMixer.SetFloat(SOUND_VOL, Mathf.Log10(val) * 20);
 
-        if (playSound)
+        if (playSound && _windowPanel.gameObject.activeSelf)
         {
-            SoundManager.Instance?.StopSound("Hurt");
-            SoundManager.Instance?.PlaySound("Hurt", false);
+            SoundManager.Instance?.PlaySound(References.HEALTH_SMALL_SOUND, false);
         }
     }
 

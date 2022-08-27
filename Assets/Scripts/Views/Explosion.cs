@@ -39,6 +39,7 @@ public class Explosion : MonoBehaviourPunCallbacks, IAttack
     void Start()
     {
         _animatorController.StartAnimation(_spriteRenderer, AnimationTrack.Idle, false, _animationSpeed);
+        SoundManager.Instance.PlaySound(References.BOOM_SOUND);
     }
 
     void Update()

@@ -32,6 +32,8 @@ public class GameController : MonoBehaviourPunCallbacks
     [SerializeField] private string _figthAnimationTrigger = "Fight";
     [Space]
     [SerializeField] private PickupHandler _pickupHandler;
+    [Space]
+    [SerializeField] private PauseMenuPanel _pauseMenu;
 
     List<Player> _currentPlayers = new List<Player>();
     Dictionary<string, bool> _readyPlayers = new Dictionary<string, bool>();
@@ -62,14 +64,26 @@ public class GameController : MonoBehaviourPunCallbacks
     {
         _characterSelectionUI.Init();
         _characterSelectionUI.SetEnabled(false);
+
         _matchResultsPanel.CloseResults();
         _matchResultsPanel.LeaveMatchButton.onClick.AddListener(LeaveRoom);
+        _matchResultsPanel.LeaveMatchButton.onClick.AddListener(PlayButtonSound);
         _matchResultsPanel.QuitGameButton.onClick.AddListener(QuitGame);
+        _matchResultsPanel.QuitGameButton.onClick.AddListener(PlayButtonSound);
         _matchResultsPanel.RematchButton.onClick.AddListener(SendRematchRequest);
+        _matchResultsPanel.RematchButton.onClick.AddListener(PlayButtonSound);
+
+        _pauseMenu.ResumeButton.onClick.AddListener(OpenOrClosePauseMenu);
+        _pauseMenu.ResumeButton.onClick.AddListener(PlayButtonSound);
+        _pauseMenu.LeaveButton.onClick.AddListener(LeaveRoom);
+        _pauseMenu.LeaveButton.onClick.AddListener(PlayButtonSound);
+        _pauseMenu.QuitButton.onClick.AddListener(QuitGame);
+        _pauseMenu.QuitButton.onClick.AddListener(PlayButtonSound);
     }
 
     void Start()
     {
+        MusicManager.Instance.StopMusic();
 
         if (!PhotonNetwork.IsConnected)
         {
@@ -92,7 +106,7 @@ public class GameController : MonoBehaviourPunCallbacks
         foreach (var player in _currentPlayers)
             _gameUI.AddPlayer(player.UserId, player.NickName, _livesPerPlayer[player.UserId], _scorePerPlayer[player.UserId]);
 
-        _localPlayerContoller = 
+        _localPlayerContoller =
             PhotonNetwork.Instantiate(_playerPrefab.name, new Vector3(0f, 0f, 0f), Quaternion.identity, 0).GetComponent<PlayerController>();
 
         _localPlayerContoller.OnReady += OnLocalPlayerReady;
@@ -108,6 +122,9 @@ public class GameController : MonoBehaviourPunCallbacks
         _tellyController.UpdateRegular();
         if (PhotonNetwork.IsMasterClient && _isGameStarted && !_isGameFinished)
             _pickupHandler.UpdateRegular();
+
+        if (Input.GetKeyDown(KeyCode.Escape) && _isGameStarted && !_isGameFinished)
+            OpenOrClosePauseMenu();
     }
 
     private void OnDestroy()
@@ -123,6 +140,16 @@ public class GameController : MonoBehaviourPunCallbacks
 
 
     #region Methods
+
+    private void OpenOrClosePauseMenu()
+    {
+        _pauseMenu.Panel.gameObject.SetActive(!_pauseMenu.Panel.gameObject.activeSelf);
+    }
+
+    private void PlayButtonSound()
+    {
+        SoundManager.Instance.PlaySound(References.BUTTON_SOUND);
+    }
 
     private void ResetLivesAndScore()
     {
@@ -163,7 +190,7 @@ public class GameController : MonoBehaviourPunCallbacks
     }
 
     [PunRPC]
-    private  void ReceiveSpawnPointRPC(string playerID, Vector3 position)
+    private void ReceiveSpawnPointRPC(string playerID, Vector3 position)
     {
         if (!playerID.Equals(_localPlayerID))
             return;
@@ -200,6 +227,8 @@ public class GameController : MonoBehaviourPunCallbacks
         yield return new WaitForSeconds(_preHenshinDelay);
 
         photonView.RPC(nameof(StartHenshinRPC), RpcTarget.All);
+        var musicIndex = Random.Range(0, MusicManager.Instance.MatchMusicCount);
+        photonView.RPC(nameof(StartPlayingMusic), RpcTarget.All, musicIndex);
     }
 
     private void CheckIfAllPlayersAreReady()
@@ -231,7 +260,9 @@ public class GameController : MonoBehaviourPunCallbacks
     {
         _matchStartMessagesAnimator.SetTrigger(trigger);
         if (trigger.Equals(_readyAnimationTrigger))
-            SoundManager.Instance.PlaySound("Alert");
+            SoundManager.Instance.PlaySound(References.ALERT_SOUND);
+        else if (trigger.Equals(_figthAnimationTrigger))
+            SoundManager.Instance.PlaySound(References.FIGHT_SOUND);
     }
 
     private IEnumerator StartUp()
@@ -242,6 +273,9 @@ public class GameController : MonoBehaviourPunCallbacks
 
         photonView.RPC(nameof(StartGameRPC), RpcTarget.All);
     }
+
+    [PunRPC]
+    private void StartPlayingMusic(int index) => MusicManager.Instance.PlayMatchMusic(index);
 
     [PunRPC]
     private void StartGameRPC()
@@ -322,6 +356,7 @@ public class GameController : MonoBehaviourPunCallbacks
         if (PhotonNetwork.IsMasterClient)
             _tellyController.KillAndStopSpawningTellys();
 
+        MusicManager.Instance.StopMusic();
         _localPlayerContoller.StopGame();
         _isGameFinished = true;
         OpenResultsPanel();
@@ -338,6 +373,7 @@ public class GameController : MonoBehaviourPunCallbacks
 
     private void OpenResultsPanel()
     {
+        SoundManager.Instance.PlaySound(References.GAME_OVER_SOUND);
         if (_isGameStarted)
             _matchResultsPanel.OpenResults(_livesPerPlayer[_localPlayerID], _scorePerPlayer[_localPlayerID]);
         else

@@ -26,6 +26,7 @@ public class ModelHAirDashUpState : PlayerState
     public override void Activate()
     {
         _view.StartAnimation(AnimationTrack.AirDashUp);
+        _view.PlaySound(References.BOOST_SOUND);
         _model.SetHasAirDashed(true);
     }
 

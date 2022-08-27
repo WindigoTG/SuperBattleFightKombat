@@ -47,6 +47,7 @@ public class MatchResultsPanel : MonoBehaviour
 
     #endregion
 
+
     #region Properties
 
     public Button LeaveMatchButton => _leaveMatchButton;
@@ -109,11 +110,11 @@ public class MatchResultsPanel : MonoBehaviour
     private IEnumerator DisplayResults()
     {
         _scoreAmountText.text = _currentScore.ToString();
-        _scoreExpValueText.text = (_currentScore * _expForScore).ToString();
+        _scoreExpValueText.text = (_currentScore * _expForScore).ToString() + " XP";
         _livesAmountText.text = _currentLives.ToString();
-        _livesExpValueText.text = (_currentLives * _expForLife).ToString();
+        _livesExpValueText.text = (_currentLives * _expForLife).ToString() + " XP";
         _expLeftToGive = (_currentScore * _expForScore) + (_currentLives * _expForLife);
-        _totalExpValueText.text = _expLeftToGive.ToString();
+        _totalExpValueText.text = _expLeftToGive.ToString() + " XP";
 
         yield return new WaitForSeconds(_displayDelay);
 
@@ -157,7 +158,7 @@ public class MatchResultsPanel : MonoBehaviour
                 progress += Time.deltaTime * _progressSpeed;
                 Debug.Log(progress);
                 _currentExp = (int)Mathf.Lerp(startingvalue, targetExp, progress);
-                _currentExpText.text = _currentExp.ToString();
+                _currentExpText.text = _currentExp.ToString() + " XP";
                 _expSlider.value = _currentExp;
                 yield return null;
             }
@@ -165,7 +166,7 @@ public class MatchResultsPanel : MonoBehaviour
             if (_currentExp == maxExp)
             {
                 _currentLevel++;
-                _currentLevelText.text = _currentLevel.ToString();
+                _currentLevelText.text = "Lvl. " + _currentLevel.ToString();
 
                 minExp = CalculateXpForLevel(_currentLevel - 1);
                 maxExp = CalculateXpForLevel(_currentLevel);
