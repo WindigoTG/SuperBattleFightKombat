@@ -118,6 +118,7 @@ MonoBehaviour:
   _spriteRenderer: {fileID: 435485447258156390}
   _animationSpeed: 10
   _spriteAnimationsConfig: {fileID: 11400000, guid: 77e25b3d668cd2b459823fbcecea2b5c, type: 2}
+  _collider: {fileID: 8957918572431778916}
 --- !u!114 &4137792496979505047
 MonoBehaviour:
   m_ObjectHideFlags: 0

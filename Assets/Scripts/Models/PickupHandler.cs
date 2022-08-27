@@ -40,7 +40,7 @@ public class PickupHandler : IUpdateableRegular
         else
             type = PickupType.HealthSmall;
 
-        var pickup = PhotonNetwork.Instantiate(_pickupPrefab.name, spawnPoint, Quaternion.identity).GetComponent<Pickup>();
+        var pickup = PhotonNetwork.InstantiateRoomObject(_pickupPrefab.name, spawnPoint, Quaternion.identity).GetComponent<Pickup>();
         pickup.SetPickupType(type);
     }
 }

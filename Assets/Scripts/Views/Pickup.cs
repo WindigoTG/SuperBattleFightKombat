@@ -8,6 +8,7 @@ public class Pickup : MonoBehaviourPunCallbacks, IPickup
     [SerializeField] private SpriteRenderer _spriteRenderer;
     [SerializeField] private float _animationSpeed = 10f;
     [SerializeField] private SpriteAnimationsConfig _spriteAnimationsConfig;
+    [SerializeField] private Collider2D _collider;
 
     private PickupType _type;
 
@@ -28,12 +29,14 @@ public class Pickup : MonoBehaviourPunCallbacks, IPickup
 
     public void PickUp()
     {
-        photonView.RPC(nameof(PlaySoundRPC), RpcTarget.All);
-        PhotonNetwork.Destroy(photonView);
+        photonView.RPC(nameof(PickUpRPC), RpcTarget.All);
+
+        _spriteRenderer.enabled = false;
+        _collider.enabled = false;
     }
 
     [PunRPC]
-    private void PlaySoundRPC()
+    private void PickUpRPC()
     {
         switch(_type)
         {
@@ -47,6 +50,9 @@ public class Pickup : MonoBehaviourPunCallbacks, IPickup
                 SoundManager.Instance.PlaySound(References.LIFE_SOUND);
                 break;
         }
+
+        if (photonView.IsMine)
+            PhotonNetwork.Destroy(photonView);
     }
 
     public void SetPickupType(PickupType type) => photonView.RPC(nameof(SetPickupTypeRPC), RpcTarget.All, type);
